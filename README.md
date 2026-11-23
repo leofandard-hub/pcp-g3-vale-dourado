@@ -4,7 +4,7 @@ ENG037 · Planejamento e Controle da Produção · UFBA · 2026.2
 Grupo: Léo Fandard e Raphael
 Packing house de manga com câmaras frias · Juazeiro · data de status 13/11/2026
 
-**Link público:** _(colar o link do Vercel aqui)_
+**Link público:** https://pcp-g3-vale-dourado-app.vercel.app
 
 ## Estrutura
 ```
