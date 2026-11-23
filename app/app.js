@@ -290,7 +290,11 @@ function renderLancTab() {
   $('#tabLanc').innerHTML = L.length ? '<tr><th></th><th>por</th>' + cols.map(c => `<th>${c}</th>`).join('') + '</tr>' +
     L.map(l => `<tr><td><button class="danger mini" data-id="${l.id}">x</button></td><td>${l.autor || ''}</td>` + cols.map(c => `<td>${l.dados[c] ?? ''}</td>`).join('') + '</tr>').join('')
     : '<tr><td>Nenhum lançamento nesta tela.</td></tr>';
-  document.querySelectorAll('#tabLanc button').forEach(b => b.onclick = () => apagar(b.dataset.id));
+  // apagar em dois cliques (sem janela de confirmação, que alguns navegadores bloqueiam)
+  document.querySelectorAll('#tabLanc button').forEach(b => b.onclick = () => {
+    if (b.dataset.ok) return apagar(b.dataset.id);
+    b.dataset.ok = '1'; b.textContent = 'apagar?'; setTimeout(() => { delete b.dataset.ok; b.textContent = 'x'; }, 4000);
+  });
 }
 $('#btnLancar').onclick = async e => {
   e.preventDefault();
@@ -329,8 +333,10 @@ async function salvar(l) {
   refresh();
 }
 async function apagar(id) {
-  if (!confirm('Apagar este lançamento?')) return;
-  if (sbOn() && !String(id).startsWith('L')) await fetch(`${SB.url}/rest/v1/lancamentos?id=eq.${id}`, { method: 'DELETE', headers: sbH() });
+  if (sbOn() && !String(id).startsWith('L')) {
+    const r = await fetch(`${SB.url}/rest/v1/lancamentos?id=eq.${id}`, { method: 'DELETE', headers: sbH() });
+    if (!r.ok) alert('Erro ao apagar no Supabase: ' + await r.text());
+  }
   else { LANC = LANC.filter(l => l.id !== id); localStorage.setItem('pcp_lanc', JSON.stringify(LANC)); }
   await carregarLanc(); refresh();
 }
