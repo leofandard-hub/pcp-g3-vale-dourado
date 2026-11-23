@@ -1,0 +1,40 @@
+id_atividade,codigo_eap,nome_atividade,fase,id_zona,unidade,quantidade_orcada,rup_orcada_hh_un,tipo_duracao,duracao_fixa_du,regime_execucao,preco_unitario_empreitada_rs,encarregado,ambiente,numero_lotes_inspecao
+A01,1.1.1,Projeto executivo civil e estrutural,Projetos e licenças,,%,100.0,,FIXA,20.0,CONTRATADA,,,INTERNO,0
+A02,1.1.2,Projeto de instalações e utilidades,Projetos e licenças,,%,100.0,,FIXA,18.0,CONTRATADA,,,INTERNO,0
+A03,1.1.3,Licenciamento ambiental e alvará de construção,Projetos e licenças,,%,100.0,,FIXA,35.0,CONTRATADA,,,INTERNO,0
+A04,1.1.4,Especificação técnica e compra dos equipamentos de processo,Projetos e licenças,,%,100.0,,FIXA,15.0,CONTRATADA,,,INTERNO,0
+A05,1.1.5,Fabricação dos equipamentos de processo (acompanhamento do fornecedor),Projetos e licenças,,%,100.0,,FIXA,100.0,CONTRATADA,,,INTERNO,0
+A06,1.2.1,Mobilização e instalação do canteiro,Canteiro e infraestrutura,CANTEIRO,m²,420.0,3.52,ESFORCO,,PROPRIA,,Jair Bispo,EXTERNO,4
+A07,1.2.2,Terraplenagem e drenagem,Canteiro e infraestrutura,TERRENO,m³,15680.0,0.128,ESFORCO,,PROPRIA,,Jair Bispo,EXTERNO,5
+A08,1.2.3,"Fundações (blocos, sapatas e vigas baldrame)",Canteiro e infraestrutura,GALPAO,m³,405.0,20.9,ESFORCO,,PROPRIA,,Jair Bispo,EXTERNO,9
+A09,1.3.1,Montagem da estrutura metálica,Estrutura e edificação,GALPAO,t,288.0,35.2,ESFORCO,,EMPREITADA,1358.72,Lúcia Farias,EXTERNO,11
+A10,1.3.2,Cobertura em telha termoacústica,Estrutura e edificação,GALPAO,m²,9450.0,0.484,ESFORCO,,EMPREITADA,16.6,Lúcia Farias,EXTERNO,7
+A11,1.3.3,Fechamento lateral,Estrutura e edificação,GALPAO,m²,3760.0,0.77,ESFORCO,,EMPREITADA,25.91,Lúcia Farias,EXTERNO,7
+A12,1.3.4,Piso industrial de concreto,Estrutura e edificação,GALPAO,m²,8280.0,0.99,ESFORCO,,PROPRIA,,Jair Bispo,INTERNO,10
+A13,1.3.5,"Pátio de manobras, acessos e pavimentação externa",Estrutura e edificação,PATIO,m²,8000.0,0.726,ESFORCO,,PROPRIA,,Jair Bispo,EXTERNO,8
+A14,1.3.6,"Áreas de apoio: alvenaria e estrutura (escritório, vestiários, refeitório)",Estrutura e edificação,APOIO,m²,1530.0,2.09,ESFORCO,,PROPRIA,,Osvaldo Lins,EXTERNO,6
+A15,1.3.7,Áreas de apoio: revestimentos e acabamentos,Estrutura e edificação,APOIO,m²,2450.0,1.32,ESFORCO,,PROPRIA,,Osvaldo Lins,INTERNO,8
+A16,1.3.8,Pintura geral e demarcação de piso,Estrutura e edificação,GALPAO,m²,8010.0,0.44,ESFORCO,,PROPRIA,,Osvaldo Lins,INTERNO,7
+A17,1.4.1,"Subestação, transformadores e painéis principais",Instalações prediais e utilidades,UTIL,painéis,6.0,132.0,ESFORCO,,PROPRIA,,Tereza Maia,INTERNO,3
+A18,1.4.2,Infraestrutura elétrica e iluminação,Instalações prediais e utilidades,GALPAO,m,2250.0,1.87,ESFORCO,,PROPRIA,,Tereza Maia,INTERNO,7
+A19,1.4.3,Instalações hidrossanitárias e drenagem predial,Instalações prediais e utilidades,GALPAO,m,540.0,1.98,ESFORCO,,PROPRIA,,Tereza Maia,INTERNO,3
+A20,1.4.4,"Sistema de combate a incêndio (sprinklers, hidrantes e bombas)",Instalações prediais e utilidades,GALPAO,pontos,820.0,4.18,ESFORCO,,EMPREITADA,151.32,Tereza Maia,INTERNO,6
+A21,1.4.5,Utilidades: central de frio e água tratada,Instalações prediais e utilidades,UTIL,m,630.0,3.08,ESFORCO,,PROPRIA,,Tereza Maia,INTERNO,5
+A22,1.4.6,"Rede lógica, CFTV e controle de acesso",Instalações prediais e utilidades,GALPAO,pontos,200.0,4.84,ESFORCO,,PROPRIA,,Tereza Maia,INTERNO,4
+A23,1.5.1,Painéis isotérmicos das câmaras,Equipamentos de processo,CAM,m²,6400.0,1.21,ESFORCO,,EMPREITADA,43.07,Hélio Prado,INTERNO,10
+A24,1.5.2,Portas frigoríficas e docas seladas,Equipamentos de processo,EXP,un,22.0,48.4,ESFORCO,,PROPRIA,,Hélio Prado,INTERNO,3
+A25,1.5.3,Compressores e condensadores,Equipamentos de processo,UTIL,un,9.0,286.0,ESFORCO,,PROPRIA,,Hélio Prado,EXTERNO,4
+A26,1.5.4,Tubulação frigorífica e isolamento,Equipamentos de processo,CAM,m,2600.0,3.74,ESFORCO,,PROPRIA,,Hélio Prado,INTERNO,12
+A27,1.5.5,Evaporadores e túneis de ar forçado,Equipamentos de processo,RES,un,16.0,96.8,ESFORCO,,PROPRIA,,Hélio Prado,INTERNO,3
+A28,1.5.6,Tanques de tratamento hidrotérmico,Equipamentos de processo,HID,un,4.0,330.0,ESFORCO,,PROPRIA,,Hélio Prado,INTERNO,3
+A29,1.5.7,Linha de seleção e calibração óptica,Equipamentos de processo,SEL,m,180.0,14.3,ESFORCO,,PROPRIA,,Hélio Prado,INTERNO,4
+A30,1.5.8,Linha de embalagem e paletização,Equipamentos de processo,EMB,un,28.0,35.2,ESFORCO,,PROPRIA,,Hélio Prado,INTERNO,3
+A31,1.5.9,"Automação, sensores e supervisório",Equipamentos de processo,CAM,pontos,900.0,2.42,ESFORCO,,PROPRIA,,Dalva Rocha,INTERNO,4
+A32,1.6.1,Implantação e parametrização do WMS frigorificado com rastreabilidade de lotes,Sistemas e pessoas,,%,100.0,,FIXA,45.0,CONTRATADA,,,INTERNO,0
+A33,1.6.2,Recrutamento e seleção da equipe operacional,Sistemas e pessoas,,%,100.0,,FIXA,30.0,CONTRATADA,,,INTERNO,0
+A34,1.6.3,Treinamento operacional,Sistemas e pessoas,,%,100.0,,FIXA,15.0,CONTRATADA,,,INTERNO,0
+A35,1.7.1,Comissionamento a frio,Comissionamento e partida,GALPAO,sistemas,28.0,35.2,ESFORCO,,PROPRIA,,Dalva Rocha,INTERNO,3
+A36,1.7.2,Testes integrados com carga,Comissionamento e partida,GALPAO,cenários,30.0,44.0,ESFORCO,,PROPRIA,,Dalva Rocha,INTERNO,3
+A37,1.7.3,"Vistorias, AVCB e licença de operação",Comissionamento e partida,,%,100.0,,FIXA,15.0,CONTRATADA,,,INTERNO,0
+A38,1.7.4,Partida assistida (ramp-up),Comissionamento e partida,GALPAO,%,100.0,,FIXA,20.0,CONTRATADA,,,INTERNO,0
+A39,1.7.5,Desmobilização do canteiro,Comissionamento e partida,CANTEIRO,m²,420.0,1.76,ESFORCO,,PROPRIA,,Osvaldo Lins,EXTERNO,3

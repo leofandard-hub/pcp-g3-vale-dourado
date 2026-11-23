@@ -1,0 +1,18 @@
+id_equipamento,tipo_equipamento,descricao,locadora,ano_fabricacao,diaria_orcada_rs,diaria_contratada_rs,valor_compra_novo_rs,custo_manutencao_mensal_proprio_rs,vida_util_anos,intervalo_preventiva_h
+ALI-01,ALI,Alisadora de piso dupla,LocaBahia Equipamentos,2016,210.0,208.33,68000.0,900.0,8,200
+ALI-02,ALI,Alisadora de piso dupla,LocaBahia Equipamentos,2024,210.0,219.34,68000.0,900.0,8,200
+BET-01,BET,Bomba de concreto lança,Nordeste Rental,2019,1900.0,1851.54,1250000.0,11500.0,10,200
+CAM-01,CAM,Caminhão basculante 12 m³,LocaBahia Equipamentos,2024,690.0,724.23,520000.0,4900.0,10,200
+CAM-02,CAM,Caminhão basculante 12 m³,Guindastes São Francisco,2020,690.0,721.96,520000.0,4900.0,10,200
+CAM-03,CAM,Caminhão basculante 12 m³,Nordeste Rental,2020,690.0,716.36,520000.0,4900.0,10,200
+ESC-01,ESC,Escavadeira hidráulica 20 t,LocaBahia Equipamentos,2015,1450.0,1431.72,780000.0,9800.0,10,200
+GUI-01,GUI,Guindaste telescópico 70 t,Nordeste Rental,2023,4200.0,4310.04,3400000.0,21000.0,10,200
+MUN-01,MUN,Caminhão munck 15 t,LocaBahia Equipamentos,2022,980.0,998.6,690000.0,6100.0,10,200
+PTA-01,PTA,Plataforma elevatória (PTA) 16 m,Nordeste Rental,2020,390.0,403.1,310000.0,2600.0,8,200
+PTA-02,PTA,Plataforma elevatória (PTA) 16 m,Nordeste Rental,2015,390.0,413.82,310000.0,2600.0,8,200
+PTA-03,PTA,Plataforma elevatória (PTA) 16 m,Guindastes São Francisco,2017,390.0,397.51,310000.0,2600.0,8,200
+PTA-04,PTA,Plataforma elevatória (PTA) 16 m,Nordeste Rental,2024,390.0,419.88,310000.0,2600.0,8,200
+PTA-05,PTA,Plataforma elevatória (PTA) 16 m,LocaBahia Equipamentos,2020,390.0,391.91,310000.0,2600.0,8,200
+PTA-06,PTA,Plataforma elevatória (PTA) 16 m,LocaBahia Equipamentos,2023,390.0,381.55,310000.0,2600.0,8,200
+RET-01,RET,Retroescavadeira,Guindastes São Francisco,2021,780.0,807.74,420000.0,5200.0,10,200
+ROL-01,ROL,Rolo compactador,LocaBahia Equipamentos,2022,720.0,703.17,460000.0,4300.0,10,200

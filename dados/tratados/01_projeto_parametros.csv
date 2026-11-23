@@ -1,0 +1,26 @@
+parametro,valor,unidade,descricao
+empresa,Vale Dourado Frutas,texto,Nome fictício da empresa do estudo de caso.
+empreendimento,Packing house de manga com câmaras frias para exportação,texto,Nome do empreendimento.
+cidade,Juazeiro,texto,Município da nova unidade.
+data_inicio_projeto,2026-02-16,data,Primeiro dia útil do projeto (dia útil 1).
+data_corte_historico,2026-11-06,data,Último dia coberto pelos arquivos CSV.
+data_status,2026-11-13,data,"Data de status do trabalho: fim da semana de campo, que o grupo lança no sistema."
+data_contratual_entrega,2027-03-23,data,Data de conclusão prevista em contrato com o cliente interno/investidor.
+orcamento_custo_direto_rs,28116171.71,R$,Soma do orçamento da linha de base (tabela 12).
+administracao_local_orcada_mes_rs,146000.0,R$/mês,"Custo indireto mensal orçado (equipe de gestão, canteiro, consumos)."
+bdi_pct,22.0,%,Benefícios e Despesas Indiretas aplicados sobre o custo para formar o preço de venda.
+preco_venda_contrato_rs,36600000.0,R$,Preço de venda do contrato de implantação.
+multa_atraso_dia_rs,18300.0,R$/dia útil,Multa contratual por dia útil de atraso em relação à data contratual.
+ganho_operacional_dia_rs,30900.0,R$/dia útil,Margem de contribuição que a nova unidade gera por dia útil em operação.
+jornada_h_dia,8,h,Jornada normal por dia útil.
+limite_hora_extra_dia_h,2,h,Máximo de horas extras por pessoa por dia.
+adicional_hora_extra_pct,60,%,Acréscimo de custo da hora extra com reflexos.
+efetivo_maximo_canteiro,130,pessoas,Máximo de trabalhadores simultâneos que as áreas de vivência do canteiro comportam (NR-18).
+meta_ppc_pct,80,%,Meta de PPC da empresa.
+sistema_operacional,WMS frigorificado com rastreabilidade de lotes,texto,Sistema de gestão que será implantado na nova unidade.
+unidade_produto,caixas,texto,Unidade de volume da operação.
+demanda_alvo_dia,42000,unidade_produto/dia,Demanda de projeto que a nova unidade deve atender no pico.
+turnos_nova_unidade,2,turnos/dia,Número de turnos previsto.
+horas_por_turno,8,h,Duração de cada turno.
+paradas_planejadas_pct,10,%,Parcela do turno reservada a paradas planejadas; desconte do tempo disponível ao calcular o takt.
+capacidade_site_atual_mes,551200.0,unidade_produto/mês,Capacidade nominal mensal do site atual da empresa.

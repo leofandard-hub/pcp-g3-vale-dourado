@@ -1,0 +1,15 @@
+id_zona,nome_zona,tipo_zona,id_zona_pai,x_m,y_m,largura_x_m,comprimento_y_m,altura_m
+TERRENO,Terreno do empreendimento,TERRENO,,0.0,0.0,205.0,174.7,0.0
+GALPAO,Edificação principal (envoltória),EDIFICACAO,TERRENO,40.0,84.7,120.0,75.0,9.0
+PATIO,Pátio de manobras e acessos,PATIO,TERRENO,40.0,10.0,120.0,66.7,0.2
+DOCAS,Plataforma de docas,PATIO,TERRENO,40.0,76.7,120.0,8.0,1.2
+APOIO,"Áreas de apoio (escritório, vestiários, refeitório)",APOIO,TERRENO,170.0,84.7,22.0,40.0,7.0
+UTIL,Central de utilidades e subestação,UTILIDADES,TERRENO,170.0,132.7,22.0,26.0,6.0
+CANTEIRO,Canteiro de obras (provisório),CANTEIRO,TERRENO,5.0,84.7,30.0,40.0,3.0
+REC,Recepção e lavagem,PROCESSO,GALPAO,40.0,84.7,31.0,37.5,7.2
+SEL,Seleção e classificação,PROCESSO,GALPAO,71.0,84.7,34.8,37.5,7.2
+HID,Tratamento hidrotérmico,PROCESSO,GALPAO,105.8,84.7,23.2,37.5,7.2
+EMB,Embalagem,PROCESSO,GALPAO,129.0,84.7,31.0,37.5,7.2
+EXP,Expedição refrigerada,PROCESSO,GALPAO,40.0,122.2,25.3,37.5,7.2
+CAM,Câmaras frias,PROCESSO,GALPAO,65.3,122.2,56.8,37.5,7.2
+RES,Pré-resfriamento (túneis),PROCESSO,GALPAO,122.1,122.2,37.9,37.5,7.2

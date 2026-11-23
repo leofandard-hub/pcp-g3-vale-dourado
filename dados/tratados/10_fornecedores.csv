@@ -1,0 +1,11 @@
+id_fornecedor,nome_fornecedor,cidade,distancia_km,categorias_atendidas
+F01,Concreteira Recôncavo,Simões Filho,25.0,CIVIL
+F02,Aços Bahia Distribuição,Salvador,40.0,CIVIL
+F03,Britas e Agregados Santa Luz,Feira de Santana,110.0,CIVIL
+F04,Metalúrgica Paraguaçu,Cachoeira,120.0,ESTRUTURA
+F05,Coberturas Nordeste,Recife,800.0,ESTRUTURA
+F06,Elétrica Dois de Julho,Salvador,40.0,ELETRICA; TI
+F07,Hidrotec Incêndio e Utilidades,Lauro de Freitas,30.0,HIDRAULICA; INCENDIO; UTILIDADES
+F08,Acabamentos Itapuã,Salvador,40.0,ACABAMENTO
+F10,Sistemas Industriais Vale do Aço,Belo Horizonte,1370.0,PROCESSO
+F12,Distribuidora Preço Bom Materiais,Aracaju,330.0,CIVIL; ACABAMENTO; ELETRICA; HIDRAULICA

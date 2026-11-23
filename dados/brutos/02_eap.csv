@@ -1,0 +1,49 @@
+codigo_eap,nivel,codigo_eap_pai,descricao,tipo_item
+1,1,,Packing house de manga com câmaras frias para exportação,PROJETO
+1.1,2,1,Projetos e licenças,FASE
+1.1.1,3,1.1,Projeto executivo civil e estrutural,PACOTE
+1.1.2,3,1.1,Projeto de instalações e utilidades,PACOTE
+1.1.3,3,1.1,Licenciamento ambiental e alvará de construção,PACOTE
+1.1.4,3,1.1,Especificação técnica e compra dos equipamentos de processo,PACOTE
+1.1.5,3,1.1,Fabricação dos equipamentos de processo (acompanhamento do fornecedor),PACOTE
+1.2,2,1,Canteiro e infraestrutura,FASE
+1.2.1,3,1.2,Mobilização e instalação do canteiro,PACOTE
+1.2.2,3,1.2,Terraplenagem e drenagem,PACOTE
+1.2.3,3,1.2,"Fundações (blocos, sapatas e vigas baldrame)",PACOTE
+1.3,2,1,Estrutura e edificação,FASE
+1.3.1,3,1.3,Montagem da estrutura metálica,PACOTE
+1.3.2,3,1.3,Cobertura em telha termoacústica,PACOTE
+1.3.3,3,1.3,Fechamento lateral,PACOTE
+1.3.4,3,1.3,Piso industrial de concreto,PACOTE
+1.3.5,3,1.3,"Pátio de manobras, acessos e pavimentação externa",PACOTE
+1.3.6,3,1.3,"Áreas de apoio: alvenaria e estrutura (escritório, vestiários, refeitório)",PACOTE
+1.3.7,3,1.3,Áreas de apoio: revestimentos e acabamentos,PACOTE
+1.3.8,3,1.3,Pintura geral e demarcação de piso,PACOTE
+1.4,2,1,Instalações prediais e utilidades,FASE
+1.4.1,3,1.4,"Subestação, transformadores e painéis principais",PACOTE
+1.4.2,3,1.4,Infraestrutura elétrica e iluminação,PACOTE
+1.4.3,3,1.4,Instalações hidrossanitárias e drenagem predial,PACOTE
+1.4.4,3,1.4,"Sistema de combate a incêndio (sprinklers, hidrantes e bombas)",PACOTE
+1.4.5,3,1.4,Utilidades: central de frio e água tratada,PACOTE
+1.4.6,3,1.4,"Rede lógica, CFTV e controle de acesso",PACOTE
+1.5,2,1,Equipamentos de processo,FASE
+1.5.1,3,1.5,Painéis isotérmicos das câmaras,PACOTE
+1.5.2,3,1.5,Portas frigoríficas e docas seladas,PACOTE
+1.5.3,3,1.5,Compressores e condensadores,PACOTE
+1.5.4,3,1.5,Tubulação frigorífica e isolamento,PACOTE
+1.5.5,3,1.5,Evaporadores e túneis de ar forçado,PACOTE
+1.5.6,3,1.5,Tanques de tratamento hidrotérmico,PACOTE
+1.5.7,3,1.5,Linha de seleção e calibração óptica,PACOTE
+1.5.8,3,1.5,Linha de embalagem e paletização,PACOTE
+1.5.9,3,1.5,"Automação, sensores e supervisório",PACOTE
+1.6,2,1,Sistemas e pessoas,FASE
+1.6.1,3,1.6,Implantação e parametrização do WMS frigorificado com rastreabilidade de lotes,PACOTE
+1.6.2,3,1.6,Recrutamento e seleção da equipe operacional,PACOTE
+1.6.3,3,1.6,Treinamento operacional,PACOTE
+1.7,2,1,Comissionamento e partida,FASE
+1.7.1,3,1.7,Comissionamento a frio,PACOTE
+1.7.2,3,1.7,Testes integrados com carga,PACOTE
+1.7.3,3,1.7,"Vistorias, AVCB e licença de operação",PACOTE
+1.7.4,3,1.7,Partida assistida (ramp-up),PACOTE
+1.7.5,3,1.7,Desmobilização do canteiro,PACOTE
+1.9,2,1,Administração local (custo indireto),INDIRETO

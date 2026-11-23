@@ -1,0 +1,8 @@
+id_posto,sequencia,nome_posto,id_zona,tempo_ciclo_padrao_s,recursos_site_atual,recursos_projeto,operadores_por_recurso,disponibilidade_prevista,eficiencia_prevista,qualidade_prevista,investimento_por_recurso_rs
+PT01,1,Recepção e lavagem,REC,1.99,1,2,5.0,0.93,0.9,0.975,310000.0
+PT02,2,Seleção e calibração óptica,SEL,0.645,1,1,6.0,0.9,0.88,0.96,8280000.0
+PT03,3,Tratamento hidrotérmico,HID,5.6,4,4,2.0,0.92,0.95,0.985,520000.0
+PT04,4,Embalagem manual,EMB,18.5,13,28,1.0,0.95,0.84,0.99,38000.0
+PT05,5,Paletização e cintamento,EMB,2.24,1,2,2.0,0.94,0.9,0.998,190000.0
+PT06,6,Pré-resfriamento,RES,11.0,6,16,0.5,0.93,0.96,0.995,88000.0
+PT07,7,Expedição refrigerada,EXP,1.5,1,2,3.0,0.95,0.9,0.998,240000.0

@@ -1,0 +1,13 @@
+funcao,nome_funcao,custo_hora_rs,adicional_hora_extra_pct
+ARM,Armador,28.5,60
+CAR,Carpinteiro,28.0,60
+ELE,Eletricista industrial,36.0,60
+ENC,Encanador industrial,33.5,60
+MEC,Mecânico montador,41.0,60
+MON,Montador de estruturas,34.0,60
+OPE,Operador de equipamento,31.0,60
+PED,Pedreiro,27.0,60
+PIN,Pintor,26.0,60
+SER,Servente,18.5,60
+SOL,Soldador,38.5,60
+TEC,Técnico de automação,58.0,60

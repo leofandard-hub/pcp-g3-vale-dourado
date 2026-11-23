@@ -1,0 +1,431 @@
+id_lancamento,data,codigo_eap,id_atividade,categoria,valor_rs,documento,fornecedor,descricao
+L00001,2026-02-20,1.1.1,A01,SUBCONTRATO,38961.92,MED-A01-2026-S08,Contratada,Medição de serviço contratado: Projeto executivo civil e estrutural
+L00002,2026-02-20,1.1.3,A03,SUBCONTRATO,8342.97,MED-A03-2026-S08,Contratada,Medição de serviço contratado: Licenciamento ambiental e alvará de construção
+L00003,2026-02-20,1.9,,INDIRETO,21701.68,ADM-2026-S08,,"Administração local (equipe de gestão, canteiro, consumos)"
+L00004,2026-02-27,1.1.1,A01,SUBCONTRATO,64936.53,MED-A01-2026-S09,Contratada,Medição de serviço contratado: Projeto executivo civil e estrutural
+L00005,2026-02-27,1.1.2,A02,SUBCONTRATO,24372.04,MED-A02-2026-S09,Contratada,Medição de serviço contratado: Projeto de instalações e utilidades
+L00006,2026-02-27,1.1.3,A03,SUBCONTRATO,13904.95,MED-A03-2026-S09,Contratada,Medição de serviço contratado: Licenciamento ambiental e alvará de construção
+L00007,2026-02-27,1.1.4,A04,SUBCONTRATO,29177.2,MED-A04-2026-S09,Contratada,Medição de serviço contratado: Especificação técnica e compra dos equipamentos de processo
+L00008,2026-02-27,1.9,,INDIRETO,35875.93,ADM-2026-S09,,"Administração local (equipe de gestão, canteiro, consumos)"
+L00009,2026-03-04,1.2.1,A06,EQUIPAMENTO,2496.5,MOB-MUN-01-260304,LocaBahia Equipamentos,Mobilização MUN-01
+L00010,2026-03-06,1.1.1,A01,SUBCONTRATO,64936.53,MED-A01-2026-S10,Contratada,Medição de serviço contratado: Projeto executivo civil e estrutural
+L00011,2026-03-06,1.1.2,A02,SUBCONTRATO,40620.07,MED-A02-2026-S10,Contratada,Medição de serviço contratado: Projeto de instalações e utilidades
+L00012,2026-03-06,1.1.3,A03,SUBCONTRATO,13904.95,MED-A03-2026-S10,Contratada,Medição de serviço contratado: Licenciamento ambiental e alvará de construção
+L00013,2026-03-06,1.1.4,A04,SUBCONTRATO,29177.2,MED-A04-2026-S10,Contratada,Medição de serviço contratado: Especificação técnica e compra dos equipamentos de processo
+L00014,2026-03-06,1.2.1,A06,MAO_DE_OBRA,7684.0,FOLHA-2026-S10,,Mão de obra própria: Mobilização e instalação do canteiro
+L00015,2026-03-06,1.2.1,A06,EQUIPAMENTO,2995.8,LOC-MUN-01-2026-S10,LocaBahia Equipamentos,Locação MUN-01 (3 diárias)
+L00016,2026-03-06,1.9,,INDIRETO,36521.34,ADM-2026-S10,,"Administração local (equipe de gestão, canteiro, consumos)"
+L00017,2026-03-13,1.1.1,A01,SUBCONTRATO,64936.53,MED-A01-2026-S11,Contratada,Medição de serviço contratado: Projeto executivo civil e estrutural
+L00018,2026-03-13,1.1.2,A02,SUBCONTRATO,40620.07,MED-A02-2026-S11,Contratada,Medição de serviço contratado: Projeto de instalações e utilidades
+L00019,2026-03-13,1.1.3,A03,SUBCONTRATO,13904.95,MED-A03-2026-S11,Contratada,Medição de serviço contratado: Licenciamento ambiental e alvará de construção
+L00020,2026-03-13,1.1.4,A04,SUBCONTRATO,29177.2,MED-A04-2026-S11,Contratada,Medição de serviço contratado: Especificação técnica e compra dos equipamentos de processo
+L00021,2026-03-13,1.2.1,A06,MAO_DE_OBRA,13140.0,FOLHA-2026-S11,,Mão de obra própria: Mobilização e instalação do canteiro
+L00022,2026-03-13,1.2.1,A06,EQUIPAMENTO,4993.0,LOC-MUN-01-2026-S11,LocaBahia Equipamentos,Locação MUN-01 (5 diárias)
+L00023,2026-03-13,1.9,,INDIRETO,36182.67,ADM-2026-S11,,"Administração local (equipe de gestão, canteiro, consumos)"
+L00024,2026-03-20,1.1.1,A01,SUBCONTRATO,38961.92,MED-A01-2026-S12,Contratada,Medição de serviço contratado: Projeto executivo civil e estrutural
+L00025,2026-03-20,1.1.2,A02,SUBCONTRATO,40620.07,MED-A02-2026-S12,Contratada,Medição de serviço contratado: Projeto de instalações e utilidades
+L00026,2026-03-20,1.1.3,A03,SUBCONTRATO,13904.95,MED-A03-2026-S12,Contratada,Medição de serviço contratado: Licenciamento ambiental e alvará de construção
+L00027,2026-03-20,1.1.4,A04,SUBCONTRATO,5835.44,MED-A04-2026-S12,Contratada,Medição de serviço contratado: Especificação técnica e compra dos equipamentos de processo
+L00028,2026-03-20,1.1.5,A05,SUBCONTRATO,1571.1,MED-A05-2026-S12,Contratada,Medição de serviço contratado: Fabricação dos equipamentos de processo (acompanhamento do fornecedor)
+L00029,2026-03-20,1.2.1,A06,MAO_DE_OBRA,12768.0,FOLHA-2026-S12,,Mão de obra própria: Mobilização e instalação do canteiro
+L00030,2026-03-20,1.2.1,A06,EQUIPAMENTO,4993.0,LOC-MUN-01-2026-S12,LocaBahia Equipamentos,Locação MUN-01 (5 diárias)
+L00031,2026-03-20,1.9,,INDIRETO,36360.55,ADM-2026-S12,,"Administração local (equipe de gestão, canteiro, consumos)"
+L00032,2026-03-27,1.1.2,A02,SUBCONTRATO,8124.01,MED-A02-2026-S13,Contratada,Medição de serviço contratado: Projeto de instalações e utilidades
+L00033,2026-03-27,1.1.3,A03,SUBCONTRATO,13904.95,MED-A03-2026-S13,Contratada,Medição de serviço contratado: Licenciamento ambiental e alvará de construção
+L00034,2026-03-27,1.1.5,A05,SUBCONTRATO,1963.87,MED-A05-2026-S13,Contratada,Medição de serviço contratado: Fabricação dos equipamentos de processo (acompanhamento do fornecedor)
+L00035,2026-03-27,1.2.1,A06,MAO_DE_OBRA,11747.6,FOLHA-2026-S13,,Mão de obra própria: Mobilização e instalação do canteiro
+L00036,2026-03-27,1.2.1,A06,EQUIPAMENTO,4993.0,LOC-MUN-01-2026-S13,LocaBahia Equipamentos,Locação MUN-01 (5 diárias)
+L00037,2026-03-27,1.9,,INDIRETO,36652.62,ADM-2026-S13,,"Administração local (equipe de gestão, canteiro, consumos)"
+L00038,2026-04-02,1.1.3,A03,SUBCONTRATO,11123.96,MED-A03-2026-S14,Contratada,Medição de serviço contratado: Licenciamento ambiental e alvará de construção
+L00039,2026-04-02,1.1.5,A05,SUBCONTRATO,1571.1,MED-A05-2026-S14,Contratada,Medição de serviço contratado: Fabricação dos equipamentos de processo (acompanhamento do fornecedor)
+L00040,2026-04-02,1.9,,INDIRETO,29371.74,ADM-2026-S14,,"Administração local (equipe de gestão, canteiro, consumos)"
+L00041,2026-04-10,1.1.3,A03,SUBCONTRATO,13904.95,MED-A03-2026-S15,Contratada,Medição de serviço contratado: Licenciamento ambiental e alvará de construção
+L00042,2026-04-10,1.1.5,A05,SUBCONTRATO,1963.87,MED-A05-2026-S15,Contratada,Medição de serviço contratado: Fabricação dos equipamentos de processo (acompanhamento do fornecedor)
+L00043,2026-04-10,1.9,,INDIRETO,35108.43,ADM-2026-S15,,"Administração local (equipe de gestão, canteiro, consumos)"
+L00044,2026-04-14,1.2.2,A07,EQUIPAMENTO,3579.3,MOB-ESC-01-260414,LocaBahia Equipamentos,Mobilização ESC-01
+L00045,2026-04-14,1.2.2,A07,EQUIPAMENTO,1810.58,MOB-CAM-01-260414,LocaBahia Equipamentos,Mobilização CAM-01
+L00046,2026-04-14,1.2.2,A07,EQUIPAMENTO,1804.9,MOB-CAM-02-260414,Guindastes São Francisco,Mobilização CAM-02
+L00047,2026-04-14,1.2.2,A07,EQUIPAMENTO,1790.9,MOB-CAM-03-260414,Nordeste Rental,Mobilização CAM-03
+L00048,2026-04-14,1.2.2,A07,EQUIPAMENTO,1757.92,MOB-ROL-01-260414,LocaBahia Equipamentos,Mobilização ROL-01
+L00049,2026-04-17,1.1.3,A03,SUBCONTRATO,2780.99,MED-A03-2026-S16,Contratada,Medição de serviço contratado: Licenciamento ambiental e alvará de construção
+L00050,2026-04-17,1.1.5,A05,SUBCONTRATO,1963.87,MED-A05-2026-S16,Contratada,Medição de serviço contratado: Fabricação dos equipamentos de processo (acompanhamento do fornecedor)
+L00051,2026-04-17,1.2.2,A07,EQUIPAMENTO,5726.88,LOC-ESC-01-2026-S16,LocaBahia Equipamentos,Locação ESC-01 (4 diárias)
+L00052,2026-04-17,1.2.2,A07,EQUIPAMENTO,2896.92,LOC-CAM-01-2026-S16,LocaBahia Equipamentos,Locação CAM-01 (4 diárias)
+L00053,2026-04-17,1.2.2,A07,EQUIPAMENTO,2887.84,LOC-CAM-02-2026-S16,Guindastes São Francisco,Locação CAM-02 (4 diárias)
+L00054,2026-04-17,1.2.2,A07,EQUIPAMENTO,2865.44,LOC-CAM-03-2026-S16,Nordeste Rental,Locação CAM-03 (4 diárias)
+L00055,2026-04-17,1.2.2,A07,EQUIPAMENTO,2812.68,LOC-ROL-01-2026-S16,LocaBahia Equipamentos,Locação ROL-01 (4 diárias)
+L00056,2026-04-17,1.9,,INDIRETO,34846.82,ADM-2026-S16,,"Administração local (equipe de gestão, canteiro, consumos)"
+L00057,2026-04-24,1.1.5,A05,SUBCONTRATO,1571.1,MED-A05-2026-S17,Contratada,Medição de serviço contratado: Fabricação dos equipamentos de processo (acompanhamento do fornecedor)
+L00058,2026-04-24,1.2.2,A07,MAO_DE_OBRA,11015.2,FOLHA-2026-S17,,Mão de obra própria: Terraplenagem e drenagem
+L00059,2026-04-24,1.2.2,A07,MATERIAL,12841.32,RM-A07-BRI-2026-S17,,Requisição de material: Brita graduada
+L00060,2026-04-24,1.2.2,A07,EQUIPAMENTO,5726.88,LOC-ESC-01-2026-S17,LocaBahia Equipamentos,Locação ESC-01 (4 diárias)
+L00061,2026-04-24,1.2.2,A07,EQUIPAMENTO,2896.92,LOC-CAM-01-2026-S17,LocaBahia Equipamentos,Locação CAM-01 (4 diárias)
+L00062,2026-04-24,1.2.2,A07,EQUIPAMENTO,2887.84,LOC-CAM-02-2026-S17,Guindastes São Francisco,Locação CAM-02 (4 diárias)
+L00063,2026-04-24,1.2.2,A07,EQUIPAMENTO,2865.44,LOC-CAM-03-2026-S17,Nordeste Rental,Locação CAM-03 (4 diárias)
+L00064,2026-04-24,1.2.2,A07,EQUIPAMENTO,2812.68,LOC-ROL-01-2026-S17,LocaBahia Equipamentos,Locação ROL-01 (4 diárias)
+L00065,2026-04-24,1.9,,INDIRETO,27427.87,ADM-2026-S17,,"Administração local (equipe de gestão, canteiro, consumos)"
+L00066,2026-04-30,1.1.5,A05,SUBCONTRATO,1571.1,MED-A05-2026-S18,Contratada,Medição de serviço contratado: Fabricação dos equipamentos de processo (acompanhamento do fornecedor)
+L00067,2026-04-30,1.2.2,A07,MAO_DE_OBRA,13994.4,FOLHA-2026-S18,,Mão de obra própria: Terraplenagem e drenagem
+L00068,2026-04-30,1.2.2,A07,MATERIAL,13935.87,RM-A07-BRI-2026-S18,,Requisição de material: Brita graduada
+L00069,2026-04-30,1.2.2,A07,EQUIPAMENTO,5726.88,LOC-ESC-01-2026-S18,LocaBahia Equipamentos,Locação ESC-01 (4 diárias)
+L00070,2026-04-30,1.2.2,A07,EQUIPAMENTO,2896.92,LOC-CAM-01-2026-S18,LocaBahia Equipamentos,Locação CAM-01 (4 diárias)
+L00071,2026-04-30,1.2.2,A07,EQUIPAMENTO,2887.84,LOC-CAM-02-2026-S18,Guindastes São Francisco,Locação CAM-02 (4 diárias)
+L00072,2026-04-30,1.2.2,A07,EQUIPAMENTO,2865.44,LOC-CAM-03-2026-S18,Nordeste Rental,Locação CAM-03 (4 diárias)
+L00073,2026-04-30,1.2.2,A07,EQUIPAMENTO,2812.68,LOC-ROL-01-2026-S18,LocaBahia Equipamentos,Locação ROL-01 (4 diárias)
+L00074,2026-04-30,1.9,,INDIRETO,28153.02,ADM-2026-S18,,"Administração local (equipe de gestão, canteiro, consumos)"
+L00075,2026-05-08,1.1.5,A05,SUBCONTRATO,1963.87,MED-A05-2026-S19,Contratada,Medição de serviço contratado: Fabricação dos equipamentos de processo (acompanhamento do fornecedor)
+L00076,2026-05-08,1.2.2,A07,MAO_DE_OBRA,17113.6,FOLHA-2026-S19,,Mão de obra própria: Terraplenagem e drenagem
+L00077,2026-05-08,1.2.2,A07,MATERIAL,20187.0,RM-A07-BRI-2026-S19,,Requisição de material: Brita graduada
+L00078,2026-05-08,1.2.2,A07,EQUIPAMENTO,7158.6,LOC-ESC-01-2026-S19,LocaBahia Equipamentos,Locação ESC-01 (5 diárias)
+L00079,2026-05-08,1.2.2,A07,EQUIPAMENTO,3621.15,LOC-CAM-01-2026-S19,LocaBahia Equipamentos,Locação CAM-01 (5 diárias)
+L00080,2026-05-08,DIVERSOS,,EQUIPAMENTO,3609.8,LOC-CAM-02-2026-S19,Guindastes São Francisco,Locação CAM-02 (5 diárias)
+L00081,2026-05-08,1.2.2,A07,EQUIPAMENTO,3581.8,LOC-CAM-03-2026-S19,Nordeste Rental,Locação CAM-03 (5 diárias)
+L00082,2026-05-08,1.2.2,A07,EQUIPAMENTO,3515.85,LOC-ROL-01-2026-S19,LocaBahia Equipamentos,Locação ROL-01 (5 diárias)
+L00083,2026-05-08,1.9,,INDIRETO,36849.74,ADM-2026-S19,,"Administração local (equipe de gestão, canteiro, consumos)"
+L00084,2026-05-15,1.1.5,A05,SUBCONTRATO,1963.87,MED-A05-2026-S20,Contratada,Medição de serviço contratado: Fabricação dos equipamentos de processo (acompanhamento do fornecedor)
+L00085,2026-05-15,1.2.2,A07,MAO_DE_OBRA,17248.0,FOLHA-2026-S20,,Mão de obra própria: Terraplenagem e drenagem
+L00086,2026-05-15,1.2.2,A07,MATERIAL,18603.54,RM-A07-BRI-2026-S20,,Requisição de material: Brita graduada
+L00087,2026-05-15,1.2.2,A07,EQUIPAMENTO,7158.6,LOC-ESC-01-2026-S20,LocaBahia Equipamentos,Locação ESC-01 (5 diárias)
+L00088,2026-05-15,1.2.2,A07,EQUIPAMENTO,3621.15,LOC-CAM-01-2026-S20,LocaBahia Equipamentos,Locação CAM-01 (5 diárias)
+L00089,2026-05-15,1.2.2,A07,EQUIPAMENTO,3609.8,LOC-CAM-02-2026-S20,Guindastes São Francisco,Locação CAM-02 (5 diárias)
+L00090,2026-05-15,1.2.2,A07,EQUIPAMENTO,3581.8,LOC-CAM-03-2026-S20,Nordeste Rental,Locação CAM-03 (5 diárias)
+L00091,2026-05-15,1.2.2,A07,EQUIPAMENTO,3515.85,LOC-ROL-01-2026-S20,LocaBahia Equipamentos,Locação ROL-01 (5 diárias)
+L00092,2026-05-15,1.9,,INDIRETO,36790.12,ADM-2026-S20,,"Administração local (equipe de gestão, canteiro, consumos)"
+L00093,2026-05-21,1.2.3,A08,EQUIPAMENTO,4628.85,MOB-BET-01-260521,Nordeste Rental,Mobilização BET-01
+L00094,2026-05-21,1.2.3,A08,EQUIPAMENTO,2019.35,MOB-RET-01-260521,Guindastes São Francisco,Mobilização RET-01
+L00095,2026-05-22,1.1.5,A05,SUBCONTRATO,1963.87,MED-A05-2026-S21,Contratada,Medição de serviço contratado: Fabricação dos equipamentos de processo (acompanhamento do fornecedor)
+L00096,2026-05-22,1.2.2,A07,MAO_DE_OBRA,5737.45,FOLHA-2026-S21,,Mão de obra própria: Terraplenagem e drenagem
+L00097,2026-05-22,1.2.3,A08,MAO_DE_OBRA,18793.6,FOLHA-2026-S21,,"Mão de obra própria: Fundações (blocos, sapatas e vigas baldrame)"
+L00098,2026-05-22,1.2.2,A07,MATERIAL,7871.43,RM-A07-BRI-2026-S21,,Requisição de material: Brita graduada
+L00099,2026-05-22,1.2.3,A08,MATERIAL,9932.39,RM-A08-CON-2026-S21,,Requisição de material: Concreto usinado fck 30 MPa
+L00100,2026-05-22,1.2.3,A08,MATERIAL,11850.9,RM-A08-ACO-2026-S21,,Requisição de material: Aço CA-50 cortado e dobrado
+L00101,2026-05-22,1.2.3,A08,MATERIAL,3078.59,RM-A08-FOR-2026-S21,,Requisição de material: Fôrma de madeira compensada
+L00102,2026-05-22,1.2.2,A07,EQUIPAMENTO,4295.16,LOC-ESC-01-2026-S21,LocaBahia Equipamentos,Locação ESC-01 (3 diárias)
+L00103,2026-05-22,1.2.2,A07,EQUIPAMENTO,2172.69,LOC-CAM-01-2026-S21,LocaBahia Equipamentos,Locação CAM-01 (3 diárias)
+L00104,2026-05-22,1.2.2,A07,EQUIPAMENTO,2165.88,LOC-CAM-02-2026-S21,Guindastes São Francisco,Locação CAM-02 (3 diárias)
+L00105,2026-05-22,DIVERSOS,,EQUIPAMENTO,2149.08,LOC-CAM-03-2026-S21,Nordeste Rental,Locação CAM-03 (3 diárias)
+L00106,2026-05-22,1.2.2,A07,EQUIPAMENTO,2109.51,LOC-ROL-01-2026-S21,LocaBahia Equipamentos,Locação ROL-01 (3 diárias)
+L00107,2026-05-22,1.2.3,A08,EQUIPAMENTO,3703.08,LOC-BET-01-2026-S21,Nordeste Rental,Locação BET-01 (2 diárias)
+L00108,2026-05-22,1.2.3,A08,EQUIPAMENTO,1615.48,LOC-RET-01-2026-S21,Guindastes São Francisco,Locação RET-01 (2 diárias)
+L00109,2026-05-22,1.9,,INDIRETO,36291.23,ADM-2026-S21,,"Administração local (equipe de gestão, canteiro, consumos)"
+L00110,2026-05-29,1.1.5,A05,SUBCONTRATO,1963.87,MED-A05-2026-S22,Contratada,Medição de serviço contratado: Fabricação dos equipamentos de processo (acompanhamento do fornecedor)
+L00111,2026-05-29,DIVERSOS,,MAO_DE_OBRA,46726.4,FOLHA-2026-S22,,"Mão de obra própria: Fundações (blocos, sapatas e vigas baldrame)"
+L00112,2026-05-29,1.2.3,A08,MATERIAL,33937.22,RM-A08-CON-2026-S22,,Requisição de material: Concreto usinado fck 30 MPa
+L00113,2026-05-29,1.2.3,A08,MATERIAL,40581.83,RM-A08-ACO-2026-S22,,Requisição de material: Aço CA-50 cortado e dobrado
+L00114,2026-05-29,1.2.3,A08,MATERIAL,10577.15,RM-A08-FOR-2026-S22,,Requisição de material: Fôrma de madeira compensada
+L00115,2026-05-29,1.2.3,A08,EQUIPAMENTO,9257.7,LOC-BET-01-2026-S22,Nordeste Rental,Locação BET-01 (5 diárias)
+L00116,2026-05-29,DIVERSOS,,EQUIPAMENTO,4038.7,LOC-RET-01-2026-S22,Guindastes São Francisco,Locação RET-01 (5 diárias)
+L00117,2026-05-29,1.9,,INDIRETO,36874.74,ADM-2026-S22,,"Administração local (equipe de gestão, canteiro, consumos)"
+L00118,2026-06-05,1.1.5,A05,SUBCONTRATO,1571.1,MED-A05-2026-S23,Contratada,Medição de serviço contratado: Fabricação dos equipamentos de processo (acompanhamento do fornecedor)
+L00119,2026-06-05,1.2.3,A08,MAO_DE_OBRA,38024.0,FOLHA-2026-S23,,"Mão de obra própria: Fundações (blocos, sapatas e vigas baldrame)"
+L00120,2026-06-05,1.2.3,A08,MATERIAL,26308.39,RM-A08-CON-2026-S23,,Requisição de material: Concreto usinado fck 30 MPa
+L00121,2026-06-05,1.2.3,A08,MATERIAL,31166.84,RM-A08-ACO-2026-S23,,Requisição de material: Aço CA-50 cortado e dobrado
+L00122,2026-06-05,1.2.3,A08,MATERIAL,8152.8,RM-A08-FOR-2026-S23,,Requisição de material: Fôrma de madeira compensada
+L00123,2026-06-05,1.2.3,A08,EQUIPAMENTO,7406.16,LOC-BET-01-2026-S23,Nordeste Rental,Locação BET-01 (4 diárias)
+L00124,2026-06-05,1.2.3,A08,EQUIPAMENTO,3230.96,LOC-RET-01-2026-S23,Guindastes São Francisco,Locação RET-01 (4 diárias)
+L00125,2026-06-05,1.9,,INDIRETO,27546.79,ADM-2026-S23,,"Administração local (equipe de gestão, canteiro, consumos)"
+L00126,2026-06-12,1.1.5,A05,SUBCONTRATO,1963.87,MED-A05-2026-S24,Contratada,Medição de serviço contratado: Fabricação dos equipamentos de processo (acompanhamento do fornecedor)
+L00127,2026-06-12,1.2.3,A08,MAO_DE_OBRA,48563.2,FOLHA-2026-S24,,"Mão de obra própria: Fundações (blocos, sapatas e vigas baldrame)"
+L00128,2026-06-12,1.2.3,A08,MATERIAL,36179.42,RM-A08-CON-2026-S24,,Requisição de material: Concreto usinado fck 30 MPa
+L00129,2026-06-12,1.2.3,A08,MATERIAL,42919.37,RM-A08-ACO-2026-S24,,Requisição de material: Aço CA-50 cortado e dobrado
+L00130,2026-06-12,1.2.3,A08,MATERIAL,11204.6,RM-A08-FOR-2026-S24,,Requisição de material: Fôrma de madeira compensada
+L00131,2026-06-12,1.2.3,A08,EQUIPAMENTO,9257.7,LOC-BET-01-2026-S24,Nordeste Rental,Locação BET-01 (5 diárias)
+L00132,2026-06-12,1.2.3,A08,EQUIPAMENTO,4038.7,LOC-RET-01-2026-S24,Guindastes São Francisco,Locação RET-01 (5 diárias)
+L00133,2026-06-12,1.9,,INDIRETO,35195.89,ADM-2026-S24,,"Administração local (equipe de gestão, canteiro, consumos)"
+L00134,2026-06-19,1.1.5,A05,SUBCONTRATO,1963.87,MED-A05-2026-S25,Contratada,Medição de serviço contratado: Fabricação dos equipamentos de processo (acompanhamento do fornecedor)
+L00135,2026-06-19,1.2.3,A08,MAO_DE_OBRA,47566.4,FOLHA-2026-S25,,"Mão de obra própria: Fundações (blocos, sapatas e vigas baldrame)"
+L00136,2026-06-19,1.6.1,A32,SUBCONTRATO,191270.56,MED-A32-2026-S25,Contratada,Medição de serviço contratado: Implantação e parametrização do WMS frigorificado com rastreabilidade de lotes
+L00137,2026-06-19,1.2.3,A08,MATERIAL,26912.44,RM-A08-CON-2026-S25,,Requisição de material: Concreto usinado fck 30 MPa
+L00138,2026-06-19,1.2.3,A08,MATERIAL,31969.58,RM-A08-ACO-2026-S25,,Requisição de material: Aço CA-50 cortado e dobrado
+L00139,2026-06-19,1.2.3,A08,MATERIAL,8332.46,RM-A08-FOR-2026-S25,,Requisição de material: Fôrma de madeira compensada
+L00140,2026-06-19,1.2.3,A08,EQUIPAMENTO,9257.7,LOC-BET-01-2026-S25,Nordeste Rental,Locação BET-01 (5 diárias)
+L00141,2026-06-19,1.2.3,A08,EQUIPAMENTO,4038.7,LOC-RET-01-2026-S25,Guindastes São Francisco,Locação RET-01 (5 diárias)
+L00142,2026-06-19,1.9,,INDIRETO,35282.1,ADM-2026-S25,,"Administração local (equipe de gestão, canteiro, consumos)"
+L00143,2026-06-26,1.1.5,A05,SUBCONTRATO,1571.1,MED-A05-2026-S26,Contratada,Medição de serviço contratado: Fabricação dos equipamentos de processo (acompanhamento do fornecedor)
+L00144,2026-06-26,1.2.3,A08,MAO_DE_OBRA,37083.2,FOLHA-2026-S26,,"Mão de obra própria: Fundações (blocos, sapatas e vigas baldrame)"
+L00145,2026-06-26,1.6.1,A32,SUBCONTRATO,153016.45,MED-A32-2026-S26,Contratada,Medição de serviço contratado: Implantação e parametrização do WMS frigorificado com rastreabilidade de lotes
+L00146,2026-06-26,1.2.3,A08,MATERIAL,24219.08,RM-A08-CON-2026-S26,,Requisição de material: Concreto usinado fck 30 MPa
+L00147,2026-06-26,1.2.3,A08,MATERIAL,28770.12,RM-A08-ACO-2026-S26,,Requisição de material: Aço CA-50 cortado e dobrado
+L00148,2026-06-26,DIVERSOS,,MATERIAL,7498.56,RM-A08-FOR-2026-S26,,Requisição de material: Fôrma de madeira compensada
+L00149,2026-06-26,1.2.3,A08,EQUIPAMENTO,7406.16,LOC-BET-01-2026-S26,Nordeste Rental,Locação BET-01 (4 diárias)
+L00150,2026-06-26,1.2.3,A08,EQUIPAMENTO,3230.96,LOC-RET-01-2026-S26,Guindastes São Francisco,Locação RET-01 (4 diárias)
+L00151,2026-06-26,1.9,,INDIRETO,29439.32,ADM-2026-S26,,"Administração local (equipe de gestão, canteiro, consumos)"
+L00152,2026-07-03,1.1.5,A05,SUBCONTRATO,1571.1,MED-A05-2026-S27,Contratada,Medição de serviço contratado: Fabricação dos equipamentos de processo (acompanhamento do fornecedor)
+L00153,2026-07-03,1.2.3,A08,MAO_DE_OBRA,37923.2,FOLHA-2026-S27,,"Mão de obra própria: Fundações (blocos, sapatas e vigas baldrame)"
+L00154,2026-07-03,1.6.1,A32,SUBCONTRATO,153016.45,MED-A32-2026-S27,Contratada,Medição de serviço contratado: Implantação e parametrização do WMS frigorificado com rastreabilidade de lotes
+L00155,2026-07-03,1.2.3,A08,MATERIAL,30486.63,RM-A08-CON-2026-S27,,Requisição de material: Concreto usinado fck 30 MPa
+L00156,2026-07-03,1.2.3,A08,MATERIAL,36215.41,RM-A08-ACO-2026-S27,,Requisição de material: Aço CA-50 cortado e dobrado
+L00157,2026-07-03,DIVERSOS,,MATERIAL,9439.08,RM-A08-FOR-2026-S27,,Requisição de material: Fôrma de madeira compensada
+L00158,2026-07-03,DIVERSOS,,EQUIPAMENTO,7406.16,LOC-BET-01-2026-S27,Nordeste Rental,Locação BET-01 (4 diárias)
+L00159,2026-07-03,DIVERSOS,,EQUIPAMENTO,3230.96,LOC-RET-01-2026-S27,Guindastes São Francisco,Locação RET-01 (4 diárias)
+L00160,2026-07-03,1.9,,INDIRETO,28120.39,ADM-2026-S27,,"Administração local (equipe de gestão, canteiro, consumos)"
+L00161,2026-07-10,1.1.5,A05,SUBCONTRATO,1963.87,MED-A05-2026-S28,Contratada,Medição de serviço contratado: Fabricação dos equipamentos de processo (acompanhamento do fornecedor)
+L00162,2026-07-10,1.2.3,A08,MAO_DE_OBRA,36764.0,FOLHA-2026-S28,,"Mão de obra própria: Fundações (blocos, sapatas e vigas baldrame)"
+L00163,2026-07-10,1.6.1,A32,SUBCONTRATO,191270.56,MED-A32-2026-S28,Contratada,Medição de serviço contratado: Implantação e parametrização do WMS frigorificado com rastreabilidade de lotes
+L00164,2026-07-10,1.2.3,A08,MATERIAL,30893.75,RM-A08-CON-2026-S28,,Requisição de material: Concreto usinado fck 30 MPa
+L00165,2026-07-10,1.2.3,A08,MATERIAL,36699.03,RM-A08-ACO-2026-S28,,Requisição de material: Aço CA-50 cortado e dobrado
+L00166,2026-07-10,1.2.3,A08,MATERIAL,9565.13,RM-A08-FOR-2026-S28,,Requisição de material: Fôrma de madeira compensada
+L00167,2026-07-10,1.2.3,A08,EQUIPAMENTO,9257.7,LOC-BET-01-2026-S28,Nordeste Rental,Locação BET-01 (5 diárias)
+L00168,2026-07-10,1.2.3,A08,EQUIPAMENTO,4038.7,LOC-RET-01-2026-S28,Guindastes São Francisco,Locação RET-01 (5 diárias)
+L00169,2026-07-10,1.9,,INDIRETO,36124.25,ADM-2026-S28,,"Administração local (equipe de gestão, canteiro, consumos)"
+L00170,2026-07-17,1.1.5,A05,SUBCONTRATO,1963.87,MED-A05-2026-S29,Contratada,Medição de serviço contratado: Fabricação dos equipamentos de processo (acompanhamento do fornecedor)
+L00171,2026-07-17,1.2.3,A08,MAO_DE_OBRA,7935.6,FOLHA-2026-S29,,"Mão de obra própria: Fundações (blocos, sapatas e vigas baldrame)"
+L00172,2026-07-17,1.6.1,A32,SUBCONTRATO,191270.56,MED-A32-2026-S29,Contratada,Medição de serviço contratado: Implantação e parametrização do WMS frigorificado com rastreabilidade de lotes
+L00173,2026-07-17,1.2.3,A08,MATERIAL,4120.02,RM-A08-CON-2026-S29,,Requisição de material: Concreto usinado fck 30 MPa
+L00174,2026-07-17,1.2.3,A08,MATERIAL,4894.22,RM-A08-ACO-2026-S29,,Requisição de material: Aço CA-50 cortado e dobrado
+L00175,2026-07-17,1.2.3,A08,MATERIAL,1275.62,RM-A08-FOR-2026-S29,,Requisição de material: Fôrma de madeira compensada
+L00176,2026-07-17,1.2.3,A08,EQUIPAMENTO,3703.08,LOC-BET-01-2026-S29,Nordeste Rental,Locação BET-01 (2 diárias)
+L00177,2026-07-17,1.2.3,A08,EQUIPAMENTO,1615.48,LOC-RET-01-2026-S29,Guindastes São Francisco,Locação RET-01 (2 diárias)
+L00178,2026-07-17,1.9,,INDIRETO,35563.25,ADM-2026-S29,,"Administração local (equipe de gestão, canteiro, consumos)"
+L00179,2026-07-20,1.3.1,A09,EQUIPAMENTO,10775.1,MOB-GUI-01-260720,Nordeste Rental,Mobilização GUI-01
+L00180,2026-07-20,1.3.1,A09,EQUIPAMENTO,1007.75,MOB-PTA-01-260720,Nordeste Rental,Mobilização PTA-01
+L00181,2026-07-20,1.3.1,A09,EQUIPAMENTO,1034.55,MOB-PTA-02-260720,Nordeste Rental,Mobilização PTA-02
+L00182,2026-07-24,1.1.5,A05,SUBCONTRATO,1963.87,MED-A05-2026-S30,Contratada,Medição de serviço contratado: Fabricação dos equipamentos de processo (acompanhamento do fornecedor)
+L00183,2026-07-24,1.6.1,A32,SUBCONTRATO,191270.56,MED-A32-2026-S30,Contratada,Medição de serviço contratado: Implantação e parametrização do WMS frigorificado com rastreabilidade de lotes
+L00184,2026-07-24,1.3.1,A09,EQUIPAMENTO,21550.2,LOC-GUI-01-2026-S30,Nordeste Rental,Locação GUI-01 (5 diárias)
+L00185,2026-07-24,1.3.1,A09,EQUIPAMENTO,2015.5,LOC-PTA-01-2026-S30,Nordeste Rental,Locação PTA-01 (5 diárias)
+L00186,2026-07-24,1.3.1,A09,EQUIPAMENTO,2069.1,LOC-PTA-02-2026-S30,Nordeste Rental,Locação PTA-02 (5 diárias)
+L00187,2026-07-24,1.9,,INDIRETO,36931.19,ADM-2026-S30,,"Administração local (equipe de gestão, canteiro, consumos)"
+L00188,2026-07-31,1.1.5,A05,SUBCONTRATO,1963.87,MED-A05-2026-S31,Contratada,Medição de serviço contratado: Fabricação dos equipamentos de processo (acompanhamento do fornecedor)
+L00189,2026-07-31,1.3.1,A09,SUBCONTRATO,15151.84,MED-A09-2026-S31,Empreiteiro,Medição de empreitada: Montagem da estrutura metálica
+L00190,2026-07-31,1.6.1,A32,SUBCONTRATO,191270.56,MED-A32-2026-S31,Contratada,Medição de serviço contratado: Implantação e parametrização do WMS frigorificado com rastreabilidade de lotes
+L00191,2026-07-31,1.3.1,A09,MATERIAL,162211.8,RM-A09-EMT-2026-S31,,Requisição de material: Estrutura metálica fabricada
+L00192,2026-07-31,1.3.1,A09,EQUIPAMENTO,21550.2,LOC-GUI-01-2026-S31,Nordeste Rental,Locação GUI-01 (5 diárias)
+L00193,2026-07-31,1.3.1,A09,EQUIPAMENTO,2015.5,LOC-PTA-01-2026-S31,Nordeste Rental,Locação PTA-01 (5 diárias)
+L00194,2026-07-31,1.3.1,A09,EQUIPAMENTO,2069.1,LOC-PTA-02-2026-S31,Nordeste Rental,Locação PTA-02 (5 diárias)
+L00195,2026-07-31,1.9,,INDIRETO,36426.28,ADM-2026-S31,,"Administração local (equipe de gestão, canteiro, consumos)"
+L00196,2026-08-07,1.1.5,A05,SUBCONTRATO,1963.87,MED-A05-2026-S32,Contratada,Medição de serviço contratado: Fabricação dos equipamentos de processo (acompanhamento do fornecedor)
+L00197,2026-08-07,1.3.1,A09,SUBCONTRATO,37844.35,MED-A09-2026-S32,Empreiteiro,Medição de empreitada: Montagem da estrutura metálica
+L00198,2026-08-07,1.6.1,A32,SUBCONTRATO,191270.56,MED-A32-2026-S32,Contratada,Medição de serviço contratado: Implantação e parametrização do WMS frigorificado com rastreabilidade de lotes
+L00199,2026-08-07,1.3.1,A09,MATERIAL,373694.4,RM-A09-EMT-2026-S32,,Requisição de material: Estrutura metálica fabricada
+L00200,2026-08-07,1.3.1,A09,EQUIPAMENTO,21550.2,LOC-GUI-01-2026-S32,Nordeste Rental,Locação GUI-01 (5 diárias)
+L00201,2026-08-07,1.3.1,A09,EQUIPAMENTO,2015.5,LOC-PTA-01-2026-S32,Nordeste Rental,Locação PTA-01 (5 diárias)
+L00202,2026-08-07,1.3.1,A09,EQUIPAMENTO,2069.1,LOC-PTA-02-2026-S32,Nordeste Rental,Locação PTA-02 (5 diárias)
+L00203,2026-08-07,1.9,,INDIRETO,36169.55,ADM-2026-S32,,"Administração local (equipe de gestão, canteiro, consumos)"
+L00204,2026-08-14,1.1.5,A05,SUBCONTRATO,1963.87,MED-A05-2026-S33,Contratada,Medição de serviço contratado: Fabricação dos equipamentos de processo (acompanhamento do fornecedor)
+L00205,2026-08-14,1.3.1,A09,SUBCONTRATO,37620.89,MED-A09-2026-S33,Empreiteiro,Medição de empreitada: Montagem da estrutura metálica
+L00206,2026-08-14,1.6.1,A32,SUBCONTRATO,191270.56,MED-A32-2026-S33,Contratada,Medição de serviço contratado: Implantação e parametrização do WMS frigorificado com rastreabilidade de lotes
+L00207,2026-08-14,1.3.1,A09,MATERIAL,374298.35,RM-A09-EMT-2026-S33,,Requisição de material: Estrutura metálica fabricada
+L00208,2026-08-14,1.3.1,A09,EQUIPAMENTO,21550.2,LOC-GUI-01-2026-S33,Nordeste Rental,Locação GUI-01 (5 diárias)
+L00209,2026-08-14,1.3.1,A09,EQUIPAMENTO,2015.5,LOC-PTA-01-2026-S33,Nordeste Rental,Locação PTA-01 (5 diárias)
+L00210,2026-08-14,1.3.1,A09,EQUIPAMENTO,2069.1,LOC-PTA-02-2026-S33,Nordeste Rental,Locação PTA-02 (5 diárias)
+L00211,2026-08-14,1.9,,INDIRETO,35648.29,ADM-2026-S33,,"Administração local (equipe de gestão, canteiro, consumos)"
+L00212,2026-08-21,1.1.5,A05,SUBCONTRATO,785.55,MED-A05-2026-S34,Contratada,Medição de serviço contratado: Fabricação dos equipamentos de processo (acompanhamento do fornecedor)
+L00213,2026-08-21,1.3.1,A09,SUBCONTRATO,40462.88,MED-A09-2026-S34,Empreiteiro,Medição de empreitada: Montagem da estrutura metálica
+L00214,2026-08-21,1.3.6,A14,MAO_DE_OBRA,6176.0,FOLHA-2026-S34,,"Mão de obra própria: Áreas de apoio: alvenaria e estrutura (escritório, vestiários, refeitório)"
+L00215,2026-08-21,1.6.1,A32,SUBCONTRATO,76508.22,MED-A32-2026-S34,Contratada,Medição de serviço contratado: Implantação e parametrização do WMS frigorificado com rastreabilidade de lotes
+L00216,2026-08-21,1.3.1,A09,MATERIAL,402573.92,RM-A09-EMT-2026-S34,,Requisição de material: Estrutura metálica fabricada
+L00217,2026-08-21,1.3.6,A14,MATERIAL,6274.37,RM-A14-BLO-2026-S34,,Requisição de material: Bloco de concreto 14x19x39
+L00218,2026-08-21,DIVERSOS,,MATERIAL,1683.68,RM-A14-ARG-2026-S34,,Requisição de material: Argamassa industrializada
+L00219,2026-08-21,1.3.1,A09,EQUIPAMENTO,21550.2,LOC-GUI-01-2026-S34,Nordeste Rental,Locação GUI-01 (5 diárias)
+L00220,2026-08-21,1.3.1,A09,EQUIPAMENTO,2015.5,LOC-PTA-01-2026-S34,Nordeste Rental,Locação PTA-01 (5 diárias)
+L00221,2026-08-21,1.3.1,A09,EQUIPAMENTO,2069.1,LOC-PTA-02-2026-S34,Nordeste Rental,Locação PTA-02 (5 diárias)
+L00222,2026-08-21,1.9,,INDIRETO,36217.37,ADM-2026-S34,,"Administração local (equipe de gestão, canteiro, consumos)"
+L00223,2026-08-28,1.3.1,A09,SUBCONTRATO,45276.97,MED-A09-2026-S35,Empreiteiro,Medição de empreitada: Montagem da estrutura metálica
+L00224,2026-08-28,1.3.6,A14,MAO_DE_OBRA,15104.0,FOLHA-2026-S35,,"Mão de obra própria: Áreas de apoio: alvenaria e estrutura (escritório, vestiários, refeitório)"
+L00225,2026-08-28,1.3.1,A09,MATERIAL,450470.37,RM-A09-EMT-2026-S35,,Requisição de material: Estrutura metálica fabricada
+L00226,2026-08-28,1.3.6,A14,MATERIAL,13979.19,RM-A14-BLO-2026-S35,,Requisição de material: Bloco de concreto 14x19x39
+L00227,2026-08-28,1.3.6,A14,MATERIAL,3766.8,RM-A14-ARG-2026-S35,,Requisição de material: Argamassa industrializada
+L00228,2026-08-28,1.3.1,A09,EQUIPAMENTO,21550.2,LOC-GUI-01-2026-S35,Nordeste Rental,Locação GUI-01 (5 diárias)
+L00229,2026-08-28,1.3.1,A09,EQUIPAMENTO,2015.5,LOC-PTA-01-2026-S35,Nordeste Rental,Locação PTA-01 (5 diárias)
+L00230,2026-08-28,1.3.1,A09,EQUIPAMENTO,2069.1,LOC-PTA-02-2026-S35,Nordeste Rental,Locação PTA-02 (5 diárias)
+L00231,2026-08-28,1.9,,INDIRETO,35485.88,ADM-2026-S35,,"Administração local (equipe de gestão, canteiro, consumos)"
+L00232,2026-08-31,1.3.2,A10,EQUIPAMENTO,2496.5,MOB-MUN-01-260831,LocaBahia Equipamentos,Mobilização MUN-01
+L00233,2026-08-31,1.3.1,A09,EQUIPAMENTO,993.77,MOB-PTA-03-260831,Guindastes São Francisco,Mobilização PTA-03
+L00234,2026-08-31,1.3.1,A09,EQUIPAMENTO,1049.7,MOB-PTA-04-260831,Nordeste Rental,Mobilização PTA-04
+L00235,2026-09-04,1.3.1,A09,SUBCONTRATO,44710.45,MED-A09-2026-S36,Empreiteiro,Medição de empreitada: Montagem da estrutura metálica
+L00236,2026-09-04,1.3.6,A14,MAO_DE_OBRA,15104.0,FOLHA-2026-S36,,"Mão de obra própria: Áreas de apoio: alvenaria e estrutura (escritório, vestiários, refeitório)"
+L00237,2026-09-04,1.3.1,A09,MATERIAL,444833.94,RM-A09-EMT-2026-S36,,Requisição de material: Estrutura metálica fabricada
+L00238,2026-09-04,1.3.6,A14,MATERIAL,14611.14,RM-A14-BLO-2026-S36,,Requisição de material: Bloco de concreto 14x19x39
+L00239,2026-09-04,1.3.6,A14,MATERIAL,3937.08,RM-A14-ARG-2026-S36,,Requisição de material: Argamassa industrializada
+L00240,2026-09-04,1.3.2,A10,EQUIPAMENTO,4993.0,LOC-MUN-01-2026-S36,LocaBahia Equipamentos,Locação MUN-01 (5 diárias)
+L00241,2026-09-04,1.3.1,A09,EQUIPAMENTO,21550.2,LOC-GUI-01-2026-S36,Nordeste Rental,Locação GUI-01 (5 diárias)
+L00242,2026-09-04,1.3.1,A09,EQUIPAMENTO,2015.5,LOC-PTA-01-2026-S36,Nordeste Rental,Locação PTA-01 (5 diárias)
+L00243,2026-09-04,1.3.1,A09,EQUIPAMENTO,2069.1,LOC-PTA-02-2026-S36,Nordeste Rental,Locação PTA-02 (5 diárias)
+L00244,2026-09-04,1.3.1,A09,EQUIPAMENTO,1987.55,LOC-PTA-03-2026-S36,Guindastes São Francisco,Locação PTA-03 (5 diárias)
+L00245,2026-09-04,1.3.1,A09,EQUIPAMENTO,2099.4,LOC-PTA-04-2026-S36,Nordeste Rental,Locação PTA-04 (5 diárias)
+L00246,2026-09-04,1.9,,INDIRETO,36833.91,ADM-2026-S36,,"Administração local (equipe de gestão, canteiro, consumos)"
+L00247,2026-09-09,1.3.1,A09,EQUIPAMENTO,979.78,MOB-PTA-05-260909,LocaBahia Equipamentos,Mobilização PTA-05
+L00248,2026-09-09,1.3.1,A09,EQUIPAMENTO,953.88,MOB-PTA-06-260909,LocaBahia Equipamentos,Mobilização PTA-06
+L00249,2026-09-11,1.3.1,A09,SUBCONTRATO,36591.93,MED-A09-2026-S37,Empreiteiro,Medição de empreitada: Montagem da estrutura metálica
+L00250,2026-09-11,1.3.2,A10,SUBCONTRATO,15393.39,MED-A10-2026-S37,Empreiteiro,Medição de empreitada: Cobertura em telha termoacústica
+L00251,2026-09-11,1.3.6,A14,MAO_DE_OBRA,12420.0,FOLHA-2026-S37,,"Mão de obra própria: Áreas de apoio: alvenaria e estrutura (escritório, vestiários, refeitório)"
+L00252,2026-09-11,1.3.1,A09,MATERIAL,364060.98,RM-A09-EMT-2026-S37,,Requisição de material: Estrutura metálica fabricada
+L00253,2026-09-11,1.3.6,A14,MATERIAL,12477.84,RM-A14-BLO-2026-S37,,Requisição de material: Bloco de concreto 14x19x39
+L00254,2026-09-11,1.3.6,A14,MATERIAL,3344.35,RM-A14-ARG-2026-S37,,Requisição de material: Argamassa industrializada
+L00255,2026-09-11,1.3.2,A10,MATERIAL,129700.56,RM-A10-TLH-2026-S37,,Requisição de material: Telha termoacústica
+L00256,2026-09-11,1.3.2,A10,EQUIPAMENTO,3994.4,LOC-MUN-01-2026-S37,LocaBahia Equipamentos,Locação MUN-01 (4 diárias)
+L00257,2026-09-11,1.3.1,A09,EQUIPAMENTO,17240.16,LOC-GUI-01-2026-S37,Nordeste Rental,Locação GUI-01 (4 diárias)
+L00258,2026-09-11,1.3.1,A09,EQUIPAMENTO,1612.4,LOC-PTA-01-2026-S37,Nordeste Rental,Locação PTA-01 (4 diárias)
+L00259,2026-09-11,1.3.1,A09,EQUIPAMENTO,1655.28,LOC-PTA-02-2026-S37,Nordeste Rental,Locação PTA-02 (4 diárias)
+L00260,2026-09-11,1.3.2,A10,EQUIPAMENTO,1590.04,LOC-PTA-03-2026-S37,Guindastes São Francisco,Locação PTA-03 (4 diárias)
+L00261,2026-09-11,1.3.2,A10,EQUIPAMENTO,1679.52,LOC-PTA-04-2026-S37,Nordeste Rental,Locação PTA-04 (4 diárias)
+L00262,2026-09-11,1.3.1,A09,EQUIPAMENTO,1175.73,LOC-PTA-05-2026-S37,LocaBahia Equipamentos,Locação PTA-05 (3 diárias)
+L00263,2026-09-11,1.3.1,A09,EQUIPAMENTO,1144.65,LOC-PTA-06-2026-S37,LocaBahia Equipamentos,Locação PTA-06 (3 diárias)
+L00264,2026-09-11,1.9,,INDIRETO,28402.0,ADM-2026-S37,,"Administração local (equipe de gestão, canteiro, consumos)"
+L00265,2026-09-18,1.3.1,A09,SUBCONTRATO,39243.04,MED-A09-2026-S38,Empreiteiro,Medição de empreitada: Montagem da estrutura metálica
+L00266,2026-09-18,1.3.2,A10,SUBCONTRATO,23412.77,MED-A10-2026-S38,Empreiteiro,Medição de empreitada: Cobertura em telha termoacústica
+L00267,2026-09-18,1.3.6,A14,MAO_DE_OBRA,15400.0,FOLHA-2026-S38,,"Mão de obra própria: Áreas de apoio: alvenaria e estrutura (escritório, vestiários, refeitório)"
+L00268,2026-09-18,1.3.1,A09,MATERIAL,390437.49,RM-A09-EMT-2026-S38,,Requisição de material: Estrutura metálica fabricada
+L00269,2026-09-18,1.3.2,A10,MATERIAL,197269.65,RM-A10-TLH-2026-S38,,Requisição de material: Telha termoacústica
+L00270,2026-09-18,1.3.6,A14,MATERIAL,15753.22,RM-A14-BLO-2026-S38,,Requisição de material: Bloco de concreto 14x19x39
+L00271,2026-09-18,1.3.6,A14,MATERIAL,4222.22,RM-A14-ARG-2026-S38,,Requisição de material: Argamassa industrializada
+L00272,2026-09-18,1.3.2,A10,EQUIPAMENTO,4993.0,LOC-MUN-01-2026-S38,LocaBahia Equipamentos,Locação MUN-01 (5 diárias)
+L00273,2026-09-18,1.3.1,A09,EQUIPAMENTO,21550.2,LOC-GUI-01-2026-S38,Nordeste Rental,Locação GUI-01 (5 diárias)
+L00274,2026-09-18,1.3.1,A09,EQUIPAMENTO,2015.5,LOC-PTA-01-2026-S38,Nordeste Rental,Locação PTA-01 (5 diárias)
+L00275,2026-09-18,1.3.1,A09,EQUIPAMENTO,2069.1,LOC-PTA-02-2026-S38,Nordeste Rental,Locação PTA-02 (5 diárias)
+L00276,2026-09-18,1.3.2,A10,EQUIPAMENTO,1987.55,LOC-PTA-03-2026-S38,Guindastes São Francisco,Locação PTA-03 (5 diárias)
+L00277,2026-09-18,1.3.2,A10,EQUIPAMENTO,2099.4,LOC-PTA-04-2026-S38,Nordeste Rental,Locação PTA-04 (5 diárias)
+L00278,2026-09-18,1.3.1,A09,EQUIPAMENTO,1959.55,LOC-PTA-05-2026-S38,LocaBahia Equipamentos,Locação PTA-05 (5 diárias)
+L00279,2026-09-18,1.3.1,A09,EQUIPAMENTO,1907.75,LOC-PTA-06-2026-S38,LocaBahia Equipamentos,Locação PTA-06 (5 diárias)
+L00280,2026-09-18,1.9,,INDIRETO,36033.56,ADM-2026-S38,,"Administração local (equipe de gestão, canteiro, consumos)"
+L00281,2026-09-25,1.3.1,A09,SUBCONTRATO,40037.22,MED-A09-2026-S39,Empreiteiro,Medição de empreitada: Montagem da estrutura metálica
+L00282,2026-09-25,1.3.2,A10,SUBCONTRATO,25643.69,MED-A10-2026-S39,Empreiteiro,Medição de empreitada: Cobertura em telha termoacústica
+L00283,2026-09-25,1.3.3,A11,SUBCONTRATO,11965.0,MED-A11-2026-S39,Empreiteiro,Medição de empreitada: Fechamento lateral
+L00284,2026-09-25,1.3.6,A14,MAO_DE_OBRA,5863.75,FOLHA-2026-S39,,"Mão de obra própria: Áreas de apoio: alvenaria e estrutura (escritório, vestiários, refeitório)"
+L00285,2026-09-25,1.3.7,A15,MAO_DE_OBRA,7404.0,FOLHA-2026-S39,,Mão de obra própria: Áreas de apoio: revestimentos e acabamentos
+L00286,2026-09-25,1.3.1,A09,MATERIAL,398338.94,RM-A09-EMT-2026-S39,,Requisição de material: Estrutura metálica fabricada
+L00287,2026-09-25,1.3.2,A10,MATERIAL,216066.77,RM-A10-TLH-2026-S39,,Requisição de material: Telha termoacústica
+L00288,2026-09-25,1.3.6,A14,MATERIAL,6331.24,RM-A14-BLO-2026-S39,,Requisição de material: Bloco de concreto 14x19x39
+L00289,2026-09-25,1.3.6,A14,MATERIAL,1689.61,RM-A14-ARG-2026-S39,,Requisição de material: Argamassa industrializada
+L00290,2026-09-25,1.3.3,A11,MATERIAL,52502.19,RM-A11-PFE-2026-S39,,Requisição de material: Painel de fechamento lateral
+L00291,2026-09-25,1.3.7,A15,MATERIAL,1441.41,RM-A15-ARG-2026-S39,,Requisição de material: Argamassa industrializada
+L00292,2026-09-25,1.3.7,A15,MATERIAL,6651.69,RM-A15-CER-2026-S39,,Requisição de material: Revestimento cerâmico/porcelanato
+L00293,2026-09-25,1.3.2,A10,EQUIPAMENTO,4993.0,LOC-MUN-01-2026-S39,LocaBahia Equipamentos,Locação MUN-01 (5 diárias)
+L00294,2026-09-25,1.3.1,A09,EQUIPAMENTO,21550.2,LOC-GUI-01-2026-S39,Nordeste Rental,Locação GUI-01 (5 diárias)
+L00295,2026-09-25,1.3.1,A09,EQUIPAMENTO,2015.5,LOC-PTA-01-2026-S39,Nordeste Rental,Locação PTA-01 (5 diárias)
+L00296,2026-09-25,1.3.1,A09,EQUIPAMENTO,2069.1,LOC-PTA-02-2026-S39,Nordeste Rental,Locação PTA-02 (5 diárias)
+L00297,2026-09-25,1.3.2,A10,EQUIPAMENTO,1987.55,LOC-PTA-03-2026-S39,Guindastes São Francisco,Locação PTA-03 (5 diárias)
+L00298,2026-09-25,1.3.2,A10,EQUIPAMENTO,2099.4,LOC-PTA-04-2026-S39,Nordeste Rental,Locação PTA-04 (5 diárias)
+L00299,2026-09-25,1.3.3,A11,EQUIPAMENTO,1959.55,LOC-PTA-05-2026-S39,LocaBahia Equipamentos,Locação PTA-05 (5 diárias)
+L00300,2026-09-25,1.3.3,A11,EQUIPAMENTO,1907.75,LOC-PTA-06-2026-S39,LocaBahia Equipamentos,Locação PTA-06 (5 diárias)
+L00301,2026-09-25,1.9,,INDIRETO,36532.53,ADM-2026-S39,,"Administração local (equipe de gestão, canteiro, consumos)"
+L00302,2026-10-02,1.3.1,A09,SUBCONTRATO,42700.02,MED-A09-2026-S40,Empreiteiro,Medição de empreitada: Montagem da estrutura metálica
+L00303,2026-10-02,1.3.2,A10,SUBCONTRATO,28604.37,MED-A10-2026-S40,Empreiteiro,Medição de empreitada: Cobertura em telha termoacústica
+L00304,2026-10-02,1.3.3,A11,SUBCONTRATO,10769.42,MED-A11-2026-S40,Empreiteiro,Medição de empreitada: Fechamento lateral
+L00305,2026-10-02,1.3.7,A15,MAO_DE_OBRA,11464.0,FOLHA-2026-S40,,Mão de obra própria: Áreas de apoio: revestimentos e acabamentos
+L00306,2026-10-02,1.3.1,A09,MATERIAL,424831.73,RM-A09-EMT-2026-S40,,Requisição de material: Estrutura metálica fabricada
+L00307,2026-10-02,1.3.2,A10,MATERIAL,241012.72,RM-A10-TLH-2026-S40,,Requisição de material: Telha termoacústica
+L00308,2026-10-02,1.3.7,A15,MATERIAL,2051.74,RM-A15-ARG-2026-S40,,Requisição de material: Argamassa industrializada
+L00309,2026-10-02,1.3.7,A15,MATERIAL,9488.44,RM-A15-CER-2026-S40,,Requisição de material: Revestimento cerâmico/porcelanato
+L00310,2026-10-02,1.3.3,A11,MATERIAL,47256.0,RM-A11-PFE-2026-S40,,Requisição de material: Painel de fechamento lateral
+L00311,2026-10-02,1.3.2,A10,EQUIPAMENTO,4993.0,LOC-MUN-01-2026-S40,LocaBahia Equipamentos,Locação MUN-01 (5 diárias)
+L00312,2026-10-02,1.3.1,A09,EQUIPAMENTO,21550.2,LOC-GUI-01-2026-S40,Nordeste Rental,Locação GUI-01 (5 diárias)
+L00313,2026-10-02,1.3.1,A09,EQUIPAMENTO,2015.5,LOC-PTA-01-2026-S40,Nordeste Rental,Locação PTA-01 (5 diárias)
+L00314,2026-10-02,1.3.1,A09,EQUIPAMENTO,2069.1,LOC-PTA-02-2026-S40,Nordeste Rental,Locação PTA-02 (5 diárias)
+L00315,2026-10-02,1.3.2,A10,EQUIPAMENTO,1987.55,LOC-PTA-03-2026-S40,Guindastes São Francisco,Locação PTA-03 (5 diárias)
+L00316,2026-10-02,1.3.3,A11,EQUIPAMENTO,379.86,LOC-PTA-04-2026-S40,Nordeste Rental,Locação PTA-04 (5 diárias)
+L00317,2026-10-02,DIVERSOS,,EQUIPAMENTO,1719.54,LOC-PTA-04-2026-S40,Nordeste Rental,Locação PTA-04 (5 diárias)
+L00318,2026-10-02,1.3.2,A10,EQUIPAMENTO,391.07,LOC-PTA-05-2026-S40,LocaBahia Equipamentos,Locação PTA-05 (5 diárias)
+L00319,2026-10-02,1.3.3,A11,EQUIPAMENTO,1568.48,LOC-PTA-05-2026-S40,LocaBahia Equipamentos,Locação PTA-05 (5 diárias)
+L00320,2026-10-02,1.3.3,A11,EQUIPAMENTO,1907.75,LOC-PTA-06-2026-S40,LocaBahia Equipamentos,Locação PTA-06 (5 diárias)
+L00321,2026-10-02,1.9,,INDIRETO,34360.15,ADM-2026-S40,,"Administração local (equipe de gestão, canteiro, consumos)"
+L00322,2026-10-09,1.3.1,A09,SUBCONTRATO,32839.12,MED-A09-2026-S41,Empreiteiro,Medição de empreitada: Montagem da estrutura metálica
+L00323,2026-10-09,1.3.2,A10,SUBCONTRATO,25598.41,MED-A10-2026-S41,Empreiteiro,Medição de empreitada: Cobertura em telha termoacústica
+L00324,2026-10-09,1.3.3,A11,SUBCONTRATO,10796.56,MED-A11-2026-S41,Empreiteiro,Medição de empreitada: Fechamento lateral
+L00325,2026-10-09,1.3.7,A15,MAO_DE_OBRA,11464.0,FOLHA-2026-S41,,Mão de obra própria: Áreas de apoio: revestimentos e acabamentos
+L00326,2026-10-09,1.3.1,A09,MATERIAL,326723.49,RM-A09-EMT-2026-S41,,Requisição de material: Estrutura metálica fabricada
+L00327,2026-10-09,1.3.2,A10,MATERIAL,215685.24,RM-A10-TLH-2026-S41,,Requisição de material: Telha termoacústica
+L00328,2026-10-09,1.3.7,A15,MATERIAL,2117.94,RM-A15-ARG-2026-S41,,Requisição de material: Argamassa industrializada
+L00329,2026-10-09,1.3.7,A15,MATERIAL,9794.59,RM-A15-CER-2026-S41,,Requisição de material: Revestimento cerâmico/porcelanato
+L00330,2026-10-09,1.3.3,A11,MATERIAL,47375.09,RM-A11-PFE-2026-S41,,Requisição de material: Painel de fechamento lateral
+L00331,2026-10-09,1.3.2,A10,EQUIPAMENTO,4993.0,LOC-MUN-01-2026-S41,LocaBahia Equipamentos,Locação MUN-01 (5 diárias)
+L00332,2026-10-09,1.3.1,A09,EQUIPAMENTO,21550.2,LOC-GUI-01-2026-S41,Nordeste Rental,Locação GUI-01 (5 diárias)
+L00333,2026-10-09,1.3.1,A09,EQUIPAMENTO,2015.5,LOC-PTA-01-2026-S41,Nordeste Rental,Locação PTA-01 (5 diárias)
+L00334,2026-10-09,1.3.1,A09,EQUIPAMENTO,2069.1,LOC-PTA-02-2026-S41,Nordeste Rental,Locação PTA-02 (5 diárias)
+L00335,2026-10-09,1.3.2,A10,EQUIPAMENTO,1987.55,LOC-PTA-03-2026-S41,Guindastes São Francisco,Locação PTA-03 (5 diárias)
+L00336,2026-10-09,1.3.2,A10,EQUIPAMENTO,2099.4,LOC-PTA-04-2026-S41,Nordeste Rental,Locação PTA-04 (5 diárias)
+L00337,2026-10-09,1.3.3,A11,EQUIPAMENTO,1959.55,LOC-PTA-05-2026-S41,LocaBahia Equipamentos,Locação PTA-05 (5 diárias)
+L00338,2026-10-09,1.3.3,A11,EQUIPAMENTO,1907.75,LOC-PTA-06-2026-S41,LocaBahia Equipamentos,Locação PTA-06 (5 diárias)
+L00339,2026-10-09,1.9,,INDIRETO,35625.37,ADM-2026-S41,,"Administração local (equipe de gestão, canteiro, consumos)"
+L00340,2026-10-15,1.3.5,A13,EQUIPAMENTO,1810.58,MOB-CAM-01-261015,LocaBahia Equipamentos,Mobilização CAM-01
+L00341,2026-10-15,1.3.5,A13,EQUIPAMENTO,1804.9,MOB-CAM-02-261015,Guindastes São Francisco,Mobilização CAM-02
+L00342,2026-10-15,1.3.5,A13,EQUIPAMENTO,1757.92,MOB-ROL-01-261015,LocaBahia Equipamentos,Mobilização ROL-01
+L00343,2026-10-15,1.3.5,A13,EQUIPAMENTO,2019.35,MOB-RET-01-261015,Guindastes São Francisco,Mobilização RET-01
+L00344,2026-10-16,1.3.1,A09,SUBCONTRATO,10806.19,MED-A09-2026-S42,Empreiteiro,Medição de empreitada: Montagem da estrutura metálica
+L00345,2026-10-16,1.3.2,A10,SUBCONTRATO,18725.93,MED-A10-2026-S42,Empreiteiro,Medição de empreitada: Cobertura em telha termoacústica
+L00346,2026-10-16,1.3.3,A11,SUBCONTRATO,10037.14,MED-A11-2026-S42,Empreiteiro,Medição de empreitada: Fechamento lateral
+L00347,2026-10-16,1.3.5,A13,MAO_DE_OBRA,7884.0,FOLHA-2026-S42,,"Mão de obra própria: Pátio de manobras, acessos e pavimentação externa"
+L00348,2026-10-16,1.3.7,A15,MAO_DE_OBRA,9508.0,FOLHA-2026-S42,,Mão de obra própria: Áreas de apoio: revestimentos e acabamentos
+L00349,2026-10-16,1.3.1,A09,MATERIAL,107513.14,RM-A09-EMT-2026-S42,,Requisição de material: Estrutura metálica fabricada
+L00350,2026-10-16,1.3.2,A10,MATERIAL,157779.59,RM-A10-TLH-2026-S42,,Requisição de material: Telha termoacústica
+L00351,2026-10-16,1.3.7,A15,MATERIAL,1733.03,RM-A15-ARG-2026-S42,,Requisição de material: Argamassa industrializada
+L00352,2026-10-16,1.3.7,A15,MATERIAL,8014.52,RM-A15-CER-2026-S42,,Requisição de material: Revestimento cerâmico/porcelanato
+L00353,2026-10-16,1.3.3,A11,MATERIAL,44042.77,RM-A11-PFE-2026-S42,,Requisição de material: Painel de fechamento lateral
+L00354,2026-10-16,1.3.5,A13,MATERIAL,24326.29,RM-A13-PAV-2026-S42,,Requisição de material: Pavimento intertravado 8 cm
+L00355,2026-10-16,1.3.5,A13,MATERIAL,8771.65,RM-A13-BRI-2026-S42,,Requisição de material: Brita graduada
+L00356,2026-10-16,1.3.2,A10,EQUIPAMENTO,3994.4,LOC-MUN-01-2026-S42,LocaBahia Equipamentos,Locação MUN-01 (4 diárias)
+L00357,2026-10-16,1.3.5,A13,EQUIPAMENTO,1448.46,LOC-CAM-01-2026-S42,LocaBahia Equipamentos,Locação CAM-01 (2 diárias)
+L00358,2026-10-16,1.3.5,A13,EQUIPAMENTO,1443.92,LOC-CAM-02-2026-S42,Guindastes São Francisco,Locação CAM-02 (2 diárias)
+L00359,2026-10-16,1.3.5,A13,EQUIPAMENTO,1406.34,LOC-ROL-01-2026-S42,LocaBahia Equipamentos,Locação ROL-01 (2 diárias)
+L00360,2026-10-16,1.3.5,A13,EQUIPAMENTO,1615.48,LOC-RET-01-2026-S42,Guindastes São Francisco,Locação RET-01 (2 diárias)
+L00361,2026-10-16,1.3.1,A09,EQUIPAMENTO,8620.08,LOC-GUI-01-2026-S42,Nordeste Rental,Locação GUI-01 (2 diárias)
+L00362,2026-10-16,1.3.1,A09,EQUIPAMENTO,839.94,LOC-PTA-01-2026-S42,Nordeste Rental,Locação PTA-01 (4 diárias)
+L00363,2026-10-16,1.3.2,A10,EQUIPAMENTO,772.46,LOC-PTA-01-2026-S42,Nordeste Rental,Locação PTA-01 (4 diárias)
+L00364,2026-10-16,1.3.1,A09,EQUIPAMENTO,835.97,LOC-PTA-02-2026-S42,Nordeste Rental,Locação PTA-02 (4 diárias)
+L00365,2026-10-16,1.3.2,A10,EQUIPAMENTO,819.31,LOC-PTA-02-2026-S42,Nordeste Rental,Locação PTA-02 (4 diárias)
+L00366,2026-10-16,1.3.2,A10,EQUIPAMENTO,767.33,LOC-PTA-03-2026-S42,Guindastes São Francisco,Locação PTA-03 (4 diárias)
+L00367,2026-10-16,1.3.3,A11,EQUIPAMENTO,822.71,LOC-PTA-03-2026-S42,Guindastes São Francisco,Locação PTA-03 (4 diárias)
+L00368,2026-10-16,1.3.2,A10,EQUIPAMENTO,823.93,LOC-PTA-04-2026-S42,Nordeste Rental,Locação PTA-04 (4 diárias)
+L00369,2026-10-16,1.3.3,A11,EQUIPAMENTO,855.59,LOC-PTA-04-2026-S42,Nordeste Rental,Locação PTA-04 (4 diárias)
+L00370,2026-10-16,1.3.3,A11,EQUIPAMENTO,783.82,LOC-PTA-05-2026-S42,LocaBahia Equipamentos,Locação PTA-05 (2 diárias)
+L00371,2026-10-16,1.3.3,A11,EQUIPAMENTO,763.1,LOC-PTA-06-2026-S42,LocaBahia Equipamentos,Locação PTA-06 (2 diárias)
+L00372,2026-10-16,1.9,,INDIRETO,29254.19,ADM-2026-S42,,"Administração local (equipe de gestão, canteiro, consumos)"
+L00373,2026-10-23,1.3.2,A10,SUBCONTRATO,20725.3,MED-A10-2026-S43,Empreiteiro,Medição de empreitada: Cobertura em telha termoacústica
+L00374,2026-10-23,1.3.3,A11,SUBCONTRATO,11849.85,MED-A11-2026-S43,Empreiteiro,Medição de empreitada: Fechamento lateral
+L00375,2026-10-23,1.3.5,A13,MAO_DE_OBRA,20500.0,FOLHA-2026-S43,,"Mão de obra própria: Pátio de manobras, acessos e pavimentação externa"
+L00376,2026-10-23,1.3.7,A15,MAO_DE_OBRA,11760.0,FOLHA-2026-S43,,Mão de obra própria: Áreas de apoio: revestimentos e acabamentos
+L00377,2026-10-23,1.3.2,A10,MATERIAL,174625.74,RM-A10-TLH-2026-S43,,Requisição de material: Telha termoacústica
+L00378,2026-10-23,1.3.7,A15,MATERIAL,1825.92,RM-A15-ARG-2026-S43,,Requisição de material: Argamassa industrializada
+L00379,2026-10-23,1.3.7,A15,MATERIAL,8444.12,RM-A15-CER-2026-S43,,Requisição de material: Revestimento cerâmico/porcelanato
+L00380,2026-10-23,1.3.3,A11,MATERIAL,51996.9,RM-A11-PFE-2026-S43,,Requisição de material: Painel de fechamento lateral
+L00381,2026-10-23,1.3.5,A13,MATERIAL,61885.51,RM-A13-PAV-2026-S43,,Requisição de material: Pavimento intertravado 8 cm
+L00382,2026-10-23,1.3.5,A13,MATERIAL,22314.88,RM-A13-BRI-2026-S43,,Requisição de material: Brita graduada
+L00383,2026-10-23,1.3.2,A10,EQUIPAMENTO,4993.0,LOC-MUN-01-2026-S43,LocaBahia Equipamentos,Locação MUN-01 (5 diárias)
+L00384,2026-10-23,1.3.5,A13,EQUIPAMENTO,3621.15,LOC-CAM-01-2026-S43,LocaBahia Equipamentos,Locação CAM-01 (5 diárias)
+L00385,2026-10-23,1.3.5,A13,EQUIPAMENTO,3609.8,LOC-CAM-02-2026-S43,Guindastes São Francisco,Locação CAM-02 (5 diárias)
+L00386,2026-10-23,1.3.5,A13,EQUIPAMENTO,3515.85,LOC-ROL-01-2026-S43,LocaBahia Equipamentos,Locação ROL-01 (5 diárias)
+L00387,2026-10-23,1.3.5,A13,EQUIPAMENTO,4038.7,LOC-RET-01-2026-S43,Guindastes São Francisco,Locação RET-01 (5 diárias)
+L00388,2026-10-23,1.3.2,A10,EQUIPAMENTO,2015.5,LOC-PTA-01-2026-S43,Nordeste Rental,Locação PTA-01 (5 diárias)
+L00389,2026-10-23,1.3.2,A10,EQUIPAMENTO,2069.1,LOC-PTA-02-2026-S43,Nordeste Rental,Locação PTA-02 (5 diárias)
+L00390,2026-10-23,1.3.3,A11,EQUIPAMENTO,1987.55,LOC-PTA-03-2026-S43,Guindastes São Francisco,Locação PTA-03 (5 diárias)
+L00391,2026-10-23,1.3.3,A11,EQUIPAMENTO,2099.4,LOC-PTA-04-2026-S43,Nordeste Rental,Locação PTA-04 (5 diárias)
+L00392,2026-10-23,1.9,,INDIRETO,34816.24,ADM-2026-S43,,"Administração local (equipe de gestão, canteiro, consumos)"
+L00393,2026-10-30,1.3.2,A10,SUBCONTRATO,4250.03,MED-A10-2026-S44,Empreiteiro,Medição de empreitada: Cobertura em telha termoacústica
+L00394,2026-10-30,1.3.3,A11,SUBCONTRATO,10971.17,MED-A11-2026-S44,Empreiteiro,Medição de empreitada: Fechamento lateral
+L00395,2026-10-30,1.3.5,A13,MAO_DE_OBRA,20876.0,FOLHA-2026-S44,,"Mão de obra própria: Pátio de manobras, acessos e pavimentação externa"
+L00396,2026-10-30,1.3.7,A15,MAO_DE_OBRA,11476.0,FOLHA-2026-S44,,Mão de obra própria: Áreas de apoio: revestimentos e acabamentos
+L00397,2026-10-30,1.3.2,A10,MATERIAL,35809.61,RM-A10-TLH-2026-S44,,Requisição de material: Telha termoacústica
+L00398,2026-10-30,1.3.7,A15,MATERIAL,2156.5,RM-A15-ARG-2026-S44,,Requisição de material: Argamassa industrializada
+L00399,2026-10-30,1.3.7,A15,MATERIAL,9972.92,RM-A15-CER-2026-S44,,Requisição de material: Revestimento cerâmico/porcelanato
+L00400,2026-10-30,1.3.3,A11,MATERIAL,48141.28,RM-A11-PFE-2026-S44,,Requisição de material: Painel de fechamento lateral
+L00401,2026-10-30,DIVERSOS,,MATERIAL,75368.74,RM-A13-PAV-2026-S44,,Requisição de material: Pavimento intertravado 8 cm
+L00402,2026-10-30,1.3.5,A13,MATERIAL,27176.71,RM-A13-BRI-2026-S44,,Requisição de material: Brita graduada
+L00403,2026-10-30,1.3.2,A10,EQUIPAMENTO,4993.0,LOC-MUN-01-2026-S44,LocaBahia Equipamentos,Locação MUN-01 (5 diárias)
+L00404,2026-10-30,1.3.5,A13,EQUIPAMENTO,3621.15,LOC-CAM-01-2026-S44,LocaBahia Equipamentos,Locação CAM-01 (5 diárias)
+L00405,2026-10-30,1.3.5,A13,EQUIPAMENTO,3609.8,LOC-CAM-02-2026-S44,Guindastes São Francisco,Locação CAM-02 (5 diárias)
+L00406,2026-10-30,1.3.5,A13,EQUIPAMENTO,3515.85,LOC-ROL-01-2026-S44,LocaBahia Equipamentos,Locação ROL-01 (5 diárias)
+L00407,2026-10-30,1.3.5,A13,EQUIPAMENTO,4038.7,LOC-RET-01-2026-S44,Guindastes São Francisco,Locação RET-01 (5 diárias)
+L00408,2026-10-30,1.3.2,A10,EQUIPAMENTO,2015.5,LOC-PTA-01-2026-S44,Nordeste Rental,Locação PTA-01 (5 diárias)
+L00409,2026-10-30,1.3.2,A10,EQUIPAMENTO,2069.1,LOC-PTA-02-2026-S44,Nordeste Rental,Locação PTA-02 (5 diárias)
+L00410,2026-10-30,1.3.3,A11,EQUIPAMENTO,1987.55,LOC-PTA-03-2026-S44,Guindastes São Francisco,Locação PTA-03 (5 diárias)
+L00411,2026-10-30,1.3.3,A11,EQUIPAMENTO,2099.4,LOC-PTA-04-2026-S44,Nordeste Rental,Locação PTA-04 (5 diárias)
+L00412,2026-10-30,1.9,,INDIRETO,35214.21,ADM-2026-S44,,"Administração local (equipe de gestão, canteiro, consumos)"
+L00413,2026-11-06,1.3.3,A11,SUBCONTRATO,8322.48,MED-A11-2026-S45,Empreiteiro,Medição de empreitada: Fechamento lateral
+L00414,2026-11-06,1.3.5,A13,MAO_DE_OBRA,16332.0,FOLHA-2026-S45,,"Mão de obra própria: Pátio de manobras, acessos e pavimentação externa"
+L00415,2026-11-06,1.3.7,A15,MAO_DE_OBRA,9656.0,FOLHA-2026-S45,,Mão de obra própria: Áreas de apoio: revestimentos e acabamentos
+L00416,2026-11-06,1.3.7,A15,MATERIAL,1833.17,RM-A15-ARG-2026-S45,,Requisição de material: Argamassa industrializada
+L00417,2026-11-06,1.3.7,A15,MATERIAL,8477.63,RM-A15-CER-2026-S45,,Requisição de material: Revestimento cerâmico/porcelanato
+L00418,2026-11-06,1.3.3,A11,MATERIAL,36518.89,RM-A11-PFE-2026-S45,,Requisição de material: Painel de fechamento lateral
+L00419,2026-11-06,1.3.5,A13,MATERIAL,42687.63,RM-A13-PAV-2026-S45,,Requisição de material: Pavimento intertravado 8 cm
+L00420,2026-11-06,1.3.5,A13,MATERIAL,15392.44,RM-A13-BRI-2026-S45,,Requisição de material: Brita graduada
+L00421,2026-11-06,1.3.2,A10,EQUIPAMENTO,3994.4,LOC-MUN-01-2026-S45,LocaBahia Equipamentos,Locação MUN-01 (4 diárias)
+L00422,2026-11-06,1.3.5,A13,EQUIPAMENTO,2896.92,LOC-CAM-01-2026-S45,LocaBahia Equipamentos,Locação CAM-01 (4 diárias)
+L00423,2026-11-06,1.3.5,A13,EQUIPAMENTO,2887.84,LOC-CAM-02-2026-S45,Guindastes São Francisco,Locação CAM-02 (4 diárias)
+L00424,2026-11-06,1.3.5,A13,EQUIPAMENTO,2812.68,LOC-ROL-01-2026-S45,LocaBahia Equipamentos,Locação ROL-01 (4 diárias)
+L00425,2026-11-06,DIVERSOS,,EQUIPAMENTO,3230.96,LOC-RET-01-2026-S45,Guindastes São Francisco,Locação RET-01 (4 diárias)
+L00426,2026-11-06,1.3.2,A10,EQUIPAMENTO,1612.4,LOC-PTA-01-2026-S45,Nordeste Rental,Locação PTA-01 (4 diárias)
+L00427,2026-11-06,1.3.2,A10,EQUIPAMENTO,1655.28,LOC-PTA-02-2026-S45,Nordeste Rental,Locação PTA-02 (4 diárias)
+L00428,2026-11-06,1.3.3,A11,EQUIPAMENTO,1590.04,LOC-PTA-03-2026-S45,Guindastes São Francisco,Locação PTA-03 (4 diárias)
+L00429,2026-11-06,1.3.3,A11,EQUIPAMENTO,1679.52,LOC-PTA-04-2026-S45,Nordeste Rental,Locação PTA-04 (4 diárias)
+L00430,2026-11-06,1.9,,INDIRETO,27855.96,ADM-2026-S45,,"Administração local (equipe de gestão, canteiro, consumos)"

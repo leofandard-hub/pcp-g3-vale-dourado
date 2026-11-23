@@ -1,0 +1,12 @@
+id_ponto,nome_ponto,tipo_ponto,x_km,y_km,volume_t_mes,custo_frete_rs_t_km
+L01,Juazeiro,FORNECEDOR,-222.0,401.0,2600.0,0.65
+L02,Petrolina,FORNECEDOR,-226.0,406.0,4100.0,0.63
+L03,Casa Nova,FORNECEDOR,-274.0,421.0,1900.0,0.59
+L04,Sobradinho,FORNECEDOR,-252.0,380.0,800.0,0.49
+L05,Porto de Salvador,CLIENTE,-4.0,-6.0,5200.0,0.51
+L06,Recife,CLIENTE,393.0,537.0,3100.0,0.43
+L07,Senhor do Bonfim,CLIENTE,-167.0,275.0,300.0,0.59
+L08,Salvador,CLIENTE,1.0,0.0,700.0,0.66
+TA,Terreno A: Juazeiro (escolhido),TERRENO_CANDIDATO,-218.0,403.0,,
+TB,Terreno B: Petrolina,TERRENO_CANDIDATO,-221.0,407.0,,
+TC,Terreno C: Senhor do Bonfim,TERRENO_CANDIDATO,-168.0,278.0,,
