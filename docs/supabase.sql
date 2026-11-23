@@ -11,3 +11,7 @@ alter table lancamentos enable row level security;
 create policy "leitura"  on lancamentos for select using (true);
 create policy "inclusao" on lancamentos for insert with check (true);
 create policy "exclusao" on lancamentos for delete using (true);
+
+-- Acesso da chave anon pela Data API (necessário em projetos novos do Supabase)
+grant select, insert, delete on lancamentos to anon;
+grant usage, select on sequence lancamentos_id_seq to anon;
