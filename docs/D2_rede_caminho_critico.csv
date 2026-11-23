@@ -1,0 +1,40 @@
+id_atividade,nome,fase,codigo_eap,id_zona,duracao_du,efetivo,es_du,ef_du,ls_du,lf_du,custo_orcado_rs,folga_total_du,critica,quase_critica,inicio_cedo,termino_cedo,inicio_tarde,termino_tarde
+A01,Projeto executivo civil e estrutural,Projetos e licenças,1.1.1,,20,0,1,20,1,20,270000.0,0,True,False,2026-02-18,2026-03-17,2026-02-18,2026-03-17
+A02,Projeto de instalações e utilidades,Projetos e licenças,1.1.2,,18,0,6,23,142,159,153000.0,136,False,False,2026-02-25,2026-03-20,2026-09-14,2026-10-07
+A03,Licenciamento ambiental e alvará de construção,Projetos e licenças,1.1.3,,35,0,1,35,1,35,105000.0,0,True,False,2026-02-18,2026-04-08,2026-02-18,2026-04-08
+A04,Especificação técnica e compra dos equipamentos de processo,Projetos e licenças,1.1.4,,15,0,4,18,51,65,90000.0,47,False,False,2026-02-23,2026-03-13,2026-05-04,2026-05-22
+A05,Fabricação dos equipamentos de processo (acompanhamento do fornecedor),Projetos e licenças,1.1.5,,100,0,19,118,66,165,40000.0,47,False,False,2026-03-16,2026-08-10,2026-05-25,2026-10-16
+A06,Mobilização e instalação do canteiro,Canteiro e infraestrutura,1.2.1,CANTEIRO,14,14,11,24,22,35,49782.4,11,False,False,2026-03-04,2026-03-23,2026-03-19,2026-04-08
+A07,Terraplenagem e drenagem,Canteiro e infraestrutura,1.2.2,TERRENO,21,12,36,56,36,56,213079.25,0,True,False,2026-04-09,2026-05-11,2026-04-09,2026-05-11
+A08,"Fundações (blocos, sapatas e vigas baldrame)",Canteiro e infraestrutura,1.2.3,GALPAO,35,31,57,91,57,91,859173.83,0,True,False,2026-05-12,2026-07-01,2026-05-12,2026-07-01
+A09,Montagem da estrutura metálica,Estrutura e edificação,1.3.1,GALPAO,43,30,95,137,95,137,4823211.36,0,True,False,2026-07-08,2026-09-04,2026-07-08,2026-09-04
+A10,Cobertura em telha termoacústica,Estrutura e edificação,1.3.2,GALPAO,29,20,117,145,117,145,1521932.5,0,True,False,2026-08-07,2026-09-17,2026-08-07,2026-09-17
+A11,Fechamento lateral,Estrutura e edificação,1.3.3,GALPAO,28,13,123,150,171,198,576252.0,48,False,False,2026-08-17,2026-09-24,2026-10-26,2026-12-04
+A12,Piso industrial de concreto,Estrutura e edificação,1.3.4,GALPAO,40,26,146,185,146,185,1332438.61,0,True,False,2026-09-18,2026-11-16,2026-09-18,2026-11-16
+A13,"Pátio de manobras, acessos e pavimentação externa",Estrutura e edificação,1.3.5,PATIO,32,23,138,169,230,261,937129.04,92,False,False,2026-09-08,2026-10-22,2027-01-21,2027-03-09
+A14,"Áreas de apoio: alvenaria e estrutura (escritório, vestiários, refeitório)",Estrutura e edificação,1.3.6,APOIO,24,17,110,133,143,166,164594.03,33,False,False,2026-07-29,2026-08-31,2026-09-15,2026-10-19
+A15,Áreas de apoio: revestimentos e acabamentos,Estrutura e edificação,1.3.7,APOIO,32,13,134,165,167,198,160717.59,33,False,False,2026-09-01,2026-10-16,2026-10-20,2026-12-04
+A16,Pintura geral e demarcação de piso,Estrutura e edificação,1.3.8,GALPAO,28,16,186,213,199,226,142173.86,13,False,False,2026-11-17,2026-12-28,2026-12-07,2027-01-15
+A17,"Subestação, transformadores e painéis principais",Instalações prediais e utilidades,1.4.1,UTIL,10,10,146,155,160,169,776153.63,14,False,False,2026-09-18,2026-10-01,2026-10-08,2026-10-22
+A18,Infraestrutura elétrica e iluminação,Instalações prediais e utilidades,1.4.2,GALPAO,27,20,146,172,182,208,587619.56,36,False,False,2026-09-18,2026-10-27,2026-11-11,2026-12-18
+A19,Instalações hidrossanitárias e drenagem predial,Instalações prediais e utilidades,1.4.3,GALPAO,12,12,146,157,250,261,46712.7,104,False,False,2026-09-18,2026-10-05,2027-02-22,2027-03-09
+A20,"Sistema de combate a incêndio (sprinklers, hidrantes e bombas)",Instalações prediais e utilidades,1.4.4,GALPAO,24,18,146,169,203,226,609716.96,57,False,False,2026-09-18,2026-10-22,2026-12-11,2027-01-15
+A21,Utilidades: central de frio e água tratada,Instalações prediais e utilidades,1.4.5,UTIL,19,13,161,179,208,226,169738.71,47,False,False,2026-10-09,2026-11-06,2026-12-18,2027-01-15
+A22,"Rede lógica, CFTV e controle de acesso",Instalações prediais e utilidades,1.4.6,GALPAO,16,8,156,171,246,261,118258.0,90,False,False,2026-10-02,2026-10-26,2027-02-16,2027-03-09
+A23,Painéis isotérmicos das câmaras,Equipamentos de processo,1.5.1,CAM,39,25,166,204,166,204,1171028.0,0,True,False,2026-10-19,2026-12-14,2026-10-19,2026-12-14
+A24,Portas frigoríficas e docas seladas,Equipamentos de processo,1.5.2,EXP,13,11,181,193,214,226,340983.6,33,False,False,2026-11-10,2026-11-27,2026-12-29,2027-01-15
+A25,Compressores e condensadores,Equipamentos de processo,1.5.3,UTIL,17,19,156,172,170,186,2016515.05,14,False,False,2026-10-02,2026-10-27,2026-10-23,2026-11-17
+A26,Tubulação frigorífica e isolamento,Equipamentos de processo,1.5.4,CAM,51,24,176,226,176,226,724106.5,0,True,False,2026-11-03,2027-01-15,2026-11-03,2027-01-15
+A27,Evaporadores e túneis de ar forçado,Equipamentos de processo,1.5.5,RES,13,15,178,190,214,226,770505.73,36,False,False,2026-11-05,2026-11-24,2026-12-29,2027-01-15
+A28,Tanques de tratamento hidrotérmico,Equipamentos de processo,1.5.6,HID,10,17,186,195,217,226,1100814.12,31,False,False,2026-11-17,2026-12-01,2027-01-04,2027-01-15
+A29,Linha de seleção e calibração óptica,Equipamentos de processo,1.5.7,SEL,18,18,186,203,209,226,4262551.0,23,False,False,2026-11-17,2026-12-11,2026-12-21,2027-01-15
+A30,Linha de embalagem e paletização,Equipamentos de processo,1.5.8,EMB,10,13,194,203,217,226,570893.29,23,False,False,2026-11-30,2026-12-11,2027-01-04,2027-01-15
+A31,"Automação, sensores e supervisório",Equipamentos de processo,1.5.9,CAM,18,16,186,203,209,226,770910.75,23,False,False,2026-11-17,2026-12-11,2026-12-21,2027-01-15
+A32,Implantação e parametrização do WMS frigorificado com rastreabilidade de lotes,Sistemas e pessoas,1.6.1,,45,0,79,123,190,234,1710000.0,111,False,False,2026-06-12,2026-08-17,2026-11-24,2027-01-27
+A33,Recrutamento e seleção da equipe operacional,Sistemas e pessoas,1.6.2,,30,0,146,175,197,226,160000.0,51,False,False,2026-09-18,2026-10-30,2026-12-03,2027-01-15
+A34,Treinamento operacional,Sistemas e pessoas,1.6.3,,15,0,176,190,227,241,230000.0,51,False,False,2026-11-03,2026-11-24,2027-01-18,2027-02-05
+A35,Comissionamento a frio,Comissionamento e partida,1.7.1,GALPAO,6,23,227,232,227,232,45466.16,0,True,False,2027-01-18,2027-01-25,2027-01-18,2027-01-25
+A36,Testes integrados com carga,Comissionamento e partida,1.7.2,GALPAO,7,26,233,239,235,241,56303.08,2,False,True,2027-01-26,2027-02-03,2027-01-28,2027-02-05
+A37,"Vistorias, AVCB e licença de operação",Comissionamento e partida,1.7.3,,15,0,227,241,227,241,95000.0,0,True,False,2027-01-18,2027-02-05,2027-01-18,2027-02-05
+A38,Partida assistida (ramp-up),Comissionamento e partida,1.7.4,GALPAO,20,0,242,261,242,261,320000.0,0,True,False,2027-02-10,2027-03-09,2027-02-10,2027-03-09
+A39,Desmobilização do canteiro,Comissionamento e partida,1.7.5,CANTEIRO,9,11,240,248,253,261,24410.4,13,False,False,2027-02-04,2027-02-18,2027-02-25,2027-03-09

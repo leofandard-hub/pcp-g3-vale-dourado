@@ -1,0 +1,989 @@
+{
+ "controle_13_11": {
+  "hh": 55086.8,
+  "custo_direto": 11689047.31
+ },
+ "evm": {
+  "O": 28116171.71,
+  "VP": 18813804.31,
+  "VA": 11090474.96,
+  "CR": 11689047.31,
+  "IDP": 0.589486037725827,
+  "IDC": 0.9487920325104225,
+  "EAC": 29633650.733350925
+ },
+ "evm_fase": [
+  {
+   "fase": "Projetos e licenças",
+   "O": 658000.0,
+   "VP": 658000.0,
+   "VA": 658000.0,
+   "CR": 667375.65,
+   "IDP": 1.0,
+   "IDC": 0.986
+  },
+  {
+   "fase": "Canteiro e infraestrutura",
+   "O": 1122035.48,
+   "VP": 1122035.48,
+   "VA": 1122028.97,
+   "CR": 1301480.82,
+   "IDP": 1.0,
+   "IDC": 0.862
+  },
+  {
+   "fase": "Estrutura e edificação",
+   "O": 9658448.99,
+   "VP": 9482964.165,
+   "VA": 7600445.985,
+   "CR": 7998755.8,
+   "IDP": 0.801,
+   "IDC": 0.95
+  },
+  {
+   "fase": "Instalações prediais e utilidades",
+   "O": 2308199.56,
+   "VP": 2308199.56,
+   "VA": 0.0,
+   "CR": 0.0,
+   "IDP": 0.0,
+   "IDC": NaN
+  },
+  {
+   "fase": "Equipamentos de processo",
+   "O": 11728308.04,
+   "VP": 3234605.102,
+   "VA": 0.0,
+   "CR": 0.0,
+   "IDP": 0.0,
+   "IDC": NaN
+  },
+  {
+   "fase": "Sistemas e pessoas",
+   "O": 2100000.0,
+   "VP": 2008000.0,
+   "VA": 1710000.0,
+   "CR": 1721435.04,
+   "IDP": 0.852,
+   "IDC": 0.993
+  },
+  {
+   "fase": "Comissionamento e partida",
+   "O": 541179.64,
+   "VP": 0.0,
+   "VA": 0.0,
+   "CR": 0.0,
+   "IDP": NaN,
+   "IDC": NaN
+  }
+ ],
+ "custo_natureza": {
+  "MAO_DE_OBRA": {
+   "VA": 515765.49,
+   "CR": 666419.75,
+   "desvio": 150654.26,
+   "IDC": 0.7739348862023255
+  },
+  "SUBCONTRATO": {
+   "VA": 2992960.96,
+   "CR": 3065607.52,
+   "desvio": 72646.56,
+   "IDC": 0.9763027192404592
+  },
+  "MATERIAL": {
+   "VA": 7054983.4,
+   "CR": 7183536.12,
+   "desvio": 128552.72,
+   "IDC": 0.9821045353618967
+  },
+  "EQUIPAMENTO": {
+   "VA": 526765.1,
+   "CR": 773483.92,
+   "desvio": 246718.82,
+   "IDC": 0.6810291553289872
+  }
+ },
+ "indireto": {
+  "real": 1320749.6,
+  "orcado_ate_status": 1295112.94
+ },
+ "prazo": {
+  "fim_linha_base_du": 261,
+  "fim_linha_base": "2027-03-09",
+  "fim_previsto_du": 302.0,
+  "fim_previsto": "2027-05-07",
+  "contrato_du": 271,
+  "atraso_vs_base_du": 41.0,
+  "atraso_vs_contrato_du": 31.0,
+  "multa_rs": 567300.0,
+  "ganho_perdido_rs": 1266900.0
+ },
+ "previsao_atividades": [
+  {
+   "id": "A01",
+   "ES": 3,
+   "EF": 23,
+   "pct": 1.0,
+   "rest": NaN
+  },
+  {
+   "id": "A02",
+   "ES": 8,
+   "EF": 28,
+   "pct": 1.0,
+   "rest": NaN
+  },
+  {
+   "id": "A03",
+   "ES": 3,
+   "EF": 42,
+   "pct": 1.0,
+   "rest": NaN
+  },
+  {
+   "id": "A04",
+   "ES": 8,
+   "EF": 23,
+   "pct": 1.0,
+   "rest": NaN
+  },
+  {
+   "id": "A05",
+   "ES": 23,
+   "EF": 127,
+   "pct": 1.0,
+   "rest": NaN
+  },
+  {
+   "id": "A06",
+   "ES": 11,
+   "EF": 28,
+   "pct": 0.9999976190476191,
+   "rest": NaN
+  },
+  {
+   "id": "A07",
+   "ES": 44,
+   "EF": 63,
+   "pct": 0.9999998724489796,
+   "rest": NaN
+  },
+  {
+   "id": "A08",
+   "ES": 64,
+   "EF": 99,
+   "pct": 0.9999925925925927,
+   "rest": NaN
+  },
+  {
+   "id": "A09",
+   "ES": 111,
+   "EF": 163,
+   "pct": 1.0,
+   "rest": NaN
+  },
+  {
+   "id": "A10",
+   "ES": 139,
+   "EF": 186,
+   "pct": 0.9760685714285714,
+   "rest": 2.0
+  },
+  {
+   "id": "A11",
+   "ES": 147,
+   "EF": 192,
+   "pct": 0.8266515957446808,
+   "rest": 8.0
+  },
+  {
+   "id": "A12",
+   "ES": 187,
+   "EF": 226,
+   "pct": 0.0,
+   "rest": NaN
+  },
+  {
+   "id": "A13",
+   "ES": 164,
+   "EF": 203,
+   "pct": 0.5229300000000001,
+   "rest": 19.0
+  },
+  {
+   "id": "A14",
+   "ES": 126,
+   "EF": 148,
+   "pct": 1.0,
+   "rest": NaN
+  },
+  {
+   "id": "A15",
+   "ES": 149,
+   "EF": 183,
+   "pct": 1.0,
+   "rest": NaN
+  },
+  {
+   "id": "A16",
+   "ES": 227,
+   "EF": 254,
+   "pct": 0.0,
+   "rest": NaN
+  },
+  {
+   "id": "A17",
+   "ES": 187,
+   "EF": 196,
+   "pct": 0.0,
+   "rest": NaN
+  },
+  {
+   "id": "A18",
+   "ES": 187,
+   "EF": 213,
+   "pct": 0.0,
+   "rest": NaN
+  },
+  {
+   "id": "A19",
+   "ES": 187,
+   "EF": 198,
+   "pct": 0.0,
+   "rest": NaN
+  },
+  {
+   "id": "A20",
+   "ES": 187,
+   "EF": 210,
+   "pct": 0.0,
+   "rest": NaN
+  },
+  {
+   "id": "A21",
+   "ES": 202,
+   "EF": 220,
+   "pct": 0.0,
+   "rest": NaN
+  },
+  {
+   "id": "A22",
+   "ES": 197,
+   "EF": 212,
+   "pct": 0.0,
+   "rest": NaN
+  },
+  {
+   "id": "A23",
+   "ES": 207,
+   "EF": 245,
+   "pct": 0.0,
+   "rest": NaN
+  },
+  {
+   "id": "A24",
+   "ES": 222,
+   "EF": 234,
+   "pct": 0.0,
+   "rest": NaN
+  },
+  {
+   "id": "A25",
+   "ES": 197,
+   "EF": 213,
+   "pct": 0.0,
+   "rest": NaN
+  },
+  {
+   "id": "A26",
+   "ES": 217,
+   "EF": 267,
+   "pct": 0.0,
+   "rest": NaN
+  },
+  {
+   "id": "A27",
+   "ES": 219,
+   "EF": 231,
+   "pct": 0.0,
+   "rest": NaN
+  },
+  {
+   "id": "A28",
+   "ES": 227,
+   "EF": 236,
+   "pct": 0.0,
+   "rest": NaN
+  },
+  {
+   "id": "A29",
+   "ES": 227,
+   "EF": 244,
+   "pct": 0.0,
+   "rest": NaN
+  },
+  {
+   "id": "A30",
+   "ES": 235,
+   "EF": 244,
+   "pct": 0.0,
+   "rest": NaN
+  },
+  {
+   "id": "A31",
+   "ES": 227,
+   "EF": 244,
+   "pct": 0.0,
+   "rest": NaN
+  },
+  {
+   "id": "A32",
+   "ES": 84,
+   "EF": 127,
+   "pct": 1.0,
+   "rest": NaN
+  },
+  {
+   "id": "A33",
+   "ES": 187,
+   "EF": 216,
+   "pct": 0.0,
+   "rest": NaN
+  },
+  {
+   "id": "A34",
+   "ES": 217,
+   "EF": 231,
+   "pct": 0.0,
+   "rest": NaN
+  },
+  {
+   "id": "A35",
+   "ES": 268,
+   "EF": 273,
+   "pct": 0.0,
+   "rest": NaN
+  },
+  {
+   "id": "A36",
+   "ES": 274,
+   "EF": 280,
+   "pct": 0.0,
+   "rest": NaN
+  },
+  {
+   "id": "A37",
+   "ES": 268,
+   "EF": 282,
+   "pct": 0.0,
+   "rest": NaN
+  },
+  {
+   "id": "A38",
+   "ES": 283,
+   "EF": 302,
+   "pct": 0.0,
+   "rest": NaN
+  },
+  {
+   "id": "A39",
+   "ES": 281,
+   "EF": 289,
+   "pct": 0.0,
+   "rest": NaN
+  }
+ ],
+ "ppc": {
+  "geral": 0.6328125,
+  "ultimas4": {
+   "2026-S43": 0.143,
+   "2026-S44": 0.5,
+   "2026-S45": 0.25,
+   "2026-S46": 0.6
+  },
+  "media_ult8": 0.38660714285714287,
+  "media_prim8": 0.90625,
+  "S46": 0.6,
+  "causas": {
+   "EQUIPAMENTO": 12,
+   "SERVICO_ANTERIOR": 11,
+   "PRODUTIVIDADE": 8,
+   "TERCEIROS": 4,
+   "RETRABALHO": 3,
+   "PROJETO": 3,
+   "MATERIAL": 3,
+   "MAO_DE_OBRA": 2,
+   "LICENCA": 1
+  },
+  "por_encarregado": {
+   "Coordenação do projeto": 0.889,
+   "Hélio Prado": 0.0,
+   "Jair Bispo": 0.609,
+   "Lúcia Farias": 0.333,
+   "Osvaldo Lins": 0.571,
+   "Tereza Maia": 0.0
+  }
+ },
+ "rup": [
+  {
+   "id": "A06",
+   "orc": 3.52,
+   "real": 4.423,
+   "hh": 1857.6,
+   "q": 419.999,
+   "enc": "Jair Bispo",
+   "desvio": 0.256,
+   "hh_excedente": 379.204
+  },
+  {
+   "id": "A07",
+   "orc": 0.128,
+   "real": 0.156,
+   "hh": 2452.7,
+   "q": 15679.998,
+   "enc": "Jair Bispo",
+   "desvio": 0.222,
+   "hh_excedente": 445.66
+  },
+  {
+   "id": "A08",
+   "orc": 20.9,
+   "real": 28.746,
+   "hh": 11642.0,
+   "q": 404.997,
+   "enc": "Jair Bispo",
+   "desvio": 0.375,
+   "hh_excedente": 3177.563
+  },
+  {
+   "id": "A09",
+   "orc": 35.2,
+   "real": 59.931,
+   "hh": 17260.2,
+   "q": 288.001,
+   "enc": "Lúcia Farias",
+   "desvio": 0.703,
+   "hh_excedente": 7122.565
+  },
+  {
+   "id": "A10",
+   "orc": 0.484,
+   "real": 0.875,
+   "hh": 8070.0,
+   "q": 9223.848,
+   "enc": "Lúcia Farias",
+   "desvio": 0.808,
+   "hh_excedente": 3605.658
+  },
+  {
+   "id": "A11",
+   "orc": 0.77,
+   "real": 1.194,
+   "hh": 3712.0,
+   "q": 3108.21,
+   "enc": "Lúcia Farias",
+   "desvio": 0.551,
+   "hh_excedente": 1318.678
+  },
+  {
+   "id": "A13",
+   "orc": 0.726,
+   "real": 0.883,
+   "hh": 3696.0,
+   "q": 4183.44,
+   "enc": "Jair Bispo",
+   "desvio": 0.217,
+   "hh_excedente": 658.823
+  },
+  {
+   "id": "A14",
+   "orc": 2.09,
+   "real": 1.948,
+   "hh": 2979.9,
+   "q": 1530.0,
+   "enc": "Osvaldo Lins",
+   "desvio": -0.068,
+   "hh_excedente": -217.8
+  },
+  {
+   "id": "A15",
+   "orc": 1.32,
+   "real": 1.394,
+   "hh": 3416.4,
+   "q": 2450.052,
+   "enc": "Osvaldo Lins",
+   "desvio": 0.056,
+   "hh_excedente": 182.331
+  }
+ ],
+ "hora_extra": {
+  "rup_rel_com_HE": 1.584318326670143,
+  "rup_rel_sem_HE": 1.1496600764718834,
+  "hh_extras_total": 7144.0,
+  "custo_adicional_HE": 123512.4
+ },
+ "perdas_hh": {
+  "chuva": 220.4,
+  "equipamento": 2966.1,
+  "material": 590.7,
+  "retrabalho": 848.1
+ },
+ "qualidade": {
+  "fvs": 58,
+  "reprovadas": 11,
+  "hh_retrab_fvs": 948.7,
+  "hh_retrab_rdo": 848.1,
+  "por_atividade": {
+   "A06": 58.0,
+   "A07": 36.2,
+   "A08": 419.79999999999995,
+   "A09": 239.3,
+   "A10": 128.5,
+   "A15": 66.9
+  },
+  "por_encarregado": {
+   "Jair Bispo": 0.238,
+   "Lúcia Farias": 0.238,
+   "Osvaldo Lins": 0.077
+  },
+  "custo_retrab_rs": 25321.634905185998
+ },
+ "fornecedores": [
+  {
+   "id_fornecedor": "F01",
+   "n": 15,
+   "atraso_medio": -0.8,
+   "atrasados_hoje": 0,
+   "valor": 646711.03,
+   "expresso": 0,
+   "rejeitado": 270.22
+  },
+  {
+   "id_fornecedor": "F02",
+   "n": 18,
+   "atraso_medio": 0.17,
+   "atrasados_hoje": 0,
+   "valor": 1143525.13,
+   "expresso": 0,
+   "rejeitado": 0.0
+  },
+  {
+   "id_fornecedor": "F03",
+   "n": 12,
+   "atraso_medio": 0.25,
+   "atrasados_hoje": 0,
+   "valor": 536600.33,
+   "expresso": 0,
+   "rejeitado": 1192.25
+  },
+  {
+   "id_fornecedor": "F04",
+   "n": 4,
+   "atraso_medio": 0.75,
+   "atrasados_hoje": 0,
+   "valor": 2240037.51,
+   "expresso": 0,
+   "rejeitado": 0.0
+  },
+  {
+   "id_fornecedor": "F05",
+   "n": 6,
+   "atraso_medio": 2.4,
+   "atrasados_hoje": 1,
+   "valor": 3919596.49,
+   "expresso": 1,
+   "rejeitado": 0.0
+  },
+  {
+   "id_fornecedor": "F06",
+   "n": 9,
+   "atraso_medio": -0.44,
+   "atrasados_hoje": 0,
+   "valor": 715143.64,
+   "expresso": 3,
+   "rejeitado": 0.0
+  },
+  {
+   "id_fornecedor": "F07",
+   "n": 7,
+   "atraso_medio": -1.0,
+   "atrasados_hoje": 0,
+   "valor": 656547.48,
+   "expresso": 5,
+   "rejeitado": 0.0
+  },
+  {
+   "id_fornecedor": "F08",
+   "n": 3,
+   "atraso_medio": -0.33,
+   "atrasados_hoje": 0,
+   "valor": 60603.39,
+   "expresso": 0,
+   "rejeitado": 0.0
+  },
+  {
+   "id_fornecedor": "F10",
+   "n": 22,
+   "atraso_medio": 10.88,
+   "atrasados_hoje": 5,
+   "valor": 10255509.31,
+   "expresso": 0,
+   "rejeitado": 296.41
+  },
+  {
+   "id_fornecedor": "F12",
+   "n": 28,
+   "atraso_medio": 0.11,
+   "atrasados_hoje": 0,
+   "valor": 966312.54,
+   "expresso": 3,
+   "rejeitado": 1870.6
+  }
+ ],
+ "pedidos_atrasados": [
+  {
+   "id_pedido": "PC0125",
+   "id_material": "CLB",
+   "id_atividade": "A29",
+   "id_fornecedor": "F10",
+   "data_prometida": "2026-11-12",
+   "data_necessidade_obra": "2026-11-17"
+  },
+  {
+   "id_pedido": "PC0121",
+   "id_material": "THT",
+   "id_atividade": "A28",
+   "id_fornecedor": "F10",
+   "data_prometida": "2026-11-10",
+   "data_necessidade_obra": "2026-11-17"
+  },
+  {
+   "id_pedido": "PC0122",
+   "id_material": "THT",
+   "id_atividade": "A28",
+   "id_fornecedor": "F10",
+   "data_prometida": "2026-11-12",
+   "data_necessidade_obra": "2026-11-19"
+  },
+  {
+   "id_pedido": "PC0109",
+   "id_material": "PFR",
+   "id_atividade": "A24",
+   "id_fornecedor": "F10",
+   "data_prometida": "2026-11-04",
+   "data_necessidade_obra": "2026-11-10"
+  },
+  {
+   "id_pedido": "PC0131",
+   "id_material": "SNS",
+   "id_atividade": "A31",
+   "id_fornecedor": "F10",
+   "data_prometida": "2026-11-09",
+   "data_necessidade_obra": "2026-11-17"
+  },
+  {
+   "id_pedido": "PC0133",
+   "id_material": "TLH",
+   "id_atividade": "A10",
+   "id_fornecedor": "F05",
+   "data_prometida": "2026-11-12",
+   "data_necessidade_obra": "2026-10-28"
+  }
+ ],
+ "frete_expresso_rs": 20594.26,
+ "emergencial_reposicao": {
+  "PROGRAMADO": 116,
+  "REPOSICAO": 7,
+  "EMERGENCIAL": 1
+ },
+ "pedidos_tardios": 17,
+ "equipamentos": [
+  {
+   "id_equipamento": "BET-01",
+   "dias": 36,
+   "op": 208.0,
+   "oc": 60.9,
+   "disp": 288.0,
+   "cor": 15.1,
+   "f": 3,
+   "util": 0.722,
+   "dias_zero": 0.0,
+   "custo_locacao": 66655.44,
+   "custo_ocioso": 14094.848
+  },
+  {
+   "id_equipamento": "CAM-01",
+   "dias": 46,
+   "op": 259.7,
+   "oc": 104.3,
+   "disp": 368.0,
+   "cor": 0.0,
+   "f": 0,
+   "util": 0.706,
+   "dias_zero": 5.0,
+   "custo_locacao": 33314.58,
+   "custo_ocioso": 9442.149
+  },
+  {
+   "id_equipamento": "CAM-02",
+   "dias": 46,
+   "op": 245.2,
+   "oc": 118.8,
+   "disp": 368.0,
+   "cor": 0.0,
+   "f": 0,
+   "util": 0.666,
+   "dias_zero": 5.0,
+   "custo_locacao": 33210.16,
+   "custo_ocioso": 10721.106
+  },
+  {
+   "id_equipamento": "CAM-03",
+   "dias": 25,
+   "op": 124.7,
+   "oc": 75.3,
+   "disp": 200.0,
+   "cor": 0.0,
+   "f": 0,
+   "util": 0.624,
+   "dias_zero": 5.0,
+   "custo_locacao": 17909.0,
+   "custo_ocioso": 6742.738
+  },
+  {
+   "id_equipamento": "ESC-01",
+   "dias": 25,
+   "op": 117.5,
+   "oc": 78.9,
+   "disp": 200.0,
+   "cor": 3.6,
+   "f": 1,
+   "util": 0.588,
+   "dias_zero": 5.0,
+   "custo_locacao": 35793.0,
+   "custo_ocioso": 14120.339
+  },
+  {
+   "id_equipamento": "GUI-01",
+   "dias": 61,
+   "op": 327.3,
+   "oc": 148.5,
+   "disp": 488.0,
+   "cor": 8.2,
+   "f": 2,
+   "util": 0.671,
+   "dias_zero": 8.0,
+   "custo_locacao": 262912.44,
+   "custo_ocioso": 80005.118
+  },
+  {
+   "id_equipamento": "MUN-01",
+   "dias": 70,
+   "op": 289.4,
+   "oc": 211.8,
+   "disp": 560.0,
+   "cor": 54.8,
+   "f": 8,
+   "util": 0.517,
+   "dias_zero": 18.0,
+   "custo_locacao": 69902.0,
+   "custo_ocioso": 26437.935
+  },
+  {
+   "id_equipamento": "PTA-01",
+   "dias": 82,
+   "op": 372.7,
+   "oc": 259.3,
+   "disp": 656.0,
+   "cor": 20.0,
+   "f": 6,
+   "util": 0.568,
+   "dias_zero": 19.0,
+   "custo_locacao": 33054.2,
+   "custo_ocioso": 13065.479
+  },
+  {
+   "id_equipamento": "PTA-02",
+   "dias": 82,
+   "op": 375.8,
+   "oc": 273.2,
+   "disp": 656.0,
+   "cor": 3.0,
+   "f": 1,
+   "util": 0.573,
+   "dias_zero": 19.0,
+   "custo_locacao": 33933.24,
+   "custo_ocioso": 14131.953
+  },
+  {
+   "id_equipamento": "PTA-03",
+   "dias": 52,
+   "op": 278.4,
+   "oc": 122.3,
+   "disp": 416.0,
+   "cor": 11.3,
+   "f": 2,
+   "util": 0.669,
+   "dias_zero": 6.0,
+   "custo_locacao": 20670.52,
+   "custo_ocioso": 6076.934
+  },
+  {
+   "id_equipamento": "PTA-04",
+   "dias": 52,
+   "op": 281.2,
+   "oc": 126.8,
+   "disp": 416.0,
+   "cor": 4.0,
+   "f": 1,
+   "util": 0.676,
+   "dias_zero": 6.0,
+   "custo_locacao": 21833.76,
+   "custo_ocioso": 6655.098
+  },
+  {
+   "id_equipamento": "PTA-05",
+   "dias": 25,
+   "op": 106.9,
+   "oc": 90.4,
+   "disp": 200.0,
+   "cor": 2.7,
+   "f": 1,
+   "util": 0.534,
+   "dias_zero": 8.0,
+   "custo_locacao": 9797.75,
+   "custo_ocioso": 4428.583
+  },
+  {
+   "id_equipamento": "PTA-06",
+   "dias": 25,
+   "op": 106.8,
+   "oc": 93.2,
+   "disp": 200.0,
+   "cor": 0.0,
+   "f": 0,
+   "util": 0.534,
+   "dias_zero": 8.0,
+   "custo_locacao": 9538.75,
+   "custo_ocioso": 4445.058
+  },
+  {
+   "id_equipamento": "RET-01",
+   "dias": 57,
+   "op": 332.3,
+   "oc": 106.4,
+   "disp": 456.0,
+   "cor": 13.3,
+   "f": 2,
+   "util": 0.729,
+   "dias_zero": 0.0,
+   "custo_locacao": 46041.18,
+   "custo_ocioso": 10742.942
+  },
+  {
+   "id_equipamento": "ROL-01",
+   "dias": 46,
+   "op": 248.9,
+   "oc": 109.6,
+   "disp": 368.0,
+   "cor": 5.5,
+   "f": 2,
+   "util": 0.676,
+   "dias_zero": 5.0,
+   "custo_locacao": 32345.82,
+   "custo_ocioso": 9633.429
+  }
+ ],
+ "locacao_ociosa_total": 230743.70775000003,
+ "diaria_contratada_acima": {
+  "ALI-01": -0.008,
+  "ALI-02": 0.044,
+  "BET-01": -0.026,
+  "CAM-01": 0.05,
+  "CAM-02": 0.046,
+  "CAM-03": 0.038,
+  "ESC-01": -0.013,
+  "GUI-01": 0.026,
+  "MUN-01": 0.019,
+  "PTA-01": 0.034,
+  "PTA-02": 0.061,
+  "PTA-03": 0.019,
+  "PTA-04": 0.077,
+  "PTA-05": 0.005,
+  "PTA-06": -0.022,
+  "RET-01": 0.036,
+  "ROL-01": -0.023
+ },
+ "seguranca": [
+  {
+   "id_ocorrencia": "OC001",
+   "data": "2026-06-02",
+   "tipo": "QUASE_ACIDENTE",
+   "id_atividade": "A08",
+   "funcao_envolvida": "SER",
+   "dias_perdidos": 0,
+   "houve_hora_extra_no_dia": 1,
+   "chuva_no_dia": 0
+  },
+  {
+   "id_ocorrencia": "OC002",
+   "data": "2026-06-03",
+   "tipo": "QUASE_ACIDENTE",
+   "id_atividade": "A08",
+   "funcao_envolvida": "SER",
+   "dias_perdidos": 0,
+   "houve_hora_extra_no_dia": 1,
+   "chuva_no_dia": 0
+  },
+  {
+   "id_ocorrencia": "OC003",
+   "data": "2026-07-08",
+   "tipo": "ACIDENTE_SEM_AFASTAMENTO",
+   "id_atividade": "A08",
+   "funcao_envolvida": "SER",
+   "dias_perdidos": 0,
+   "houve_hora_extra_no_dia": 0,
+   "chuva_no_dia": 0
+  },
+  {
+   "id_ocorrencia": "OC004",
+   "data": "2026-08-07",
+   "tipo": "ACIDENTE_SEM_AFASTAMENTO",
+   "id_atividade": "A09",
+   "funcao_envolvida": "MON",
+   "dias_perdidos": 0,
+   "houve_hora_extra_no_dia": 1,
+   "chuva_no_dia": 0
+  },
+  {
+   "id_ocorrencia": "OC005",
+   "data": "2026-09-09",
+   "tipo": "QUASE_ACIDENTE",
+   "id_atividade": "A09",
+   "funcao_envolvida": "SOL",
+   "dias_perdidos": 0,
+   "houve_hora_extra_no_dia": 1,
+   "chuva_no_dia": 0
+  },
+  {
+   "id_ocorrencia": "OC006",
+   "data": "2026-10-02",
+   "tipo": "ACIDENTE_SEM_AFASTAMENTO",
+   "id_atividade": "A09",
+   "funcao_envolvida": "SER",
+   "dias_perdidos": 0,
+   "houve_hora_extra_no_dia": 1,
+   "chuva_no_dia": 0
+  },
+  {
+   "id_ocorrencia": "OC007",
+   "data": "2026-10-28",
+   "tipo": "QUASE_ACIDENTE",
+   "id_atividade": "A13",
+   "funcao_envolvida": "PED",
+   "dias_perdidos": 0,
+   "houve_hora_extra_no_dia": 0,
+   "chuva_no_dia": 0
+  }
+ ]
+}

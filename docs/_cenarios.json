@@ -1,0 +1,104 @@
+{
+ "premissas": {
+  "adicional_noturno": 0.2,
+  "perda_prod_noturna": 0.1,
+  "iluminacao_apoio_noturno_por_frente": 20000,
+  "supervisao_noturna_por_frente": 22500,
+  "alisadoras_extra_A12": 8400,
+  "diligenciamento_F10": 60000,
+  "ampliacao_vivencia_temporaria": 35000
+ },
+ "cenarios": {
+  "1. Seguir como está": {
+   "fim_du": 302,
+   "fim": "2027-05-07",
+   "atraso_contrato_du": 31,
+   "custo_adicional": 0,
+   "itens": {},
+   "multa": 567300.0,
+   "ganho_perdido_vs_contrato": 957900.0,
+   "adm_local_extra_vs_base": 285047.62,
+   "pico_efetivo_simultaneo": 142,
+   "pico_nivelado": 129,
+   "deslocadas": {
+    "A16": [
+     232,
+     259
+    ]
+   },
+   "impacto_total": 1810247.62
+  },
+  "2. Recuperar o prazo": {
+   "fim_du": 269,
+   "fim": "2027-03-19",
+   "atraso_contrato_du": 0,
+   "custo_adicional": 265743.17,
+   "itens": {
+    "2º turno A12 (adic. noturno + perda)": 29391.69,
+    "2º turno A26 (adic. noturno + perda)": 47951.48,
+    "Iluminação e apoio noturno (2 frentes)": 40000,
+    "Supervisão noturna (2 frentes)": 45000,
+    "2 alisadoras extras no piso (20 du)": 8400,
+    "Diligenciamento e frete expresso F10": 60000,
+    "Ampliação temporária da vivência (pico > 130)": 35000
+   },
+   "multa": 0,
+   "ganho_perdido_vs_contrato": -61800.0,
+   "adm_local_extra_vs_base": 55619.05,
+   "pico_efetivo_simultaneo": 193,
+   "pico_nivelado": 161,
+   "deslocadas": {
+    "A27": [
+     213,
+     225
+    ],
+    "A28": [
+     221,
+     230
+    ]
+   },
+   "impacto_total": 259562.22
+  },
+  "3. Replanejar (recuperação parcial)": {
+   "fim_du": 292,
+   "fim": "2027-04-23",
+   "atraso_contrato_du": 21,
+   "custo_adicional": 115291.69,
+   "itens": {
+    "2º turno A12 (adic. noturno + perda)": 29391.69,
+    "Iluminação e apoio noturno (1 frente)": 20000,
+    "Supervisão noturna (1 frente)": 22500,
+    "2 alisadoras extras no piso (20 du)": 8400,
+    "Ampliação temporária da vivência (pico > 130)": 35000
+   },
+   "multa": 384300.0,
+   "ganho_perdido_vs_contrato": 648900.0,
+   "adm_local_extra_vs_base": 215523.81,
+   "pico_efetivo_simultaneo": 193,
+   "pico_nivelado": 151,
+   "deslocadas": {
+    "A16": [
+     214,
+     241
+    ],
+    "A21": [
+     204,
+     222
+    ],
+    "A27": [
+     213,
+     225
+    ],
+    "A28": [
+     225,
+     234
+    ]
+   },
+   "impacto_total": 1364015.5
+  }
+ },
+ "custo_mo": {
+  "A12": 195944.61,
+  "A26": 319676.5
+ }
+}

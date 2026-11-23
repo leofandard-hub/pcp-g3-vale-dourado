@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sistema de PCP · Vale Dourado Frutas</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Sistema de PCP</h1>
+    <p class="sub">G3 · Vale Dourado Frutas · Packing house de manga · Juazeiro</p>
+  </div>
+  <div class="status">
+    <span id="syncStatus" class="pill"></span>
+    Data: <input type="date" id="dataFiltro" value="2026-11-13" min="2026-02-16" max="2027-06-30">
+  </div>
+</header>
+
+<nav>
+  <button data-tab="dashboard" class="active">Dashboard</button>
+  <button data-tab="analises">Análises</button>
+  <button data-tab="lancamentos">Lançamentos</button>
+  <button data-tab="modelo">Modelo 3D</button>
+  <button data-tab="config">Dados e configuração</button>
+</nav>
+
+<main>
+  <!-- R11 · DASHBOARD DE UMA TELA -->
+  <section id="dashboard" class="tab active">
+    <div class="kpis" id="kpis"></div>
+    <div class="grid3">
+      <div class="card"><h3>Curva S · VP × VA × CR (R$ mi)</h3><canvas id="chartS"></canvas></div>
+      <div class="card"><h3>PPC semanal (meta 80%)</h3><canvas id="chartPPC"></canvas></div>
+      <div class="card"><h3>Pareto das causas</h3><canvas id="chartPareto"></canvas></div>
+      <div class="card"><h3>Efetivo real × previsto (média/dia na semana)</h3><canvas id="chartHist"></canvas></div>
+      <div class="card"><h3>Avanço por fase</h3><canvas id="chartFases"></canvas></div>
+      <div class="card"><h3>Alertas</h3><ul id="alertas" class="alertas"></ul></div>
+    </div>
+  </section>
+
+  <!-- ANÁLISES -->
+  <section id="analises" class="tab">
+    <div class="card"><h3>R4 · R5 · Valor agregado por fase</h3><div class="scroll"><table class="data" id="tabFases"></table></div></div>
+    <div class="card"><h3>R4 · Avanço por atividade</h3><div class="scroll"><table class="data" id="tabAtiv"></table></div></div>
+    <div class="grid2">
+      <div class="card"><h3>R7 · RUP real × orçada por atividade</h3><div class="scroll"><table class="data" id="tabRup"></table></div></div>
+      <div class="card"><h3>R7 · RUP por encarregado</h3><div class="scroll"><table class="data" id="tabRupEnc"></table></div>
+        <h3 style="margin-top:16px">R8 · Absenteísmo</h3><div id="absent"></div></div>
+    </div>
+    <div class="grid2">
+      <div class="card"><h3>R9 · Pedidos em aberto / atrasados</h3><div class="scroll"><table class="data" id="tabPedidos"></table></div></div>
+      <div class="card"><h3>R9 · Atraso por fornecedor</h3><div class="scroll"><table class="data" id="tabForn"></table></div></div>
+    </div>
+    <div class="card"><h3>R10 · Equipamentos de obra por tipo</h3><div class="scroll"><table class="data" id="tabEquip"></table></div></div>
+  </section>
+
+  <!-- R3 · LANÇAMENTOS -->
+  <section id="lancamentos" class="tab">
+    <div class="card">
+      <div class="row">
+        <label>Tela <select id="formTabela"></select></label>
+        <label>Quem lança <input id="autor" placeholder="seu nome" size="14"></label>
+      </div>
+      <form id="form" class="mapform"></form>
+      <button id="btnLancar">Lançar</button> <span id="formMsg"></span>
+    </div>
+    <div class="card">
+      <h3>Lançamentos desta tela <span class="hint" id="lancInfo"></span></h3>
+      <div class="scroll"><table class="data" id="tabLanc"></table></div>
+    </div>
+  </section>
+
+  <!-- R12 · MODELO 3D -->
+  <section id="modelo" class="tab">
+    <div class="card">
+      <div class="row">
+        <label>Data <input type="range" id="slider3d" min="0" max="1000" value="1000"></label>
+        <b id="label3d"></b>
+        <span class="legend"><i style="background:#c9ced6"></i>não iniciado <i style="background:#f2b134"></i>em andamento <i style="background:#2e9e5b"></i>concluído <i style="background:#c0392b"></i>crítica atrasada</span>
+      </div>
+      <div class="view3dwrap"><div id="view3d"></div><div id="info3d" class="info3d">Clique em uma zona.</div></div>
+      <p class="hint">Avanço da zona = média ponderada pelo custo orçado do avanço das atividades da zona (Anexo B). Mouse: girar, rolar para aproximar, botão direito para arrastar.</p>
+    </div>
+  </section>
+
+  <!-- CONFIG -->
+  <section id="config" class="tab">
+    <div class="card">
+      <h3>R1 · Números de controle do dossiê</h3>
+      <table class="data" id="tabControle"></table>
+    </div>
+    <div class="card">
+      <h3>R2 · Banco na nuvem (Supabase)</h3>
+      <p>As chaves não ficam no repositório: cada integrante cola uma vez aqui (fica salvo só neste navegador).</p>
+      <div class="mapform">
+        <label>Project URL<input id="sbUrl" placeholder="https://xxxx.supabase.co"></label>
+        <label>anon public key<input id="sbKey" placeholder="eyJ..."></label>
+      </div>
+      <button id="btnSb">Conectar</button> <span id="sbMsg"></span>
+    </div>
+  </section>
+</main>
+
+<script src="app.js"></script>
+<script type="module" src="modelo3d.js"></script>
+</body>
+</html>

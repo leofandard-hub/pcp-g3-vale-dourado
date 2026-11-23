@@ -1,0 +1,994 @@
+{
+ "evm": {
+  "O": 28116171.71,
+  "VP": 18813804.31,
+  "VA": 11090474.96,
+  "CR": 11689047.31,
+  "IDP": 0.589486037725827,
+  "IDC": 0.9487920325104225,
+  "EAC": 29633650.733350925
+ },
+ "prazo": {
+  "fim_linha_base_du": 261,
+  "fim_linha_base": "2027-03-09",
+  "fim_previsto_du": 302.0,
+  "fim_previsto": "2027-05-07",
+  "contrato_du": 271,
+  "atraso_vs_base_du": 41.0,
+  "atraso_vs_contrato_du": 31.0,
+  "multa_rs": 567300.0,
+  "ganho_perdido_rs": 1266900.0
+ },
+ "ppc": {
+  "geral": 0.6328125,
+  "ultimas4": {
+   "2026-S43": 0.143,
+   "2026-S44": 0.5,
+   "2026-S45": 0.25,
+   "2026-S46": 0.6
+  },
+  "media_ult8": 0.38660714285714287,
+  "media_prim8": 0.90625,
+  "S46": 0.6,
+  "causas": {
+   "EQUIPAMENTO": 12,
+   "SERVICO_ANTERIOR": 11,
+   "PRODUTIVIDADE": 8,
+   "TERCEIROS": 4,
+   "RETRABALHO": 3,
+   "PROJETO": 3,
+   "MATERIAL": 3,
+   "MAO_DE_OBRA": 2,
+   "LICENCA": 1
+  },
+  "por_encarregado": {
+   "Coordenação do projeto": 0.889,
+   "Hélio Prado": 0.0,
+   "Jair Bispo": 0.609,
+   "Lúcia Farias": 0.333,
+   "Osvaldo Lins": 0.571,
+   "Tereza Maia": 0.0
+  }
+ },
+ "he": {
+  "rup_rel_com_HE": 1.584318326670143,
+  "rup_rel_sem_HE": 1.1496600764718834,
+  "hh_extras_total": 7144.0,
+  "custo_adicional_HE": 123512.4
+ },
+ "qual": {
+  "fvs": 58,
+  "reprovadas": 11,
+  "hh_retrab_fvs": 948.7,
+  "hh_retrab_rdo": 848.1,
+  "por_atividade": {
+   "A06": 58.0,
+   "A07": 36.2,
+   "A08": 419.79999999999995,
+   "A09": 239.3,
+   "A10": 128.5,
+   "A15": 66.9
+  },
+  "por_encarregado": {
+   "Jair Bispo": 0.238,
+   "Lúcia Farias": 0.238,
+   "Osvaldo Lins": 0.077
+  },
+  "custo_retrab_rs": 25321.634905185998
+ },
+ "nat": {
+  "MAO_DE_OBRA": {
+   "VA": 515765.49,
+   "CR": 666419.75,
+   "desvio": 150654.26,
+   "IDC": 0.7739348862023255
+  },
+  "SUBCONTRATO": {
+   "VA": 2992960.96,
+   "CR": 3065607.52,
+   "desvio": 72646.56,
+   "IDC": 0.9763027192404592
+  },
+  "MATERIAL": {
+   "VA": 7054983.4,
+   "CR": 7183536.12,
+   "desvio": 128552.72,
+   "IDC": 0.9821045353618967
+  },
+  "EQUIPAMENTO": {
+   "VA": 526765.1,
+   "CR": 773483.92,
+   "desvio": 246718.82,
+   "IDC": 0.6810291553289872
+  }
+ },
+ "ind": {
+  "real": 1320749.6,
+  "orcado_ate_status": 1295112.94
+ },
+ "cen": {
+  "1. Seguir como está": {
+   "fim_du": 302,
+   "fim": "2027-05-07",
+   "atraso_contrato_du": 31,
+   "custo_adicional": 0,
+   "itens": {},
+   "multa": 567300.0,
+   "ganho_perdido_vs_contrato": 957900.0,
+   "adm_local_extra_vs_base": 285047.62,
+   "pico_efetivo_simultaneo": 142,
+   "pico_nivelado": 129,
+   "deslocadas": {
+    "A16": [
+     232,
+     259
+    ]
+   },
+   "impacto_total": 1810247.62
+  },
+  "2. Recuperar o prazo": {
+   "fim_du": 269,
+   "fim": "2027-03-19",
+   "atraso_contrato_du": 0,
+   "custo_adicional": 265743.17,
+   "itens": {
+    "2º turno A12 (adic. noturno + perda)": 29391.69,
+    "2º turno A26 (adic. noturno + perda)": 47951.48,
+    "Iluminação e apoio noturno (2 frentes)": 40000,
+    "Supervisão noturna (2 frentes)": 45000,
+    "2 alisadoras extras no piso (20 du)": 8400,
+    "Diligenciamento e frete expresso F10": 60000,
+    "Ampliação temporária da vivência (pico > 130)": 35000
+   },
+   "multa": 0,
+   "ganho_perdido_vs_contrato": -61800.0,
+   "adm_local_extra_vs_base": 55619.05,
+   "pico_efetivo_simultaneo": 193,
+   "pico_nivelado": 161,
+   "deslocadas": {
+    "A27": [
+     213,
+     225
+    ],
+    "A28": [
+     221,
+     230
+    ]
+   },
+   "impacto_total": 259562.22
+  },
+  "3. Replanejar (recuperação parcial)": {
+   "fim_du": 292,
+   "fim": "2027-04-23",
+   "atraso_contrato_du": 21,
+   "custo_adicional": 115291.69,
+   "itens": {
+    "2º turno A12 (adic. noturno + perda)": 29391.69,
+    "Iluminação e apoio noturno (1 frente)": 20000,
+    "Supervisão noturna (1 frente)": 22500,
+    "2 alisadoras extras no piso (20 du)": 8400,
+    "Ampliação temporária da vivência (pico > 130)": 35000
+   },
+   "multa": 384300.0,
+   "ganho_perdido_vs_contrato": 648900.0,
+   "adm_local_extra_vs_base": 215523.81,
+   "pico_efetivo_simultaneo": 193,
+   "pico_nivelado": 151,
+   "deslocadas": {
+    "A16": [
+     214,
+     241
+    ],
+    "A21": [
+     204,
+     222
+    ],
+    "A27": [
+     213,
+     225
+    ],
+    "A28": [
+     225,
+     234
+    ]
+   },
+   "impacto_total": 1364015.5
+  }
+ },
+ "cap": [
+  {
+   "posto": "PT01",
+   "nome": "Recepção e lavagem",
+   "oee": 0.8160750000000001,
+   "cap": 42517.91758793971,
+   "nec": 2,
+   "proj": 2,
+   "add": 0,
+   "inv": 0.0,
+   "ops": 20.0
+  },
+  {
+   "posto": "PT02",
+   "nome": "Seleção e calibração óptica",
+   "oee": 0.76032,
+   "cap": 61108.509767441865,
+   "nec": 1,
+   "proj": 1,
+   "add": 0,
+   "inv": 0.0,
+   "ops": 12.0
+  },
+  {
+   "posto": "PT03",
+   "nome": "Tratamento hidrotérmico",
+   "oee": 0.8608899999999999,
+   "cap": 31877.526857142853,
+   "nec": 6,
+   "proj": 4,
+   "add": 2,
+   "inv": 1040000.0,
+   "ops": 24.0
+  },
+  {
+   "posto": "PT04",
+   "nome": "Embalagem manual",
+   "oee": 0.79002,
+   "cap": 61985.39623783784,
+   "nec": 19,
+   "proj": 28,
+   "add": 0,
+   "inv": 0.0,
+   "ops": 38.0
+  },
+  {
+   "posto": "PT05",
+   "nome": "Paletização e cintamento",
+   "oee": 0.844308,
+   "cap": 39079.39885714285,
+   "nec": 3,
+   "proj": 2,
+   "add": 1,
+   "inv": 190000.0,
+   "ops": 12.0
+  },
+  {
+   "posto": "PT06",
+   "nome": "Pré-resfriamento",
+   "oee": 0.888336,
+   "cap": 66983.76471272728,
+   "nec": 11,
+   "proj": 16,
+   "add": 0,
+   "inv": 0.0,
+   "ops": 11.0
+  },
+  {
+   "posto": "PT07",
+   "nome": "Expedição refrigerada",
+   "oee": 0.85329,
+   "cap": 58979.4048,
+   "nec": 2,
+   "proj": 2,
+   "add": 0,
+   "inv": 0.0,
+   "ops": 12.0
+  }
+ ],
+ "curvaS": [
+  [
+   "2026-02",
+   0.188,
+   0.177,
+   0.18
+  ],
+  [
+   "2026-03",
+   0.658,
+   0.644,
+   0.668
+  ],
+  [
+   "2026-04",
+   0.833,
+   0.757,
+   0.818
+  ],
+  [
+   "2026-05",
+   1.245,
+   1.07,
+   1.169
+  ],
+  [
+   "2026-06",
+   2.2,
+   1.914,
+   2.024
+  ],
+  [
+   "2026-07",
+   5.109,
+   3.216,
+   3.468
+  ],
+  [
+   "2026-08",
+   9.148,
+   5.662,
+   5.848
+  ],
+  [
+   "2026-09",
+   12.685,
+   8.63,
+   8.549
+  ],
+  [
+   "2026-10",
+   17.422,
+   10.699,
+   11.258
+  ],
+  [
+   "2026-11",
+   18.814,
+   11.09,
+   11.689
+  ],
+  [
+   "2026-12",
+   27.433,
+   null,
+   null
+  ],
+  [
+   "2027-01",
+   27.716,
+   null,
+   null
+  ],
+  [
+   "2027-02",
+   28.004,
+   null,
+   null
+  ],
+  [
+   "2027-03",
+   28.116,
+   null,
+   null
+  ]
+ ],
+ "atrasos": {
+  "A07": {
+   "base_fim": "2026-05-11",
+   "real_fim": "2026-05-20",
+   "dias": 7,
+   "ini_atraso": 8,
+   "pct": 1.0
+  },
+  "A08": {
+   "base_fim": "2026-07-01",
+   "real_fim": "2026-07-14",
+   "dias": 8,
+   "ini_atraso": 7,
+   "pct": 1.0
+  },
+  "A09": {
+   "base_fim": "2026-09-04",
+   "real_fim": "2026-10-14",
+   "dias": 26,
+   "ini_atraso": 16,
+   "pct": 1.0
+  },
+  "A10": {
+   "base_fim": "2026-09-17",
+   "real_fim": "2026-11-13",
+   "dias": null,
+   "ini_atraso": 22,
+   "pct": 0.976
+  },
+  "A11": {
+   "base_fim": "2026-09-24",
+   "real_fim": "2026-11-13",
+   "dias": null,
+   "ini_atraso": 24,
+   "pct": 0.827
+  },
+  "A13": {
+   "base_fim": "2026-10-22",
+   "real_fim": "2026-11-13",
+   "dias": null,
+   "ini_atraso": 26,
+   "pct": 0.523
+  },
+  "A14": {
+   "base_fim": "2026-08-31",
+   "real_fim": "2026-09-22",
+   "dias": 15,
+   "ini_atraso": 16,
+   "pct": 1.0
+  },
+  "A15": {
+   "base_fim": "2026-10-16",
+   "real_fim": "2026-11-12",
+   "dias": 18,
+   "ini_atraso": 15,
+   "pct": 1.0
+  }
+ },
+ "rup": [
+  {
+   "id": "A06",
+   "orc": 3.52,
+   "real": 4.423,
+   "desvio": 0.256,
+   "hh_excedente": 379.204,
+   "du_perdidos": 3.386,
+   "enc": "Jair Bispo"
+  },
+  {
+   "id": "A07",
+   "orc": 0.128,
+   "real": 0.156,
+   "desvio": 0.222,
+   "hh_excedente": 445.66,
+   "du_perdidos": 4.642,
+   "enc": "Jair Bispo"
+  },
+  {
+   "id": "A08",
+   "orc": 20.9,
+   "real": 28.746,
+   "desvio": 0.375,
+   "hh_excedente": 3177.563,
+   "du_perdidos": 12.813,
+   "enc": "Jair Bispo"
+  },
+  {
+   "id": "A09",
+   "orc": 35.2,
+   "real": 59.931,
+   "desvio": 0.703,
+   "hh_excedente": 7122.565,
+   "du_perdidos": 29.677,
+   "enc": "Lúcia Farias"
+  },
+  {
+   "id": "A10",
+   "orc": 0.484,
+   "real": 0.875,
+   "desvio": 0.808,
+   "hh_excedente": 3605.658,
+   "du_perdidos": 22.535,
+   "enc": "Lúcia Farias"
+  },
+  {
+   "id": "A11",
+   "orc": 0.77,
+   "real": 1.194,
+   "desvio": 0.551,
+   "hh_excedente": 1318.678,
+   "du_perdidos": 12.68,
+   "enc": "Lúcia Farias"
+  },
+  {
+   "id": "A13",
+   "orc": 0.726,
+   "real": 0.883,
+   "desvio": 0.217,
+   "hh_excedente": 658.823,
+   "du_perdidos": 3.581,
+   "enc": "Jair Bispo"
+  },
+  {
+   "id": "A14",
+   "orc": 2.09,
+   "real": 1.948,
+   "desvio": -0.068,
+   "hh_excedente": -217.8,
+   "du_perdidos": -1.601,
+   "enc": "Osvaldo Lins"
+  },
+  {
+   "id": "A15",
+   "orc": 1.32,
+   "real": 1.394,
+   "desvio": 0.056,
+   "hh_excedente": 182.331,
+   "du_perdidos": 1.753,
+   "enc": "Osvaldo Lins"
+  }
+ ],
+ "equip": [
+  {
+   "id_equipamento": "GUI-01",
+   "util": 0.671,
+   "dias_zero": 8.0,
+   "custo_ocioso": 80005.118,
+   "f": 2,
+   "cor": 8.2
+  },
+  {
+   "id_equipamento": "MUN-01",
+   "util": 0.517,
+   "dias_zero": 18.0,
+   "custo_ocioso": 26437.935,
+   "f": 8,
+   "cor": 54.8
+  },
+  {
+   "id_equipamento": "PTA-02",
+   "util": 0.573,
+   "dias_zero": 19.0,
+   "custo_ocioso": 14131.953,
+   "f": 1,
+   "cor": 3.0
+  },
+  {
+   "id_equipamento": "ESC-01",
+   "util": 0.588,
+   "dias_zero": 5.0,
+   "custo_ocioso": 14120.339,
+   "f": 1,
+   "cor": 3.6
+  },
+  {
+   "id_equipamento": "BET-01",
+   "util": 0.722,
+   "dias_zero": 0.0,
+   "custo_ocioso": 14094.848,
+   "f": 3,
+   "cor": 15.1
+  },
+  {
+   "id_equipamento": "PTA-01",
+   "util": 0.568,
+   "dias_zero": 19.0,
+   "custo_ocioso": 13065.479,
+   "f": 6,
+   "cor": 20.0
+  },
+  {
+   "id_equipamento": "RET-01",
+   "util": 0.729,
+   "dias_zero": 0.0,
+   "custo_ocioso": 10742.942,
+   "f": 2,
+   "cor": 13.3
+  },
+  {
+   "id_equipamento": "CAM-02",
+   "util": 0.666,
+   "dias_zero": 5.0,
+   "custo_ocioso": 10721.106,
+   "f": 0,
+   "cor": 0.0
+  },
+  {
+   "id_equipamento": "ROL-01",
+   "util": 0.676,
+   "dias_zero": 5.0,
+   "custo_ocioso": 9633.429,
+   "f": 2,
+   "cor": 5.5
+  },
+  {
+   "id_equipamento": "CAM-01",
+   "util": 0.706,
+   "dias_zero": 5.0,
+   "custo_ocioso": 9442.149,
+   "f": 0,
+   "cor": 0.0
+  },
+  {
+   "id_equipamento": "CAM-03",
+   "util": 0.624,
+   "dias_zero": 5.0,
+   "custo_ocioso": 6742.738,
+   "f": 0,
+   "cor": 0.0
+  },
+  {
+   "id_equipamento": "PTA-04",
+   "util": 0.676,
+   "dias_zero": 6.0,
+   "custo_ocioso": 6655.098,
+   "f": 1,
+   "cor": 4.0
+  },
+  {
+   "id_equipamento": "PTA-03",
+   "util": 0.669,
+   "dias_zero": 6.0,
+   "custo_ocioso": 6076.934,
+   "f": 2,
+   "cor": 11.3
+  },
+  {
+   "id_equipamento": "PTA-06",
+   "util": 0.534,
+   "dias_zero": 8.0,
+   "custo_ocioso": 4445.058,
+   "f": 0,
+   "cor": 0.0
+  },
+  {
+   "id_equipamento": "PTA-05",
+   "util": 0.534,
+   "dias_zero": 8.0,
+   "custo_ocioso": 4428.583,
+   "f": 1,
+   "cor": 2.7
+  }
+ ],
+ "equip_ocioso_total": 230743.70775000003,
+ "forn": [
+  {
+   "id_fornecedor": "F01",
+   "n": 15,
+   "atraso_medio": -0.8,
+   "atrasados_hoje": 0,
+   "valor": 646711.03,
+   "expresso": 0,
+   "rejeitado": 270.22
+  },
+  {
+   "id_fornecedor": "F02",
+   "n": 18,
+   "atraso_medio": 0.17,
+   "atrasados_hoje": 0,
+   "valor": 1143525.13,
+   "expresso": 0,
+   "rejeitado": 0.0
+  },
+  {
+   "id_fornecedor": "F03",
+   "n": 12,
+   "atraso_medio": 0.25,
+   "atrasados_hoje": 0,
+   "valor": 536600.33,
+   "expresso": 0,
+   "rejeitado": 1192.25
+  },
+  {
+   "id_fornecedor": "F04",
+   "n": 4,
+   "atraso_medio": 0.75,
+   "atrasados_hoje": 0,
+   "valor": 2240037.51,
+   "expresso": 0,
+   "rejeitado": 0.0
+  },
+  {
+   "id_fornecedor": "F05",
+   "n": 6,
+   "atraso_medio": 2.4,
+   "atrasados_hoje": 1,
+   "valor": 3919596.49,
+   "expresso": 1,
+   "rejeitado": 0.0
+  },
+  {
+   "id_fornecedor": "F06",
+   "n": 9,
+   "atraso_medio": -0.44,
+   "atrasados_hoje": 0,
+   "valor": 715143.64,
+   "expresso": 3,
+   "rejeitado": 0.0
+  },
+  {
+   "id_fornecedor": "F07",
+   "n": 7,
+   "atraso_medio": -1.0,
+   "atrasados_hoje": 0,
+   "valor": 656547.48,
+   "expresso": 5,
+   "rejeitado": 0.0
+  },
+  {
+   "id_fornecedor": "F08",
+   "n": 3,
+   "atraso_medio": -0.33,
+   "atrasados_hoje": 0,
+   "valor": 60603.39,
+   "expresso": 0,
+   "rejeitado": 0.0
+  },
+  {
+   "id_fornecedor": "F10",
+   "n": 22,
+   "atraso_medio": 10.88,
+   "atrasados_hoje": 5,
+   "valor": 10255509.31,
+   "expresso": 0,
+   "rejeitado": 296.41
+  },
+  {
+   "id_fornecedor": "F12",
+   "n": 28,
+   "atraso_medio": 0.11,
+   "atrasados_hoje": 0,
+   "valor": 966312.54,
+   "expresso": 3,
+   "rejeitado": 1870.6
+  }
+ ],
+ "ped_atrasados": [
+  {
+   "id_pedido": "PC0125",
+   "id_material": "CLB",
+   "id_atividade": "A29",
+   "id_fornecedor": "F10",
+   "data_prometida": "2026-11-12",
+   "data_necessidade_obra": "2026-11-17"
+  },
+  {
+   "id_pedido": "PC0121",
+   "id_material": "THT",
+   "id_atividade": "A28",
+   "id_fornecedor": "F10",
+   "data_prometida": "2026-11-10",
+   "data_necessidade_obra": "2026-11-17"
+  },
+  {
+   "id_pedido": "PC0122",
+   "id_material": "THT",
+   "id_atividade": "A28",
+   "id_fornecedor": "F10",
+   "data_prometida": "2026-11-12",
+   "data_necessidade_obra": "2026-11-19"
+  },
+  {
+   "id_pedido": "PC0109",
+   "id_material": "PFR",
+   "id_atividade": "A24",
+   "id_fornecedor": "F10",
+   "data_prometida": "2026-11-04",
+   "data_necessidade_obra": "2026-11-10"
+  },
+  {
+   "id_pedido": "PC0131",
+   "id_material": "SNS",
+   "id_atividade": "A31",
+   "id_fornecedor": "F10",
+   "data_prometida": "2026-11-09",
+   "data_necessidade_obra": "2026-11-17"
+  },
+  {
+   "id_pedido": "PC0133",
+   "id_material": "TLH",
+   "id_atividade": "A10",
+   "id_fornecedor": "F05",
+   "data_prometida": "2026-11-12",
+   "data_necessidade_obra": "2026-10-28"
+  }
+ ],
+ "ped_tardios": 17,
+ "ppc_sem": [
+  [
+   "2026-S08",
+   1.0
+  ],
+  [
+   "2026-S09",
+   1.0
+  ],
+  [
+   "2026-S10",
+   1.0
+  ],
+  [
+   "2026-S11",
+   1.0
+  ],
+  [
+   "2026-S12",
+   1.0
+  ],
+  [
+   "2026-S13",
+   0.75
+  ],
+  [
+   "2026-S14",
+   0.5
+  ],
+  [
+   "2026-S15",
+   1.0
+  ],
+  [
+   "2026-S16",
+   1.0
+  ],
+  [
+   "2026-S17",
+   1.0
+  ],
+  [
+   "2026-S18",
+   0.5
+  ],
+  [
+   "2026-S19",
+   0.5
+  ],
+  [
+   "2026-S20",
+   0.667
+  ],
+  [
+   "2026-S21",
+   1.0
+  ],
+  [
+   "2026-S22",
+   1.0
+  ],
+  [
+   "2026-S23",
+   1.0
+  ],
+  [
+   "2026-S24",
+   1.0
+  ],
+  [
+   "2026-S25",
+   0.667
+  ],
+  [
+   "2026-S26",
+   1.0
+  ],
+  [
+   "2026-S27",
+   1.0
+  ],
+  [
+   "2026-S28",
+   0.75
+  ],
+  [
+   "2026-S29",
+   1.0
+  ],
+  [
+   "2026-S30",
+   1.0
+  ],
+  [
+   "2026-S31",
+   0.333
+  ],
+  [
+   "2026-S32",
+   0.0
+  ],
+  [
+   "2026-S33",
+   1.0
+  ],
+  [
+   "2026-S34",
+   0.5
+  ],
+  [
+   "2026-S35",
+   1.0
+  ],
+  [
+   "2026-S36",
+   0.333
+  ],
+  [
+   "2026-S37",
+   0.25
+  ],
+  [
+   "2026-S38",
+   0.25
+  ],
+  [
+   "2026-S39",
+   0.4
+  ],
+  [
+   "2026-S40",
+   0.5
+  ],
+  [
+   "2026-S41",
+   0.2
+  ],
+  [
+   "2026-S42",
+   0.5
+  ],
+  [
+   "2026-S43",
+   0.143
+  ],
+  [
+   "2026-S44",
+   0.5
+  ],
+  [
+   "2026-S45",
+   0.25
+  ],
+  [
+   "2026-S46",
+   0.6
+  ]
+ ],
+ "restr_abertas": 15,
+ "fase": [
+  {
+   "fase": "Projetos e licenças",
+   "O": 658000.0,
+   "VP": 658000.0,
+   "VA": 658000.0,
+   "CR": 667375.65,
+   "IDP": 1.0,
+   "IDC": 0.986
+  },
+  {
+   "fase": "Canteiro e infraestrutura",
+   "O": 1122035.48,
+   "VP": 1122035.48,
+   "VA": 1122028.97,
+   "CR": 1301480.82,
+   "IDP": 1.0,
+   "IDC": 0.862
+  },
+  {
+   "fase": "Estrutura e edificação",
+   "O": 9658448.99,
+   "VP": 9482964.165,
+   "VA": 7600445.985,
+   "CR": 7998755.8,
+   "IDP": 0.801,
+   "IDC": 0.95
+  },
+  {
+   "fase": "Instalações prediais e utilidades",
+   "O": 2308199.56,
+   "VP": 2308199.56,
+   "VA": 0.0,
+   "CR": 0.0,
+   "IDP": 0.0,
+   "IDC": null
+  },
+  {
+   "fase": "Equipamentos de processo",
+   "O": 11728308.04,
+   "VP": 3234605.102,
+   "VA": 0.0,
+   "CR": 0.0,
+   "IDP": 0.0,
+   "IDC": null
+  },
+  {
+   "fase": "Sistemas e pessoas",
+   "O": 2100000.0,
+   "VP": 2008000.0,
+   "VA": 1710000.0,
+   "CR": 1721435.04,
+   "IDP": 0.852,
+   "IDC": 0.993
+  },
+  {
+   "fase": "Comissionamento e partida",
+   "O": 541179.64,
+   "VP": 0.0,
+   "VA": 0.0,
+   "CR": 0.0,
+   "IDP": null,
+   "IDC": null
+  }
+ ]
+}
