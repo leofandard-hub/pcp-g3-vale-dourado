@@ -274,7 +274,7 @@ function renderForm() {
   $('#form').innerHTML = cols.map(c => {
     const vals = [...new Set(base.map(r => r[c]).filter(v => v !== null && v !== ''))];
     const isNum = NUMCOLS.has(t + '.' + c);
-    if (c.startsWith('data')) return `<label>${c}<input type="date" name="${c}" value="${D()}"></label>`;
+    if (c.startsWith('data')) return `<label>${c}<input type="date" name="${c}" value="${localStorage.getItem('pcp_ultima_data') || ''}"></label>`;
     if (!isNum && vals.length && vals.length <= 40) {
       const opts = c === 'id_atividade' ? ATIV().map(a => a.id_atividade) : vals.sort();
       return `<label>${c}<input name="${c}" list="dl_${c}"><datalist id="dl_${c}">${opts.map(o => `<option value="${o}">`).join('')}</datalist></label>`;
@@ -302,6 +302,8 @@ $('#btnLancar').onclick = async e => {
   if (!autor) { $('#formMsg').textContent = ' informe quem lança'; return; }
   localStorage.setItem('pcp_autor', autor);
   const dados = {}; new FormData($('#form')).forEach((v, k) => dados[k] = v);
+  if ('data' in dados && !dados.data) { $('#formMsg').textContent = ' informe a data'; return; }
+  if (dados.data) localStorage.setItem('pcp_ultima_data', dados.data);
   await salvar({ tabela: $('#formTabela').value, dados, autor });
   $('#formMsg').textContent = ' ✓ lançado';
   $('#form').querySelectorAll('input:not([type=date])').forEach(i => i.value = '');
