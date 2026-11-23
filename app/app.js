@@ -306,7 +306,8 @@ $('#btnLancar').onclick = async e => {
 /* ---------------- R2 · persistência (Supabase REST) ---------------- */
 const SB = { url: localStorage.getItem('sb_url') || '', key: localStorage.getItem('sb_key') || '' };
 const sbOn = () => SB.url && SB.key;
-const sbH = () => ({ apikey: SB.key, Authorization: 'Bearer ' + SB.key, 'Content-Type': 'application/json', Prefer: 'return=representation' });
+// chave legada (JWT "eyJ...") vai também no Authorization; a chave nova "sb_publishable_..." só no header apikey
+const sbH = () => ({ apikey: SB.key, ...(SB.key.startsWith('eyJ') ? { Authorization: 'Bearer ' + SB.key } : {}), 'Content-Type': 'application/json', Prefer: 'return=representation' });
 async function carregarLanc() {
   if (sbOn()) {
     try {
