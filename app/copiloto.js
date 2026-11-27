@@ -102,6 +102,10 @@
   function htmlCartao(c) {
     const g = COR[c.gravidade] ? c.gravidade : 'info';
     const pct = v => Math.max(0, Math.min(100, +v || 0));
+    const pctDe = t => { const m = String(t || '').match(/(\d+(?:,\d+)?)\s*%/); return m ? +m[1].replace(',', '.') : null; };
+    (c.numeros || []).forEach(n => { // barra também quando a IA não preencheu real_pct/previsto_pct ("0%" + "previsto 97,5%")
+      if (n.real_pct == null && /%/.test(n.valor) && /previsto/i.test(n.detalhe || '')) { n.real_pct = pctDe(n.valor); n.previsto_pct = pctDe(n.detalhe); }
+    });
     const tiles = (c.numeros || []).slice(0, 4).map(n => `
       <div class="tileIA ${esc(n.status || 'neutro')}">
         <div class="v">${esc(n.valor ?? '')}</div><div class="l">${esc(n.rotulo ?? '')}</div>
