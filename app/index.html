@@ -30,6 +30,7 @@
   <button data-tab="analises">Análises</button>
   <button data-tab="lancamentos">Lançamentos</button>
   <button data-tab="modelo">Modelo 3D</button>
+  <button data-tab="copiloto">Copiloto IA</button>
   <button data-tab="config">Dados e configuração</button>
 </nav>
 
@@ -103,6 +104,20 @@
     </div>
   </section>
 
+  <!-- COPILOTO IA (opcional) -->
+  <section id="copiloto" class="tab">
+    <div class="card">
+      <h3>Copiloto IA · perguntas sobre a obra</h3>
+      <p class="hint">A IA não calcula nada: ela lê os números que o sistema já calculou na data selecionada no topo e os do relatório gerencial (data de status 13/11/2026). Se o dado não estiver no sistema, ela diz que não sabe. Confira sempre no Dashboard antes de usar um número.</p>
+      <div class="row sugestoes" id="sugIA"></div>
+      <div class="row iarow">
+        <input id="perguntaIA" maxlength="500" placeholder="Ex.: por que a obra está atrasada?">
+        <button id="btnIA">Perguntar</button>
+      </div>
+      <div id="respostasIA"></div>
+    </div>
+  </section>
+
   <!-- CONFIG -->
   <section id="config" class="tab">
     <div class="card">
@@ -123,5 +138,6 @@
 
 <script src="app.js"></script>
 <script type="module" src="modelo3d.js"></script>
+<script src="copiloto.js"></script>
 </body>
 </html>

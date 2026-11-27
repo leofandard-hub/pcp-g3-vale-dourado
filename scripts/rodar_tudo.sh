@@ -10,6 +10,7 @@ python3 scripts/docs_d9_d10.py > /dev/null       # D9, D10 + figuras
 python3 scripts/cenarios_custos.py > /dev/null   # cenários da Parte 3
 python3 scripts/docs_pdfs.py                     # PDFs D9–D12
 python3 scripts/dados_relatorio.py > /dev/null
+python3 scripts/contexto_copiloto.py           # números que o copiloto de IA pode citar
 node scripts/relatorio_gerencial.js              # relatório gerencial (pptx)
 node scripts/ficha_grupo.js
 python3 scripts/guias.py > /dev/null            # kit da semana de campo + guia do caderno
