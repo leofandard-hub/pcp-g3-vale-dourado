@@ -41,6 +41,7 @@ const CARTAO = `FORMATO DA RESPOSTA (substitui as regras 4 e 5): responda SOMENT
  "fonte": "campos usados, ex. sistema.atividades A12, relatorio.prazo"}
 "numeros": de 1 a 4 itens, o mais importante primeiro. Preencha real_pct e previsto_pct (0 a 100) só quando o número compara realizado × previsto em %.
 "gravidade": critico = atraso no caminho crítico, multa ou estouro de custo; atencao = desvio a acompanhar; ok = dentro do previsto; info = pergunta neutra ou dado inexistente.
+Perguntas de causa (\"por que\"): priorize nesta ordem as atividades críticas com previsto_pct > real_pct (sistema.atividades), as principais causas de não cumprimento do PPC e a RUP; suprimentos e restrições só depois.
 Se o dado não existir: titulo "Esse dado não está no sistema.", gravidade "info", numeros [], e em pontos a tela onde procurar.`;
 
 let modeloCache = null;
