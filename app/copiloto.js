@@ -90,6 +90,7 @@
     return { total, faltando };
   }
   window.PCP_verificar = verificar; // usado nos testes
+  window.PCP_gravidade = (...a) => gravidade(...a);
 
   /* ---------- apresentação visual ---------- */
   const COR = { critico: '🔴', atencao: '🟠', ok: '🟢', info: '🔵' };
@@ -99,21 +100,68 @@
   const textoDoCartao = c => [c.titulo, ...(c.numeros || []).flatMap(n => [n.valor, n.detalhe,
     n.real_pct != null ? n.real_pct + '%' : '', n.previsto_pct != null ? n.previsto_pct + '%' : '']), ...(c.pontos || []), c.acao]
     .filter(Boolean).join('\n') + '\nFonte: ' + (c.fonte || '');
-  function htmlCartao(c) {
-    const g = COR[c.gravidade] ? c.gravidade : 'info';
+  /* ---------- cor do cartão calculada pelo site (não pela IA) ----------
+     Olha o que a resposta cita (atividades, IDP/IDC, PPC, multa, RUP, equipamentos, pedidos, gargalo)
+     e aplica regras fixas sobre os números do sistema. Vale a pior cor encontrada. */
+  const NIVEL = { info: 0, ok: 1, atencao: 2, critico: 3 };
+  function gravidade(c, ctx, pergunta) {
+    const S = ctx.sistema, R = ctx.relatorio || {}, f = String(c.fonte || '');
+    const txt = [pergunta, c.titulo, ...(c.numeros || []).flatMap(n => [n.rotulo, n.valor, n.detalhe]), ...(c.pontos || [])].join(' ');
+    if (/não está no sistema/i.test(c.titulo || '')) return { g: 'info', motivo: 'dado inexistente' };
+    if (/compar|cen[aá]rio/i.test(pergunta) && /cenario/.test(f)) return { g: 'info', motivo: 'comparação de cenários' };
+    let g = 'ok', motivos = [];
+    const sobe = (n, m) => { if (NIVEL[n] > NIVEL[g]) { g = n; motivos = [m]; } else if (n === g) motivos.push(m); };
+    const f1 = v => String(v).replace('.', ',');
+    // atividades citadas
+    const ids = [...new Set(txt.match(/\bA\d{2}\b/g) || [])];
+    ids.forEach(id => {
+      const a = S.atividades.find(x => x.id === id); if (!a) return;
+      const gap = a.previsto_pct - a.real_pct;
+      if (gap > 5) sobe(a.critica ? 'critico' : 'atencao', `${id}${a.critica ? ' crítica' : ''} ${f1(a.real_pct)}% × ${f1(a.previsto_pct)}% previsto`);
+    });
+    // índices de prazo e custo
+    [['IDP', S.evm.IDP], ['IDC', S.evm.IDC]].forEach(([k, v]) => {
+      if (new RegExp('\\b' + k + '\\b').test(txt)) sobe(v < 0.9 ? 'critico' : v < 1 ? 'atencao' : 'ok', `${k} ${f1(v)}`);
+    });
+    if (/avan[cç]o/i.test(txt) && S.evm.avanco_previsto_pct - S.evm.avanco_real_pct > 5)
+      sobe('critico', `avanço ${f1(S.evm.avanco_real_pct)}% × ${f1(S.evm.avanco_previsto_pct)}%`);
+    // prazo contratual e multa
+    if (/multa|término|termina|prazo/i.test(txt) && R.prazo?.atraso_vs_contrato_du > 0)
+      sobe('critico', `término ${R.prazo.atraso_vs_contrato_du} du após o contrato`);
+    // PPC (última semana)
+    const sem = Object.values(S.ppc_semanas || {}), ppcUlt = sem[sem.length - 1];
+    if (/\bPPC\b/.test(txt) && ppcUlt != null) sobe(ppcUlt < 80 ? 'atencao' : 'ok', `PPC última semana ${f1(ppcUlt)}%`);
+    // recursos
+    if (/RUP/.test(txt) && (S.rup || []).some(r => r.desvio_pct > 0)) sobe('atencao', 'RUP real pior que a orçada');
+    if (/equipament/i.test(txt) && (S.equipamentos || []).some(e => e.utilizacao_pct < 60)) sobe('atencao', 'equipamento com utilização < 60%');
+    if (/pedido|fornecedor|suprimento/i.test(txt) && (S.pedidos_em_aberto || []).some(p => p.atrasado)) sobe('atencao', 'pedidos em atraso');
+    if (/gargalo|capacidade/i.test(txt) && (R.cap || []).some(p => p.add > 0)) sobe('atencao', 'posto abaixo da demanda');
+    if (!motivos.length) return { g: (c.numeros || []).length ? 'ok' : 'info', motivo: 'nenhum alerta nos números citados' };
+    return { g, motivo: motivos.slice(0, 2).join(' · ') };
+  }
+  // cor de cada número com realizado × previsto: regra fixa
+  function statusTile(n) {
+    if (n.real_pct == null || n.previsto_pct == null) return n.status || 'neutro';
+    const gap = n.previsto_pct - n.real_pct;
+    return gap <= 0 ? 'bom' : gap <= 5 ? 'atencao' : 'ruim';
+  }
+
+  function htmlCartao(c, grav) {
+    const g = grav.g;
     const pct = v => Math.max(0, Math.min(100, +v || 0));
     const pctDe = t => { const m = String(t || '').match(/(\d+(?:,\d+)?)\s*%/); return m ? +m[1].replace(',', '.') : null; };
     (c.numeros || []).forEach(n => { // barra também quando a IA não preencheu real_pct/previsto_pct ("0%" + "previsto 97,5%")
       if (n.real_pct == null && /%/.test(n.valor) && /previsto/i.test(n.detalhe || '')) { n.real_pct = pctDe(n.valor); n.previsto_pct = pctDe(n.detalhe); }
     });
     const tiles = (c.numeros || []).slice(0, 4).map(n => `
-      <div class="tileIA ${esc(n.status || 'neutro')}">
+      <div class="tileIA ${esc(statusTile(n))}">
         <div class="v">${esc(n.valor ?? '')}</div><div class="l">${esc(n.rotulo ?? '')}</div>
         ${n.real_pct != null && n.previsto_pct != null ? `<div class="barra"><i class="prev" style="width:${pct(n.previsto_pct)}%"></i><i class="real" style="width:${pct(n.real_pct)}%"></i></div>` : ''}
         ${n.detalhe ? `<div class="d">${esc(n.detalhe)}</div>` : ''}
       </div>`).join('');
     return `<div class="cartaoIA g-${g}">
       <div class="veredito">${COR[g]} ${esc(c.titulo)}</div>
+      <div class="motivoCor">cor calculada pelo sistema: ${esc(grav.motivo)}</div>
       ${tiles ? `<div class="tilesIA">${tiles}</div>` : ''}
       ${(c.pontos || []).length ? `<ul>${c.pontos.slice(0, 3).map(p => `<li>${esc(p)}</li>`).join('')}</ul>` : ''}
       ${c.acao ? `<div class="acaoIA">➜ <b>Ação:</b> ${esc(c.acao)}</div>` : ''}
@@ -147,7 +195,7 @@
       if (!r.ok || j.erro) throw new Error(j.erro || r.status);
       const cartao = modo === 'ata' ? null : lerCartao(j.resposta);
       const texto = cartao ? textoDoCartao(cartao) : j.resposta;
-      caixa.querySelector('.a').innerHTML = cartao ? htmlCartao(cartao) : modo === 'ata' ? htmlAta(j.resposta) : esc(j.resposta);
+      caixa.querySelector('.a').innerHTML = cartao ? htmlCartao(cartao, gravidade(cartao, contexto, q)) : modo === 'ata' ? htmlAta(j.resposta) : esc(j.resposta);
       if (modo !== 'ata') { historico.push({ pergunta: q, resposta: j.resposta }); historico = historico.slice(-4); }
       const v = verificar(texto, contexto);
       caixa.insertAdjacentHTML('beforeend', v.faltando.length
