@@ -29,7 +29,7 @@ async function modelos(key) {
     .filter(n => /flash/.test(n) && !/image|tts|audio|live|embed|vision|exp|preview/.test(n));
   const versao = n => +(n.match(/(\d+(\.\d+)?)/) || [0, 0])[1];
   nomes.sort((a, b) => versao(b) - versao(a) || a.length - b.length);
-  modeloCache = nomes.length ? nomes.slice(0, 3) : ['gemini-flash-latest'];
+  modeloCache = [...nomes.slice(0, 4), 'gemini-flash-latest'];
   return modeloCache;
 }
 
@@ -46,23 +46,29 @@ module.exports = async (req, res) => {
   const corpo = {
     systemInstruction: { parts: [{ text: REGRAS }] },
     contents: [{ role: 'user', parts: [{ text: `CONTEXTO:\n${ctx}\n\nPERGUNTA: ${pergunta}` }] }],
-    generationConfig: { temperature: 0, maxOutputTokens: 700 }
+    generationConfig: { temperature: 0, maxOutputTokens: 2000 }
   };
 
-  let ultimoErro = '';
+  // tenta os modelos em ordem; se um estiver sobrecarregado (429/503), espera um pouco e tenta de novo
+  const erros = [], inicio = Date.now(), espera = ms => new Promise(r => setTimeout(r, ms));
   try {
     for (const m of await modelos(key)) {
-      const r = await fetch(`${API}/models/${m}:generateContent`, {
-        method: 'POST', headers: { 'Content-Type': 'application/json', 'x-goog-api-key': key }, body: JSON.stringify(corpo)
-      });
-      const j = await r.json().catch(() => ({}));
-      if (r.ok) {
-        const texto = (j.candidates?.[0]?.content?.parts || []).map(p => p.text || '').join('').trim();
-        return res.status(200).json({ resposta: texto || 'Sem resposta do modelo.', modelo: m });
+      for (let tentativa = 0; tentativa < 2 && Date.now() - inicio < 40000; tentativa++) {
+        const r = await fetch(`${API}/models/${m}:generateContent`, {
+          method: 'POST', headers: { 'Content-Type': 'application/json', 'x-goog-api-key': key }, body: JSON.stringify(corpo)
+        });
+        const j = await r.json().catch(() => ({}));
+        if (r.ok) {
+          const texto = (j.candidates?.[0]?.content?.parts || []).filter(p => !p.thought).map(p => p.text || '').join('').trim();
+          return res.status(200).json({ resposta: texto || 'Sem resposta do modelo.', modelo: m });
+        }
+        erros.push(`${m}: ${r.status}`);
+        if (r.status === 400 || r.status === 401 || r.status === 403) throw new Error((j.error?.message || 'chave ou pedido inválido').slice(0, 150));
+        if (r.status !== 429 && r.status !== 503) break; // outro erro: passa para o próximo modelo
+        await espera(1500);
       }
-      ultimoErro = `${m}: ${r.status} ${j.error?.message || ''}`;
-      if (r.status === 400 || r.status === 403) break; // chave ou pedido inválido: não adianta tentar outro modelo
     }
-  } catch (e) { ultimoErro = String(e.message || e); }
+  } catch (e) { erros.push(String(e.message || e)); }
+  const ultimoErro = erros.join('; ');
   return res.status(502).json({ erro: 'A IA não respondeu agora (' + ultimoErro.slice(0, 200) + '). O resto do sistema funciona normalmente.' });
 };
