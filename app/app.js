@@ -362,10 +362,31 @@ function renderControle() {
     linhas.map(([l, e, s, d]) => `<tr><td>${l}</td><td class="num">${nf(e, d)}</td><td class="num">${nf(s, d)}</td><td>${Math.abs(e - s) < 0.05 ? '✔' : '✘'}</td></tr>`));
 }
 
-/* ---------------- API p/ o modelo 3D ---------------- */
+/* ---------------- contexto para o copiloto de IA ---------------- */
+// Só números já calculados pelo sistema na data selecionada: a IA lê, não calcula.
+function contextoIA() {
+  const data = D(), c = calc(data), r2 = v => Math.round(v * 100) / 100, pc = v => Math.round(v * 1000) / 10;
+  const p = ppc(data);
+  return {
+    data, dia_util_projeto: c.n,
+    evm: { BAC: r2(c.BAC), VP: r2(c.VP), VA: r2(c.VA), CR: r2(c.CR), IDP: r2(c.IDP), IDC: r2(c.IDC), EAC: r2(c.EAC),
+      avanco_real_pct: pc(c.VA / c.BAC), avanco_previsto_pct: pc(c.VP / c.BAC) },
+    atividades: c.at.map(a => ({ id: a.id_atividade, nome: a.nome_atividade, fase: a.fase, zona: a.id_zona,
+      critica: !!a.b.critica, folga_du: a.b.folga_total_du, inicio_base: a.b.inicio_cedo, fim_base: a.b.termino_cedo,
+      real_pct: pc(a.pReal), previsto_pct: pc(a.pPlan), orcado_rs: r2(a.O), custo_real_rs: r2(a.CR), encarregado: a.encarregado })),
+    fases: porFase(c).map(f => ({ fase: f.fase, IDP: r2(f.VA / f.VP), IDC: r2(f.VA / f.CR), orcado_rs: r2(f.O) })),
+    ppc_semanas: Object.fromEntries(p.ks.slice(-8).map(k => [k, pc(p.sem[k].c / p.sem[k].p)])),
+    causas_nao_cumprimento: p.causas,
+    rup: rup(data).L.map(x => ({ id: x.id, encarregado: x.enc, orcada: r2(x.orc), real: r2(x.real), desvio_pct: pc(x.desvio) })),
+    hh_apontadas: r2(hhTotal(data)),
+    lancamentos_semana_de_campo: LANC.length
+  };
+}
+
+/* ---------------- API p/ o modelo 3D e o copiloto ---------------- */
 window.PCP = {
   zonas: () => G.tabelas['13_layout_zonas'],
-  calc, D, fP, fD,
+  calc, D, fP, fD, contextoIA,
   datas: () => G.tabelas['11_calendario'].filter(c => c.dia_util_projeto && c.data <= '2027-03-31').map(c => c.data)
 };
 

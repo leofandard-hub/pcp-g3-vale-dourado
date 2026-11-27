@@ -64,3 +64,11 @@ button.ghost{background:#fff;color:#1f4d3a;border:1px solid #1f4d3a}
 .legend3d .cx.borda{border:2px solid #c0392b;background:#fff}
 .pill3d{background:#e6f1ec;color:#1f4d3a;font-weight:600;padding:3px 8px;border-radius:10px}
 #slider3d{flex:1;min-width:160px}
+
+/* copiloto IA */
+.sugestoes{flex-wrap:wrap;gap:6px;margin:10px 0}
+.sugestoes button{background:#eef3f0;color:#1f4d3a;border:1px solid #cfdcd4;font-size:12px;padding:5px 10px}
+.iarow{gap:8px}.iarow input{flex:1;padding:8px;border:1px solid #c9ced6;border-radius:6px}
+.msgIA{border-left:3px solid #1f4d3a;background:#f7f9f8;padding:10px 12px;margin-top:12px;border-radius:4px;white-space:pre-wrap;font-size:14px}
+.msgIA .q{font-weight:600;margin-bottom:6px}.msgIA.erro{border-color:#c0392b}
+.msgIA .meta{color:#6b7385;font-size:11px;margin-top:6px}
