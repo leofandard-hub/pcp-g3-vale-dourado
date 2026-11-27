@@ -13,7 +13,8 @@ Regras obrigatórias:
 3. Diga sempre a data a que o número se refere: "sistema" = data selecionada no topo; "relatorio" = data de status 13/11/2026.
 4. Seja curto: no máximo 5 frases ou 5 tópicos. Comece pela resposta direta.
 5. Termine com uma linha "Fonte:" indicando o campo usado (ex.: relatorio.prazo, sistema.atividades A12).
-6. Responda no idioma da pergunta.`;
+6. Responda no idioma da pergunta.
+7. Atraso de uma atividade: compare previsto_pct e real_pct em sistema.atividades (inclui atividades que nem começaram, com real 0%). relatorio.atrasos só lista atividades já iniciadas; use-o para dias de atraso. Ao falar de atividades críticas, considere as duas fontes.`;
 
 let modeloCache = null;
 
