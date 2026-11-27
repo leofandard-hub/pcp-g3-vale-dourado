@@ -29,6 +29,20 @@ const ATA = `MODO ATA: escreva a ata semanal do Comitê de PCP na data do sistem
 Na seção 1, IDP, IDC e avanço vêm só de sistema.evm (2 casas decimais); término e multa de relatorio.prazo. Na seção 3, liste só atividades críticas com previsto_pct maior que real_pct.
 Até 25 linhas (substitui o limite de 5 frases da regra 4). Demais regras valem: nenhum número fora do CONTEXTO, nenhuma recomendação que não esteja apoiada nos dados.`;
 
+// Formato visual: a resposta vira um cartão (veredito colorido + números grandes + 3 pontos + ação).
+const CARTAO = `FORMATO DA RESPOSTA (substitui as regras 4 e 5): responda SOMENTE com um objeto JSON válido, sem texto fora dele:
+{"titulo": "a resposta direta em no máximo 12 palavras, como um veredito",
+ "gravidade": "critico" | "atencao" | "ok" | "info",
+ "numeros": [{"rotulo": "o que é (até 5 palavras)", "valor": "o número principal formatado, ex. 0%, R$ 567.300, 07/05/2027",
+              "detalhe": "comparação curta, ex. previsto 97,5%", "status": "ruim" | "atencao" | "bom" | "neutro",
+              "real_pct": número ou null, "previsto_pct": número ou null}],
+ "pontos": ["até 3 frases curtas (máx. 15 palavras) que explicam o porquê"],
+ "acao": "uma ação que os dados sustentam (ex.: cenário do relatório) ou \"\"",
+ "fonte": "campos usados, ex. sistema.atividades A12, relatorio.prazo"}
+"numeros": de 1 a 4 itens, o mais importante primeiro. Preencha real_pct e previsto_pct (0 a 100) só quando o número compara realizado × previsto em %.
+"gravidade": critico = atraso no caminho crítico, multa ou estouro de custo; atencao = desvio a acompanhar; ok = dentro do previsto; info = pergunta neutra ou dado inexistente.
+Se o dado não existir: titulo "Esse dado não está no sistema.", gravidade "info", numeros [], e em pontos a tela onde procurar.`;
+
 let modeloCache = null;
 
 // escolhe automaticamente um modelo "flash" disponível para a chave (rápido e com cota gratuita)
@@ -58,14 +72,14 @@ module.exports = async (req, res) => {
   if (ctx.length > 120000) return res.status(400).json({ erro: 'Contexto grande demais.' });
 
   const corpo = {
-    systemInstruction: { parts: [{ text: REGRAS + (modo === 'ata' ? '\n\n' + ATA : '') + '\n\nCONTEXTO:\n' + ctx }] },
+    systemInstruction: { parts: [{ text: REGRAS + '\n\n' + (modo === 'ata' ? ATA : CARTAO) + '\n\nCONTEXTO:\n' + ctx }] },
     contents: [
       // conversa anterior (até 4 trocas), para permitir perguntas de seguimento
       ...(Array.isArray(historico) && modo !== 'ata' ? historico.slice(-4) : []).flatMap(h => [
         { role: 'user', parts: [{ text: String(h.pergunta || '').slice(0, 500) }] },
         { role: 'model', parts: [{ text: String(h.resposta || '').slice(0, 3000) }] }]),
       { role: 'user', parts: [{ text: pergunta }] }],
-    generationConfig: { temperature: 0, maxOutputTokens: modo === 'ata' ? 4000 : 2000 }
+    generationConfig: { temperature: 0, maxOutputTokens: modo === 'ata' ? 4000 : 2000, ...(modo === 'ata' ? {} : { responseMimeType: 'application/json' }) }
   };
 
   // Raciocínio interno no mínimo: a IA só lê números, e "pensar" deixava a resposta lenta (30 s a 2 min).

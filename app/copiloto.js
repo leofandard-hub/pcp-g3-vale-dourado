@@ -91,6 +91,41 @@
   }
   window.PCP_verificar = verificar; // usado nos testes
 
+  /* ---------- apresentação visual ---------- */
+  const COR = { critico: '🔴', atencao: '🟠', ok: '🟢', info: '🔵' };
+  function lerCartao(txt) {
+    try { const o = JSON.parse(String(txt).replace(/^```(json)?|```$/g, '').trim()); return o && o.titulo ? o : null; } catch { return null; }
+  }
+  const textoDoCartao = c => [c.titulo, ...(c.numeros || []).flatMap(n => [n.valor, n.detalhe,
+    n.real_pct != null ? n.real_pct + '%' : '', n.previsto_pct != null ? n.previsto_pct + '%' : '']), ...(c.pontos || []), c.acao]
+    .filter(Boolean).join('\n') + '\nFonte: ' + (c.fonte || '');
+  function htmlCartao(c) {
+    const g = COR[c.gravidade] ? c.gravidade : 'info';
+    const pct = v => Math.max(0, Math.min(100, +v || 0));
+    const tiles = (c.numeros || []).slice(0, 4).map(n => `
+      <div class="tileIA ${esc(n.status || 'neutro')}">
+        <div class="v">${esc(n.valor ?? '')}</div><div class="l">${esc(n.rotulo ?? '')}</div>
+        ${n.real_pct != null && n.previsto_pct != null ? `<div class="barra"><i class="prev" style="width:${pct(n.previsto_pct)}%"></i><i class="real" style="width:${pct(n.real_pct)}%"></i></div>` : ''}
+        ${n.detalhe ? `<div class="d">${esc(n.detalhe)}</div>` : ''}
+      </div>`).join('');
+    return `<div class="cartaoIA g-${g}">
+      <div class="veredito">${COR[g]} ${esc(c.titulo)}</div>
+      ${tiles ? `<div class="tilesIA">${tiles}</div>` : ''}
+      ${(c.pontos || []).length ? `<ul>${c.pontos.slice(0, 3).map(p => `<li>${esc(p)}</li>`).join('')}</ul>` : ''}
+      ${c.acao ? `<div class="acaoIA">➜ <b>Ação:</b> ${esc(c.acao)}</div>` : ''}
+    </div>`;
+  }
+  // ata: markdown simples (títulos, negrito, tópicos), sempre escapado antes
+  function htmlAta(t) {
+    return esc(t).split('\n').map(l => {
+      l = l.replace(/\*\*(.+?)\*\*/g, '<b>$1</b>');
+      if (/^\s*[-*•]\s+/.test(l)) return `<li>${l.replace(/^\s*[-*•]\s+/, '')}</li>`;
+      if (/^\s*(#+\s*)?\d+\.\s/.test(l)) return `<h4>${l.replace(/^\s*#+\s*/, '')}</h4>`;
+      if (/^\s*Fonte:/i.test(l)) return `<div class="hint">${l}</div>`;
+      return l.trim() ? `<p>${l}</p>` : '';
+    }).join('').replace(/(<li>.*?<\/li>)+/g, m => `<ul>${m}</ul>`);
+  }
+
   async function perguntar(modo) {
     const q = modo === 'ata' ? 'Ata semanal do Comitê de PCP' : $('#perguntaIA').value.trim();
     if (!q || !window.PCP?.contextoIA) return;
@@ -106,13 +141,15 @@
       const r = await fetch('api/chat', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ pergunta: q, contexto, modo, historico }) });
       const j = await r.json().catch(() => ({ erro: 'Copiloto indisponível neste endereço (a função /api/chat só roda na Vercel).' }));
       if (!r.ok || j.erro) throw new Error(j.erro || r.status);
-      caixa.querySelector('.a').textContent = j.resposta;
+      const cartao = modo === 'ata' ? null : lerCartao(j.resposta);
+      const texto = cartao ? textoDoCartao(cartao) : j.resposta;
+      caixa.querySelector('.a').innerHTML = cartao ? htmlCartao(cartao) : modo === 'ata' ? htmlAta(j.resposta) : esc(j.resposta);
       if (modo !== 'ata') { historico.push({ pergunta: q, resposta: j.resposta }); historico = historico.slice(-4); }
-      const v = verificar(j.resposta, contexto);
+      const v = verificar(texto, contexto);
       caixa.insertAdjacentHTML('beforeend', v.faltando.length
         ? `<div class="verif bad">⚠ Número(s) não encontrado(s) nos dados do sistema: <b>${v.faltando.map(esc).join(' · ')}</b>. Não use sem conferir.</div>`
         : `<div class="verif ok">✔ ${v.total ? `Os ${v.total} números da resposta conferem com os dados do sistema.` : 'Resposta sem números para conferir.'}</div>`);
-      caixa.insertAdjacentHTML('beforeend', `<div class="meta">Gerado por IA (${esc(j.modelo)}) com os números do sistema em ${window.PCP.fD(contexto.sistema.data)} </div>` + links(j.resposta));
+      caixa.insertAdjacentHTML('beforeend', `<div class="meta">Gerado por IA (${esc(j.modelo)}) com os números do sistema em ${window.PCP.fD(contexto.sistema.data)} </div>` + links(texto));
     } catch (e) {
       caixa.classList.add('erro');
       caixa.querySelector('.a').textContent = String(e.message || e);
