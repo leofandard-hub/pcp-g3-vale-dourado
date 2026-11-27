@@ -83,12 +83,20 @@
   <section id="modelo" class="tab">
     <div class="card">
       <div class="row">
-        <label>Data <input type="range" id="slider3d" min="0" max="1000" value="1000"></label>
+        <button id="play3d">▶ animar</button>
+        <input type="range" id="slider3d" min="0" max="1000" value="1000">
         <b id="label3d"></b>
-        <span class="legend"><i style="background:#c9ced6"></i>não iniciado <i style="background:#f2b134"></i>em andamento <i style="background:#2e9e5b"></i>concluído <i style="background:#c0392b"></i>crítica atrasada</span>
+        <button id="hoje3d" class="ghost">data de status</button>
+        <button id="vista3d" class="ghost">Vista de cima</button>
       </div>
-      <div class="view3dwrap"><div id="view3d"></div><div id="info3d" class="info3d">Clique em uma zona.</div></div>
-      <p class="hint">Avanço da zona = média ponderada pelo custo orçado do avanço das atividades da zona (Anexo B). Mouse: girar, rolar para aproximar, botão direito para arrastar.</p>
+      <div class="row legend3d">
+        <span id="global3d" class="pill3d"></span>
+        <span class="grad"></span><span class="hint">0% → 50% → 100%</span>
+        <span><i class="cx" style="background:#c9ced6"></i>sem início</span>
+        <span><i class="cx borda"></i>crítica atrasada</span>
+      </div>
+      <div class="view3dwrap"><div id="view3d"></div><div id="info3d" class="info3d hidden"></div></div>
+      <p class="hint">Cor e altura = avanço real da zona (média das atividades ponderada pelo custo orçado, Anexo B). Fio de arame = volume previsto. Clique numa zona para ver as atividades. Mouse: girar, rolar para aproximar, botão direito para arrastar.</p>
     </div>
   </section>
 

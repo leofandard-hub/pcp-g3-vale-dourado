@@ -50,3 +50,17 @@ select,input{padding:5px;border:1px solid #c9ced6;border-radius:5px;font-size:13
 .info3d table td{padding:2px 4px;border-bottom:1px solid #eee}
 td.num{text-align:right}
 tr.crit td{color:#c0392b}
+
+#view3d{position:relative;height:600px}
+.labels3d{position:absolute;top:0;left:0;pointer-events:none}
+.lbl3d{background:rgba(255,255,255,.92);border:1px solid #c9ced6;border-radius:6px;padding:2px 6px;font-size:11px;white-space:nowrap;color:#1d2330;box-shadow:0 1px 3px rgba(0,0,0,.15)}
+.lbl3d.atraso{border-color:#c0392b;color:#c0392b}
+.info3d.hidden{display:none}
+.info3d .fechar{position:absolute;top:4px;right:6px;background:none;color:#4a5263;font-size:18px;padding:0 4px}
+button.ghost{background:#fff;color:#1f4d3a;border:1px solid #1f4d3a}
+.legend3d{gap:14px;font-size:12px;color:#4a5263}
+.legend3d .grad{display:inline-block;width:120px;height:10px;border-radius:5px;background:linear-gradient(90deg,#c9ced6,#f2a541,#2e9e5b)}
+.legend3d .cx{display:inline-block;width:12px;height:12px;border-radius:2px;margin-right:4px;vertical-align:middle}
+.legend3d .cx.borda{border:2px solid #c0392b;background:#fff}
+.pill3d{background:#e6f1ec;color:#1f4d3a;font-weight:600;padding:3px 8px;border-radius:10px}
+#slider3d{flex:1;min-width:160px}
