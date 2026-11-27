@@ -72,11 +72,23 @@ Entradas de Raphael: ver seção no final.
 **Como corrigimos:** linha apagada e relançada; formulário passou a exigir a data e a guardar a última usada; apagar em dois cliques. Conferência automática: 21 linhas de mão de obra, 1.096 Hh, sem faltas nem duplicatas.
 **Commits:** a553d5b, 10a90ad
 
+### 12 · 26/11 · Léo · Modelo 3D mais legível
+**Pedido:** "O modelo 3D está pouco claro: há falhas de textura, as cores quase não se distinguem e os volumes não representam bem a obra. Refaça a representação e explique o que cada cor e cada volume significam."
+**O que a IA errou:** a primeira versão empilhava caixas transparentes (texturas piscando por sobreposição), usava um degradê contínuo difícil de ler e desenhava o terreno como se fosse uma zona. Depois, o controle de data ia até março de 2027, embora só exista avanço real até a data de status: a obra "congelava" a partir de 16/11.
+**Como corrigimos:** materiais opacos sem sobreposição, 5 classes de cor com legenda (0%, 1–33%, 34–66%, 67–99%, 100%), galpão montado atividade por atividade (sapatas A08, pilares A09, cobertura A10, fechamento A11, piso A12), moldura vermelha nas zonas críticas atrasadas e controle de data limitado a 13/11. Testado no navegador sem erros.
+**Commits:** 708bd7b, d8c0fb9, 26079f5
+
+### 13 · 26/11 · Léo · Copiloto de IA no sistema (opcional)
+**Pedido:** "Crie uma aba onde a diretoria faça perguntas em linguagem natural sobre a obra. A IA não pode inventar números: deve responder só com o que o sistema já calculou, dizer quando o dado não existe e citar a fonte. A chave da IA não pode ficar no repositório."
+**O que a IA errou:** (1) as respostas levavam de 30 s a 2 min, porque o modelo "raciocinava" longamente antes de responder; (2) uma pergunta falhou quando o servidor do Gemini estava sobrecarregado (erro 503); (3) ao listar as atividades críticas atrasadas, esqueceu a A12 (piso, 0% realizado contra 97,5% previsto), porque usou só a lista de atrasos do relatório, que contém apenas atividades já iniciadas.
+**Como corrigimos:** raciocínio interno reduzido, limite de 25 s por chamada e modelo mais leve primeiro (resposta em cerca de 2 s); nova tentativa automática com modelos reserva quando há sobrecarga; regra no prompt para comparar previsto × realizado de todas as atividades. Conferimos as respostas com os números do relatório (cenários, multa, atrasos), e uma pergunta fora do escopo recebeu "Esse dado não está no sistema". Chave guardada só na variável `GEMINI_API_KEY` da Vercel. Feito numa branch e integrado por pull request (#1).
+**Commits:** 502fc6e, 7fb0ccc (merge do PR #1), 9d44399, 31eb32c, 062add2
+
 ---
 
 ## Entradas de Raphael
 
 | # | Data | O que pediu à IA | O que a IA errou | Como corrigiu | Commit |
 |---|---|---|---|---|---|
-| 12 | | | | | |
-| 13 | | | | | |
+| 14 | | | | | |
+| 15 | | | | | |
