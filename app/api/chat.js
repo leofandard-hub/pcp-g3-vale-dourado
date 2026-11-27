@@ -40,7 +40,12 @@ const CARTAO = `FORMATO DA RESPOSTA (substitui as regras 4 e 5): responda SOMENT
  "acao": "uma ação que os dados sustentam (ex.: cenário do relatório) ou \"\"",
  "fonte": "campos usados, ex. sistema.atividades A12, relatorio.prazo"}
 "numeros": de 1 a 4 itens, o mais importante primeiro. Preencha real_pct e previsto_pct (0 a 100) só quando o número compara realizado × previsto em %.
-"gravidade": critico = atraso no caminho crítico, multa ou estouro de custo; atencao = desvio a acompanhar; ok = dentro do previsto; info = pergunta neutra ou dado inexistente.
+"gravidade" descreve o TEMA DA PERGUNTA, não a obra inteira:
+- critico: a própria resposta mostra atraso no caminho crítico, multa contratual ou custo acima do orçamento (IDC < 0,9);
+- atencao: desvio a acompanhar (ex.: IDC entre 0,9 e 1, PPC abaixo de 80%, RUP pior que a orçada, equipamento ocioso);
+- ok: indicador dentro do previsto ou boa notícia;
+- info: comparações, explicações, listas neutras (ex.: comparar cenários, explicar um conceito) e dado inexistente.
+Não use critico só porque existe algum problema em outra parte do CONTEXTO. Em comparação de cenários use info.
 Perguntas de causa (\"por que\"): priorize nesta ordem as atividades críticas com previsto_pct > real_pct (sistema.atividades), as principais causas de não cumprimento do PPC e a RUP; suprimentos e restrições só depois.
 Se o dado não existir: titulo "Esse dado não está no sistema.", gravidade "info", numeros [], e em pontos a tela onde procurar.`;
 
