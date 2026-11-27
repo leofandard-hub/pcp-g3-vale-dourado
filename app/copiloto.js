@@ -42,8 +42,10 @@
     const { nums, datas } = valoresDoContexto(ctx);
     const corpo = texto.split(/\n\s*Fonte:/i)[0];
     const faltando = []; let total = 0;
+    // datas aaaa-mm-dd
+    const semIso = corpo.replace(/\d{4}-\d{2}-\d{2}/g, t => { total++; if (!datas.has(t)) faltando.push(t); return ' '; });
     // datas dd/mm/aaaa ou dd/mm
-    const semDatas = corpo.replace(/(?<!\d)(\d{1,2})\/(\d{1,2})(?:\/(\d{4}))?(?!\d)/g, (t, d, m, a) => {
+    const semDatas = semIso.replace(/(?<!\d)(\d{1,2})\/(\d{1,2})(?:\/(\d{4}))?(?!\d)/g, (t, d, m, a) => {
       total++;
       const dd = d.padStart(2, '0'), mm = m.padStart(2, '0');
       const ok = [...datas].some(x => x.slice(8) === dd && x.slice(5, 7) === mm && (!a || x.slice(0, 4) === a));

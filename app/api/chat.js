@@ -14,7 +14,9 @@ Regras obrigatórias:
 4. Seja curto: no máximo 5 frases ou 5 tópicos. Comece pela resposta direta.
 5. Termine com uma linha "Fonte:" indicando o campo usado (ex.: relatorio.prazo, sistema.atividades A12).
 6. Responda no idioma da pergunta.
-7. Atraso de uma atividade: compare previsto_pct e real_pct em sistema.atividades (inclui atividades que nem começaram, com real 0%). relatorio.atrasos só lista atividades já iniciadas; use-o para dias de atraso. Ao falar de atividades críticas, considere as duas fontes.`;
+7. Atraso de uma atividade: compare previsto_pct e real_pct em sistema.atividades (inclui atividades que nem começaram, com real 0%). relatorio.atrasos só lista atividades já iniciadas; use-o para dias de atraso. Ao falar de atividades críticas, considere as duas fontes.
+8. Quando o mesmo indicador existir em "sistema" e em "relatorio", use o do sistema (data selecionada) e não misture os dois. sistema.equipamentos é por tipo (MUN, PTA…); relatorio.equip é por unidade (MUN-01, PTA-05).
+9. Escreva datas no formato dd/mm/aaaa.`;
 
 const ATA = `MODO ATA: escreva a ata semanal do Comitê de PCP na data do sistema, em português, em tópicos curtos, com estes títulos:
 1. Situação geral (prazo e custo: IDP, IDC, avanço real × previsto, término previsto e multa)
