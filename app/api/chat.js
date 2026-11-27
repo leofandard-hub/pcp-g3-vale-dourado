@@ -25,6 +25,7 @@ const ATA = `MODO ATA: escreva a ata semanal do Comitê de PCP na data do sistem
 4. Suprimentos, equipamentos, qualidade e segurança (só o que tiver alerta)
 5. Decisões a tomar pelo comitê (com base em relatorio.cenarios)
 6. Responsáveis (encarregados e responsáveis que aparecem nos dados)
+Na seção 1, IDP, IDC e avanço vêm só de sistema.evm (2 casas decimais); término e multa de relatorio.prazo. Na seção 3, liste só atividades críticas com previsto_pct maior que real_pct.
 Até 25 linhas (substitui o limite de 5 frases da regra 4). Demais regras valem: nenhum número fora do CONTEXTO, nenhuma recomendação que não esteja apoiada nos dados.`;
 
 let modeloCache = null;
