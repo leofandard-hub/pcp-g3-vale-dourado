@@ -98,6 +98,7 @@
     const caixa = document.createElement('div');
     caixa.className = 'msgIA';
     caixa.innerHTML = `<div class="q">${esc(q)}</div><div class="a">…</div>`;
+    if (modo !== 'ata') $('#perguntaIA').value = '';   // limpa ao enviar: o usuário já pode digitar a próxima
     $('#respostasIA').append(caixa); caixa.scrollIntoView({ block: 'nearest' });
     try {
       relatorio = relatorio || await (await fetch('data/copiloto.json')).json();
@@ -107,7 +108,6 @@
       if (!r.ok || j.erro) throw new Error(j.erro || r.status);
       caixa.querySelector('.a').textContent = j.resposta;
       if (modo !== 'ata') { historico.push({ pergunta: q, resposta: j.resposta }); historico = historico.slice(-4); }
-      $('#perguntaIA').value = '';
       const v = verificar(j.resposta, contexto);
       caixa.insertAdjacentHTML('beforeend', v.faltando.length
         ? `<div class="verif bad">⚠ Número(s) não encontrado(s) nos dados do sistema: <b>${v.faltando.map(esc).join(' · ')}</b>. Não use sem conferir.</div>`
