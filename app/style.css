@@ -72,3 +72,4 @@ button.ghost{background:#fff;color:#1f4d3a;border:1px solid #1f4d3a}
 .msgIA{border-left:3px solid #1f4d3a;background:#f7f9f8;padding:10px 12px;margin-top:12px;border-radius:4px;white-space:pre-wrap;font-size:14px}
 .msgIA .q{font-weight:600;margin-bottom:6px}.msgIA.erro{border-color:#c0392b}
 .msgIA .meta{color:#6b7385;font-size:11px;margin-top:6px}
+.verif{font-size:12px;margin-top:8px;padding:4px 8px;border-radius:4px;white-space:normal}.verif.ok{background:#e6f4ea;color:#1e6b3a}.verif.bad{background:#fdecea;color:#a93226}
