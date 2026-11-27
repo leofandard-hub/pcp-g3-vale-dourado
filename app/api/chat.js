@@ -28,8 +28,8 @@ async function modelos(key) {
     .map(m => m.name.replace('models/', ''))
     .filter(n => /flash/.test(n) && !/image|tts|audio|live|embed|vision|exp|preview/.test(n));
   const versao = n => +(n.match(/(\d+(\.\d+)?)/) || [0, 0])[1];
-  nomes.sort((a, b) => versao(b) - versao(a) || a.length - b.length);
-  modeloCache = [...nomes.slice(0, 4), 'gemini-flash-latest'];
+  nomes.sort((a, b) => /lite/.test(b) - /lite/.test(a) || versao(b) - versao(a) || a.length - b.length);
+  modeloCache = [...nomes.slice(0, 4), 'gemini-flash-lite-latest', 'gemini-flash-latest'];
   return modeloCache;
 }
 
@@ -49,23 +49,32 @@ module.exports = async (req, res) => {
     generationConfig: { temperature: 0, maxOutputTokens: 2000 }
   };
 
-  // tenta os modelos em ordem; se um estiver sobrecarregado (429/503), espera um pouco e tenta de novo
-  const erros = [], inicio = Date.now(), espera = ms => new Promise(r => setTimeout(r, ms));
+  // Raciocínio interno no mínimo: a IA só lê números, e "pensar" deixava a resposta lenta (30 s a 2 min).
+  // Cada geração de modelo aceita um formato; tenta do mais novo ao mais antigo.
+  const PENSAR = [{ thinkingLevel: 'low' }, { thinkingBudget: 0 }, null];
+  const chamar = (m, pensar) => fetch(`${API}/models/${m}:generateContent`, {
+    method: 'POST', signal: AbortSignal.timeout(25000),
+    headers: { 'Content-Type': 'application/json', 'x-goog-api-key': key },
+    body: JSON.stringify({ ...corpo, generationConfig: { ...corpo.generationConfig, ...(pensar ? { thinkingConfig: pensar } : {}) } })
+  });
+
+  // tenta os modelos em ordem; sobrecarga (429/503) ou lentidão: tenta o próximo
+  const erros = [], inicio = Date.now();
   try {
     for (const m of await modelos(key)) {
-      for (let tentativa = 0; tentativa < 2 && Date.now() - inicio < 40000; tentativa++) {
-        const r = await fetch(`${API}/models/${m}:generateContent`, {
-          method: 'POST', headers: { 'Content-Type': 'application/json', 'x-goog-api-key': key }, body: JSON.stringify(corpo)
-        });
-        const j = await r.json().catch(() => ({}));
+      if (Date.now() - inicio > 45000) break;
+      for (const pensar of PENSAR) {
+        let r, j;
+        try { r = await chamar(m, pensar); j = await r.json().catch(() => ({})); }
+        catch (e) { erros.push(`${m}: tempo esgotado`); break; }
         if (r.ok) {
           const texto = (j.candidates?.[0]?.content?.parts || []).filter(p => !p.thought).map(p => p.text || '').join('').trim();
-          return res.status(200).json({ resposta: texto || 'Sem resposta do modelo.', modelo: m });
+          return res.status(200).json({ resposta: texto || 'Sem resposta do modelo.', modelo: m, segundos: Math.round((Date.now() - inicio) / 1000) });
         }
-        erros.push(`${m}: ${r.status}`);
-        if (r.status === 400 || r.status === 401 || r.status === 403) throw new Error((j.error?.message || 'chave ou pedido inválido').slice(0, 150));
-        if (r.status !== 429 && r.status !== 503) break; // outro erro: passa para o próximo modelo
-        await espera(1500);
+        const msg = j.error?.message || '';
+        if (r.status === 400 && /think/i.test(msg)) continue;          // formato de raciocínio não aceito: tenta o próximo formato
+        if (r.status === 401 || r.status === 403 || (r.status === 400 && /key/i.test(msg))) throw new Error('chave inválida: ' + msg.slice(0, 120));
+        erros.push(`${m}: ${r.status}`); break;                          // sobrecarga, modelo inexistente etc.: próximo modelo
       }
     }
   } catch (e) { erros.push(String(e.message || e)); }
