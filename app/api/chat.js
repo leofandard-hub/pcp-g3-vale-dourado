@@ -44,6 +44,18 @@ const CARTAO = `FORMATO DA RESPOSTA (substitui as regras 4 e 5): responda SOMENT
 Perguntas de causa (\"por que\"): priorize nesta ordem as atividades críticas com previsto_pct > real_pct (sistema.atividades), as principais causas de não cumprimento do PPC e a RUP; suprimentos e restrições só depois.
 Se o dado não existir: titulo "Esse dado não está no sistema.", gravidade "info", numeros [], e em pontos a tela onde procurar.`;
 
+// Esquema do cartão: com ele o Gemini é obrigado a devolver um JSON válido nesse formato.
+const S = (type, extra = {}) => ({ type, ...extra });
+const ESQUEMA = S('OBJECT', {
+  properties: {
+    titulo: S('STRING'), gravidade: S('STRING', { enum: ['critico', 'atencao', 'ok', 'info'] }),
+    numeros: S('ARRAY', { items: S('OBJECT', { properties: {
+      rotulo: S('STRING'), valor: S('STRING'), detalhe: S('STRING'), status: S('STRING', { enum: ['ruim', 'atencao', 'bom', 'neutro'] }),
+      real_pct: S('NUMBER', { nullable: true }), previsto_pct: S('NUMBER', { nullable: true }) }, required: ['rotulo', 'valor'] }) }),
+    pontos: S('ARRAY', { items: S('STRING') }), acao: S('STRING'), fonte: S('STRING') },
+  required: ['titulo', 'gravidade', 'numeros', 'pontos', 'fonte'] });
+let comEsquema = true; // desligado sozinho se o modelo recusar o esquema
+
 let modeloCache = null;
 
 // escolhe automaticamente um modelo "flash" disponível para a chave (rápido e com cota gratuita)
@@ -89,7 +101,8 @@ module.exports = async (req, res) => {
   const chamar = (m, pensar) => fetch(`${API}/models/${m}:generateContent`, {
     method: 'POST', signal: AbortSignal.timeout(25000),
     headers: { 'Content-Type': 'application/json', 'x-goog-api-key': key },
-    body: JSON.stringify({ ...corpo, generationConfig: { ...corpo.generationConfig, ...(pensar ? { thinkingConfig: pensar } : {}) } })
+    body: JSON.stringify({ ...corpo, generationConfig: { ...corpo.generationConfig, ...(pensar ? { thinkingConfig: pensar } : {}),
+      ...(modo !== 'ata' && comEsquema ? { responseSchema: ESQUEMA } : {}) } })
   });
 
   // tenta os modelos em ordem; sobrecarga (429/503) ou lentidão: tenta o próximo
@@ -103,9 +116,14 @@ module.exports = async (req, res) => {
         catch (e) { erros.push(`${m}: tempo esgotado`); break; }
         if (r.ok) {
           const texto = (j.candidates?.[0]?.content?.parts || []).filter(p => !p.thought).map(p => p.text || '').join('').trim();
+          if (modo !== 'ata') { // cartão: só aceita JSON válido; senão tenta de novo (próximo modelo)
+            try { JSON.parse(texto.replace(/^```(json)?|```$/g, '').trim()); }
+            catch { erros.push(`${m}: JSON inválido`); break; }
+          }
           return res.status(200).json({ resposta: texto || 'Sem resposta do modelo.', modelo: m, segundos: Math.round((Date.now() - inicio) / 1000) });
         }
         const msg = j.error?.message || '';
+        if (r.status === 400 && /schema/i.test(msg) && comEsquema) { comEsquema = false; continue; } // esquema não aceito: segue sem ele
         if (r.status === 400 && /think/i.test(msg)) continue;          // formato de raciocínio não aceito: tenta o próximo formato
         if (r.status === 401 || r.status === 403 || (r.status === 400 && /key/i.test(msg))) throw new Error('chave inválida: ' + msg.slice(0, 120));
         erros.push(`${m}: ${r.status}`); break;                          // sobrecarga, modelo inexistente etc.: próximo modelo
