@@ -16,7 +16,8 @@ Regras obrigatórias:
 6. Responda no idioma da pergunta.
 7. Atraso de uma atividade: compare previsto_pct e real_pct em sistema.atividades (inclui atividades que nem começaram, com real 0%). relatorio.atrasos só lista atividades já iniciadas; use-o para dias de atraso. Ao falar de atividades críticas, considere as duas fontes.
 8. Quando o mesmo indicador existir em "sistema" e em "relatorio", use o do sistema (data selecionada) e não misture os dois. sistema.equipamentos é por tipo (MUN, PTA…); relatorio.equip é por unidade (MUN-01, PTA-05).
-9. Escreva datas no formato dd/mm/aaaa.`;
+9. Escreva datas no formato dd/mm/aaaa.
+10. Perguntas de seguimento (ex.: "e para a A26?") referem-se às mensagens anteriores da conversa; responda com os dados do CONTEXTO.`;
 
 const ATA = `MODO ATA: escreva a ata semanal do Comitê de PCP na data do sistema, em português, em tópicos curtos, com estes títulos:
 1. Situação geral (prazo e custo: IDP, IDC, avanço real × previsto, término previsto e multa)
@@ -51,14 +52,19 @@ module.exports = async (req, res) => {
   const key = process.env.GEMINI_API_KEY;
   if (!key) return res.status(500).json({ erro: 'GEMINI_API_KEY não configurada na Vercel.' });
 
-  const { pergunta, contexto, modo } = req.body || {};
+  const { pergunta, contexto, modo, historico } = req.body || {};
   if (!pergunta || String(pergunta).length > 500) return res.status(400).json({ erro: 'Pergunta vazia ou longa demais (máx. 500 caracteres).' });
   const ctx = JSON.stringify(contexto || {});
   if (ctx.length > 120000) return res.status(400).json({ erro: 'Contexto grande demais.' });
 
   const corpo = {
-    systemInstruction: { parts: [{ text: REGRAS + (modo === 'ata' ? '\n\n' + ATA : '') }] },
-    contents: [{ role: 'user', parts: [{ text: `CONTEXTO:\n${ctx}\n\nPERGUNTA: ${pergunta}` }] }],
+    systemInstruction: { parts: [{ text: REGRAS + (modo === 'ata' ? '\n\n' + ATA : '') + '\n\nCONTEXTO:\n' + ctx }] },
+    contents: [
+      // conversa anterior (até 4 trocas), para permitir perguntas de seguimento
+      ...(Array.isArray(historico) && modo !== 'ata' ? historico.slice(-4) : []).flatMap(h => [
+        { role: 'user', parts: [{ text: String(h.pergunta || '').slice(0, 500) }] },
+        { role: 'model', parts: [{ text: String(h.resposta || '').slice(0, 3000) }] }]),
+      { role: 'user', parts: [{ text: pergunta }] }],
     generationConfig: { temperature: 0, maxOutputTokens: modo === 'ata' ? 4000 : 2000 }
   };
 

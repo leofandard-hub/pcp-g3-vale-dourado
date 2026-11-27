@@ -73,3 +73,4 @@ button.ghost{background:#fff;color:#1f4d3a;border:1px solid #1f4d3a}
 .msgIA .q{font-weight:600;margin-bottom:6px}.msgIA.erro{border-color:#c0392b}
 .msgIA .meta{color:#6b7385;font-size:11px;margin-top:6px}
 .verif{font-size:12px;margin-top:8px;padding:4px 8px;border-radius:4px;white-space:normal}.verif.ok{background:#e6f4ea;color:#1e6b3a}.verif.bad{background:#fdecea;color:#a93226}
+.msgIA .links{margin-top:6px;white-space:normal}.msgIA .irTela{font-size:12px;padding:3px 9px;margin-right:6px}a.irTela{color:#1f4d3a}

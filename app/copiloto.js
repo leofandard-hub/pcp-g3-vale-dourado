@@ -10,13 +10,31 @@
     'Qual é o gargalo da nova unidade?',
     'Quais encarregados têm a pior RUP?'
   ];
-  let relatorio = null;
+  let relatorio = null, historico = [];
+  const REPO = 'https://github.com/leofandard-hub/pcp-g3-vale-dourado/blob/main/docs/relatorio_gerencial.pdf';
+  // de onde veio o dado (linha "Fonte:" e atividades citadas) -> tela do sistema onde conferir
+  const TELAS = [
+    [/sistema\.(evm|ppc_semanas|causas_nao_cumprimento)|efetivo_medio/, 'dashboard', 'Dashboard'],
+    [/sistema\.(atividades|fases|rup|equipamentos|pedidos|fornecedores|mao_de_obra|hh_)/, 'analises', 'Análises'],
+    [/sistema\.(qualidade_fvs|restricoes_abertas|seguranca)/, 'lancamentos', 'Lançamentos'],
+    [/\bA\d{2}\b/, 'modelo', 'Modelo 3D']];
+  function links(texto) {
+    const fonte = (texto.match(/Fonte:[^\n]*/i) || [''])[0], out = [];
+    TELAS.forEach(([re, tab, nome]) => { if (re.test(tab === 'modelo' ? texto : fonte)) out.push(`<button type="button" class="ghost irTela" data-tab="${tab}">→ ver em ${nome}</button>`); });
+    if (/relatorio\./.test(fonte)) out.push(`<a class="irTela" href="${REPO}" target="_blank" rel="noopener">→ relatório gerencial (PDF)</a>`);
+    return out.length ? `<div class="links">${out.join(' ')}</div>` : '';
+  }
+  document.addEventListener('click', e => {
+    const b = e.target.closest('button.irTela'); if (!b) return;
+    document.querySelector(`nav button[data-tab="${b.dataset.tab}"]`).click(); window.scrollTo(0, 0);
+  });
   const esc = t => String(t).replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]));
 
   $('#sugIA').innerHTML = SUGESTOES.map(q => `<button type="button">${q}</button>`).join('');
   $('#sugIA').onclick = e => { if (e.target.tagName === 'BUTTON') { $('#perguntaIA').value = e.target.textContent; perguntar(); } };
   $('#btnIA').onclick = () => perguntar();
   $('#btnAta').onclick = () => perguntar('ata');
+  $('#btnNovaIA').onclick = () => { historico = []; $('#respostasIA').innerHTML = ''; $('#perguntaIA').focus(); };
   $('#perguntaIA').onkeydown = e => { if (e.key === 'Enter') perguntar(); };
 
   /* ---------- verificador de números ----------
@@ -80,19 +98,21 @@
     const caixa = document.createElement('div');
     caixa.className = 'msgIA';
     caixa.innerHTML = `<div class="q">${esc(q)}</div><div class="a">…</div>`;
-    $('#respostasIA').prepend(caixa);
+    $('#respostasIA').append(caixa); caixa.scrollIntoView({ block: 'nearest' });
     try {
       relatorio = relatorio || await (await fetch('data/copiloto.json')).json();
       const contexto = { sistema: window.PCP.contextoIA(), relatorio };
-      const r = await fetch('api/chat', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ pergunta: q, contexto, modo }) });
+      const r = await fetch('api/chat', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ pergunta: q, contexto, modo, historico }) });
       const j = await r.json().catch(() => ({ erro: 'Copiloto indisponível neste endereço (a função /api/chat só roda na Vercel).' }));
       if (!r.ok || j.erro) throw new Error(j.erro || r.status);
       caixa.querySelector('.a').textContent = j.resposta;
+      if (modo !== 'ata') { historico.push({ pergunta: q, resposta: j.resposta }); historico = historico.slice(-4); }
+      $('#perguntaIA').value = '';
       const v = verificar(j.resposta, contexto);
       caixa.insertAdjacentHTML('beforeend', v.faltando.length
         ? `<div class="verif bad">⚠ Número(s) não encontrado(s) nos dados do sistema: <b>${v.faltando.map(esc).join(' · ')}</b>. Não use sem conferir.</div>`
         : `<div class="verif ok">✔ ${v.total ? `Os ${v.total} números da resposta conferem com os dados do sistema.` : 'Resposta sem números para conferir.'}</div>`);
-      caixa.insertAdjacentHTML('beforeend', `<div class="meta">Gerado por IA (${esc(j.modelo)}) com os números do sistema em ${window.PCP.fD(contexto.sistema.data)} · confira no Dashboard</div>`);
+      caixa.insertAdjacentHTML('beforeend', `<div class="meta">Gerado por IA (${esc(j.modelo)}) com os números do sistema em ${window.PCP.fD(contexto.sistema.data)} </div>` + links(j.resposta));
     } catch (e) {
       caixa.classList.add('erro');
       caixa.querySelector('.a').textContent = String(e.message || e);
