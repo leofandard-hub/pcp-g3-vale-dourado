@@ -8,13 +8,22 @@ const REGRAS = `Você é o copiloto do Sistema de PCP do Grupo 3 (obra da packin
 Responda perguntas da diretoria e dos professores sobre a obra usando SOMENTE os dados do bloco CONTEXTO.
 
 Regras obrigatórias:
-1. Use apenas números que aparecem no CONTEXTO, copiados como estão (pode arredondar e formatar em pt-BR). Nunca estime, extrapole nem faça contas novas além de somar ou comparar dois valores do CONTEXTO.
+1. Use apenas números que aparecem no CONTEXTO, copiados como estão (pode arredondar e formatar em pt-BR). Nunca estime, extrapole nem faça contas: para comparar, cite os dois valores (ex.: "38,6% realizado contra 66,9% previsto") em vez de calcular a diferença. Cada número da resposta é conferido automaticamente com o CONTEXTO.
 2. Se a resposta não estiver no CONTEXTO, diga exatamente: "Esse dado não está no sistema." e sugira em qual tela procurar (Dashboard, Análises, Lançamentos, Modelo 3D).
 3. Diga sempre a data a que o número se refere: "sistema" = data selecionada no topo; "relatorio" = data de status 13/11/2026.
 4. Seja curto: no máximo 5 frases ou 5 tópicos. Comece pela resposta direta.
 5. Termine com uma linha "Fonte:" indicando o campo usado (ex.: relatorio.prazo, sistema.atividades A12).
 6. Responda no idioma da pergunta.
 7. Atraso de uma atividade: compare previsto_pct e real_pct em sistema.atividades (inclui atividades que nem começaram, com real 0%). relatorio.atrasos só lista atividades já iniciadas; use-o para dias de atraso. Ao falar de atividades críticas, considere as duas fontes.`;
+
+const ATA = `MODO ATA: escreva a ata semanal do Comitê de PCP na data do sistema, em português, em tópicos curtos, com estes títulos:
+1. Situação geral (prazo e custo: IDP, IDC, avanço real × previsto, término previsto e multa)
+2. PPC da última semana e principais causas de não cumprimento
+3. Atividades críticas atrasadas (previsto × realizado)
+4. Suprimentos, equipamentos, qualidade e segurança (só o que tiver alerta)
+5. Decisões a tomar pelo comitê (com base em relatorio.cenarios)
+6. Responsáveis (encarregados e responsáveis que aparecem nos dados)
+Até 25 linhas (substitui o limite de 5 frases da regra 4). Demais regras valem: nenhum número fora do CONTEXTO, nenhuma recomendação que não esteja apoiada nos dados.`;
 
 let modeloCache = null;
 
@@ -39,15 +48,15 @@ module.exports = async (req, res) => {
   const key = process.env.GEMINI_API_KEY;
   if (!key) return res.status(500).json({ erro: 'GEMINI_API_KEY não configurada na Vercel.' });
 
-  const { pergunta, contexto } = req.body || {};
+  const { pergunta, contexto, modo } = req.body || {};
   if (!pergunta || String(pergunta).length > 500) return res.status(400).json({ erro: 'Pergunta vazia ou longa demais (máx. 500 caracteres).' });
   const ctx = JSON.stringify(contexto || {});
   if (ctx.length > 120000) return res.status(400).json({ erro: 'Contexto grande demais.' });
 
   const corpo = {
-    systemInstruction: { parts: [{ text: REGRAS }] },
+    systemInstruction: { parts: [{ text: REGRAS + (modo === 'ata' ? '\n\n' + ATA : '') }] },
     contents: [{ role: 'user', parts: [{ text: `CONTEXTO:\n${ctx}\n\nPERGUNTA: ${pergunta}` }] }],
-    generationConfig: { temperature: 0, maxOutputTokens: 2000 }
+    generationConfig: { temperature: 0, maxOutputTokens: modo === 'ata' ? 4000 : 2000 }
   };
 
   // Raciocínio interno no mínimo: a IA só lê números, e "pensar" deixava a resposta lenta (30 s a 2 min).

@@ -379,7 +379,41 @@ function contextoIA() {
     causas_nao_cumprimento: p.causas,
     rup: rup(data).L.map(x => ({ id: x.id, encarregado: x.enc, orcada: r2(x.orc), real: r2(x.real), desvio_pct: pc(x.desvio) })),
     hh_apontadas: r2(hhTotal(data)),
-    lancamentos_semana_de_campo: LANC.length
+    lancamentos_semana_de_campo: LANC.length,
+    ...contextoRecursos(data)
+  };
+}
+
+// Recursos na data selecionada (R8, R9, R10, FVS, restrições, segurança): mesmas contas da tela Análises.
+function contextoRecursos(d) {
+  const r2 = v => isFinite(v) ? Math.round(v * 100) / 100 : null, pc = v => isFinite(v) ? Math.round(v * 1000) / 10 : null;
+  const nomes = Object.fromEntries(G.tabelas['10_fornecedores'].map(f => [f.id_fornecedor, f.nome_fornecedor]));
+  // mão de obra
+  const m = rows('15_rdo_mao_de_obra').filter(r => r.data <= d);
+  const pv = m.reduce((s, r) => s + num(r.efetivo_previsto), 0), pr = m.reduce((s, r) => s + num(r.efetivo_presente), 0);
+  const H = histograma(d), ult = H.ks.map((k, i) => [k, H.real[i], H.prev[i]]).filter(x => x[1] !== null).slice(-4);
+  // suprimentos
+  const P = pedidos(d), fo = {};
+  P.forEach(p => { const x = fo[p.id_fornecedor] = fo[p.id_fornecedor] || { pedidos: 0, entregues: 0, entregues_com_atraso: 0, soma: 0, em_atraso_hoje: 0 };
+    x.pedidos++; if (p.atrasoEntrega !== null) { x.entregues++; x.soma += p.atrasoEntrega; if (p.atrasoEntrega > 0) x.entregues_com_atraso++; } if (p.atrasado) x.em_atraso_hoje++; });
+  // qualidade, restrições, segurança
+  const fvs = rows('23_inspecoes_qualidade').filter(r => r.data <= d), rep = fvs.filter(r => r.resultado !== 'APROVADO');
+  const restr = rows('22_restricoes').filter(r => r.data_identificacao <= d && !(r.data_remocao && r.data_remocao <= d));
+  const seg = rows('24_ocorrencias_seguranca').filter(r => r.data <= d);
+  return {
+    mao_de_obra: { absenteismo_pct: pc(1 - pr / pv), faltas_homens_dia: r2(pv - pr), homens_dia_previstos: r2(pv),
+      efetivo_medio_ultimas_semanas: ult.map(([k, real, prev]) => ({ semana: k, real: r2(real), previsto_linha_de_base: r2(prev) })), limite_canteiro: 130 },
+    equipamentos: equipamentos(d).map(e => ({ tipo: e.tipo, diarias: e.dias, disponibilidade_pct: pc(e.dispon), utilizacao_pct: pc(e.util),
+      falhas: e.f, mtbf_h: r2(e.mtbf), mttr_h: r2(e.mttr), horas_ociosas: r2(e.oc), dias_sem_atividade: e.semAtiv })),
+    pedidos_em_aberto: P.filter(p => p.aberto).sort((a, b) => b.atrasado - a.atrasado).slice(0, 30).map(p => ({ pedido: p.id_pedido, material: p.id_material,
+      atividade: p.id_atividade, fornecedor: p.id_fornecedor, necessidade_obra: p.data_necessidade_obra, prometida: p.data_prometida, atrasado: !!p.atrasado })),
+    fornecedores: Object.entries(fo).map(([f, x]) => ({ fornecedor: f, nome: nomes[f] || '', pedidos: x.pedidos, entregues: x.entregues,
+      entregues_com_atraso: x.entregues_com_atraso, atraso_medio_du: x.entregues ? r2(x.soma / x.entregues) : null, em_atraso_hoje: x.em_atraso_hoje })),
+    pedidos_a_emitir_com_alerta: limitesPedido(d).filter(x => x.alerta).map(x => ({ material: x.mat, atividade: x.ativ, pedir_ate: x.limite })),
+    qualidade_fvs: { inspecoes: fvs.length, reprovadas: rep.length, hh_retrabalho: r2(fvs.reduce((s, r) => s + (num(r.hh_retrabalho_estimado) || 0), 0)),
+      reprovadas_por_atividade: rep.reduce((o, r) => (o[r.id_atividade] = (o[r.id_atividade] || 0) + 1, o), {}) },
+    restricoes_abertas: restr.map(r => ({ id: r.id_restricao, atividade: r.id_atividade, tipo: r.tipo_restricao, responsavel: r.responsavel, necessaria_em: r.data_necessaria })),
+    seguranca: { ocorrencias: seg.length, por_tipo: seg.reduce((o, r) => (o[r.tipo] = (o[r.tipo] || 0) + 1, o), {}), dias_perdidos: seg.reduce((s, r) => s + (num(r.dias_perdidos) || 0), 0) }
   };
 }
 
