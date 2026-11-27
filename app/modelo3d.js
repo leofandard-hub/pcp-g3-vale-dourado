@@ -163,14 +163,16 @@ function build() {
   }
 }
 
+// slider vai só até a data de status: depois dela não há avanço real apontado
+function calcDatas() { const d = window.PCP.D(); datas = window.PCP.datas().filter(x => x <= d); }
 function setData(data) { const i = datas.indexOf(data); if (i >= 0) slider.value = Math.round(i / (datas.length - 1) * 1000); }
 function onReady() {
-  if (ready) return; datas = window.PCP.datas(); ready = true; setData(window.PCP.D());
+  if (ready) return; calcDatas(); ready = true; setData(window.PCP.D());
   if (document.getElementById('modelo').classList.contains('active')) build();
 }
 window.addEventListener('pcp:ready', onReady);
 if (window.PCP?.ready) onReady();
-window.addEventListener('pcp:data', () => { setData(window.PCP.D()); if (inited) build(); });
+window.addEventListener('pcp:data', () => { calcDatas(); setData(window.PCP.D()); if (inited) build(); });
 window.addEventListener('pcp:show3d', () => requestAnimationFrame(build));
 slider.oninput = () => { stop(); build(); };
 
